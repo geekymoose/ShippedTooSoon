@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4719495324897580}
   - component: {fileID: 2569400267024983494}
-  - component: {fileID: 114335894688205356}
+  - component: {fileID: 114160250115095190}
   m_Layer: 0
   m_Name: GameMap
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114335894688205356
+--- !u!114 &114160250115095190
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -56,10 +56,10 @@ MonoBehaviour:
   roomWidth: 16
   roomHeight: 9
   listRooms:
-  - {fileID: 114726512449085912, guid: 4f98a7ff6cf9a584ba3704e832f7efa6, type: 2}
-  - {fileID: 114840146907347588, guid: a742d79ab5cb9744b92ee9cf2d737737, type: 2}
-  - {fileID: 114333374194034928, guid: bd7256fcbce6aff4cbf3d6cf2754ee97, type: 2}
-  - {fileID: 114855690458463558, guid: 35db561f3f3cdb74a87f96b15df22874, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!156049354 &2569400267024983494
 Grid:
   m_ObjectHideFlags: 1
