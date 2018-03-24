@@ -6,7 +6,7 @@ using UnityEngine.Assertions;
 public class GameManager : MonoBehaviour {
 	private GameMap gameMap = null;
 	private PlayerMovement player = null;
-	private CameraController camera = null;
+	private CameraController roomCamera = null;
 	private GameTimeManager timeManager = new GameTimeManager();
 
 	// Room management
@@ -31,10 +31,10 @@ public class GameManager : MonoBehaviour {
 
 		this.gameMap = gameMapObject.GetComponent<GameMap>();
 		this.player = playerObject.GetComponent<PlayerMovement>();
-		this.camera = cameraObject.GetComponent<CameraController>();
+		this.roomCamera = cameraObject.GetComponent<CameraController>();
 
 		Assert.IsNotNull(this.gameMap, "Unable to recover GameMap script from GameMap Object");
-		Assert.IsNotNull(this.camera, "Unable to recover CameraController script");
+		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
 		Assert.IsNotNull(this.player, "Unable to recover the player script");
 
 	}
@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(this.currentRoom, "Player is not in a room (But should be)");
 
 		if(this.currentRoom != null) {
-		Debug.Log("CURRENT: " + this.currentRoom + " -- CUrrent ID: " + this.currentRoom.getId());
 			this.hasSwitchedRoom = false;
 			if(this.currentRoom.getId() != this.oldRoomId) {
 				this.hasSwitchedRoom = true;
@@ -68,19 +67,9 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void updateCameraPosition() {
-		//this.camera.
-		// TODO
-		//this.camera.targetPosition = this.transform.position;
-
 		if(this.currentRoom != null) {
 			Vector3 center = this.gameMap.getCellCenterWorldFromId(this.currentRoom.getId());
-			this.camera.targetPosition = center;
-			/*
-			Tilemap tilemap = this.currentRoom.GetComponent<Tilemap>();
-			Assert.IsNotNull(tilemap, "Unable to recover tile map from a room (Probably invalid room prefab)");
-
-			Debug.Log(this.currentRoom.transform.position);
-			*/
+			this.roomCamera.targetPosition = center;
 		}
 	}
 

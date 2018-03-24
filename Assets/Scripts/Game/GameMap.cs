@@ -39,7 +39,6 @@ public class GameMap : MonoBehaviour {
 		Assert.IsNotNull(this.grid, "Missing GameMap. Script may be applied on the wrong GameObject.");
 		Assert.IsTrue(width > 0, "Invalid GameMap size (width)");
 
-		Vector3 gridPos = new Vector3(0.0f, 0.0f, 0.0f);
 		for(int k = 0; k < this.listRooms.Length; k++){
 			this.instanciateRoomById(k);
 		}
@@ -115,7 +114,7 @@ public class GameMap : MonoBehaviour {
 		int y = gridPos.y / this.roomHeight;
 		int id = this.convertCellPosToID(x, y);
 
-		if(!this.isValidCellPos(x, y) || !this.isValidCellID(id)) {
+		if(!this.isValidCellID(id)) {
 			return null;
 		}
 		return this.listRooms[id];
@@ -128,21 +127,12 @@ public class GameMap : MonoBehaviour {
 		if(!this.isValidCellID(id)) {
 			return new Vector3(0.0f, 0.0f, 0.0f);
 		}
-		Tilemap tilemap = this.listRooms[id].getTilemap();
 		Vector2Int cellPos = this.convertCellIDtoPos(id);
-
-		/* 
-		Vector3 center = tilemap.GetCellCenterWorld(new Vector3Int(cellPos.x, cellPos.y, 0));
-		float x = center.x + this.roomWidth / 2;
-		float y = center.y + this.roomHeight / 2;
-		center = new Vector3(x, y, 0.0f);
-		*/
 
 		float x = cellPos.x * this.roomWidth + this.roomWidth / 2;
 		float y = cellPos.y * this.roomHeight + this.roomHeight / 2;
 		Vector3 center = new Vector3(x, y, 0.0f);
 
-		Debug.Log("ID: " + id + " ::: TileMap: " + tilemap + " ::: CellPos: " + cellPos + " ::: Center: " + center);
 		return center;
 	}
 }
