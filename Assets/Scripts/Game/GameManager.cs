@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour {
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
 
 		Assert.IsNotNull(this.currentRoom, "Player is not in a room (But should be)");
-		
+
 		if(this.currentRoom != null) {
 			this.hasSwitchedRoom = false;
 			if(this.currentRoom.getId() != this.oldRoomId) {
@@ -70,6 +70,17 @@ public class GameManager : MonoBehaviour {
 		//this.camera.
 		// TODO
 		//this.camera.targetPosition = this.transform.position;
+
+		if(this.currentRoom != null) {
+			Vector3 center = this.gameMap.getCellCenterWorldFromId(this.currentRoom.getId());
+			this.camera.targetPosition = center;
+			/*
+			Tilemap tilemap = this.currentRoom.GetComponent<Tilemap>();
+			Assert.IsNotNull(tilemap, "Unable to recover tile map from a room (Probably invalid room prefab)");
+
+			Debug.Log(this.currentRoom.transform.position);
+			*/
+		}
 	}
 
 

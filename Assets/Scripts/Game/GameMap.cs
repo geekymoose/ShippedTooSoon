@@ -79,6 +79,15 @@ public class GameMap : MonoBehaviour {
 		return id;
 	}
 
+	/**
+	 * Convert Cell ID to Grid coordinate.
+	 */
+	private Vector2Int convertCellIDtoPos(int id) {
+		int x = id % this.width;
+		int y = id / this.width;
+		return new Vector2Int(x, y);
+	}
+
 	private bool isValidCellPos(int x, int y) {
 		int h = this.listRooms.Length / this.width;
 		return (x >= 0 && x < this.width && y >= 0 && y < h);
@@ -110,5 +119,24 @@ public class GameMap : MonoBehaviour {
 			return null;
 		}
 		return this.listRooms[id];
+	}
+
+	/**
+	 * Get the center position in world space of the specific room.
+	 */
+	public Vector3 getCellCenterWorldFromId(int id) {
+		if(!this.isValidCellID(id)) {
+			return new Vector3(0.0f, 0.0f, 0.0f);
+		}
+		Tilemap tilemap = this.listRooms[id].getTilemap();
+		Debug.Log("DEBUG: " + tilemap);
+		Vector2Int v = this.convertCellIDtoPos(id);
+		Debug.Log("V:::  " + v);
+		Vector3 center = tilemap.GetCellCenterWorld(new Vector3Int(v.x, v.y, 0));
+		float x = center.x + this.roomWidth / 2;
+		float y = center.y + this.roomHeight / 2;
+		center = new Vector3(x, y, 0.0f);
+		Debug.Log("Center:::  " + center);
+		return center;
 	}
 }
