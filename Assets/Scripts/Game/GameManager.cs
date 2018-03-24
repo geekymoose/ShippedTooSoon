@@ -53,11 +53,16 @@ public class GameManager : MonoBehaviour {
 	// Core Methods
 	// -------------------------------------------------------------------------
 	private void updateCurrentRoom() {
+		float x = this.player.gameObject.transform.position.x;
+		float y = this.player.gameObject.transform.position.y;
+		this.currentRoomId = this.gameMap.getRoomId((int)x, (int)y);
 		// TODO
 	}
 
 	private void updateCameraPosition() {
+		//this.camera.
 		// TODO
+		//this.camera.targetPosition = this.transform.position;
 	}
 
 

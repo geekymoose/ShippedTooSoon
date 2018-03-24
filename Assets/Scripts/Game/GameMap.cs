@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Tilemaps;
 
 
 public class GameMap : MonoBehaviour {
@@ -50,7 +51,7 @@ public class GameMap : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	/**
-	 * Get Room at specific position.
+	 * Get Room at specific position. (Grid Coordinates)
 	 */
 	public Room getRoomAt(int x, int y) {
 		int id = this.getRoomId(x, y);
@@ -62,11 +63,11 @@ public class GameMap : MonoBehaviour {
 	}
 
 	/**
-	 * Get room ID by its position.
+	 * Get room ID by its position. (Grid Coordinates)
 	 */
 	public int getRoomId(int x, int y) {
 		int id = x + (x * y);
-		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
+		Assert.IsTrue(id >= 0 && id < this.listRooms.Length, "Unexpected Room ID value");
 		return id;
 	}
 
@@ -74,7 +75,7 @@ public class GameMap : MonoBehaviour {
 	 * Instanciate the specific room
 	 */
 	public void instanciateRoomById(int id) {
-		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
+		Assert.IsTrue(id >= 0 && id < this.listRooms.Length, "Unexpected Room ID value");
 
 		int xPos = (id % this.width) * 16;
 		int yPos = (id / this.width) * 9;
