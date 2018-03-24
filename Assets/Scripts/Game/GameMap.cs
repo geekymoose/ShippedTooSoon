@@ -47,57 +47,68 @@ public class GameMap : MonoBehaviour {
 
 
 	// -------------------------------------------------------------------------
-	// Methods
+	// Private methods / Assets
 	// -------------------------------------------------------------------------
 
 	/**
-	 * Get Room at specific position. (Grid Coordinates)
+	 * Instanciate the specific room using its ID.
 	 */
-	public Room getRoomAtCellPos(int x, int y) {
-		int id = this.getRoomId(x, y);
-		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
-		if(id < 0 || id >= this.listRooms.Length) {
-			return null;
-		}
-		return this.listRooms[id];
-	}
-
-	/**
-	 * Get room ID by its position. (Grid Coordinates)
-	 */
-	public int getRoomId(int x, int y) {
-		int id = x + (x * y);
-		Assert.IsTrue(id >= 0 && id < this.listRooms.Length, "Unexpected Room ID value");
-		return id;
-	}
-
-	/**
-	 * Instanciate the specific room
-	 */
-	public void instanciateRoomById(int id) {
+	private void instanciateRoomById(int id) {
 		Assert.IsTrue(id >= 0 && id < this.listRooms.Length, "Unexpected Room ID value");
 
 		float xPos = (id % this.width) * 16;
 		float yPos = (id / this.width) * 9;
 
-	// This is to make bottom left corner at 0:0
+		// This is to make bottom left corner at 0:0
 		xPos += (float)this.roomWidth / 2.0f; 
 		yPos += (float)this.roomHeight / 2.0f;
 
 		Vector3 pos = new Vector3(xPos, yPos, 0.0f);
 		Room room = this.listRooms[id];
+		room.setId(id);
 
 		Object.Instantiate(room, pos, Quaternion.identity, this.grid.transform);
 	}
 
-	public Vector2Int getCellFromWorld(Vector3 worldPos) {
+	/**
+	 * Get room ID by its position in grid. (Grid Coordinates)
+	 * Start at 0:0
+	 */
+	private int convertCellPosToID(int x, int y) {
+		int id = x + (y * this.width);
+		return id;
+	}
+
+	private bool isValidCellPos(int x, int y) {
+		int h = this.listRooms.Length / this.width;
+		return (x >= 0 && x < this.width && y >= 0 && y < h);
+	}
+
+	private bool isValidCellID(int id) {
+		return (id >= 0 && id < this.listRooms.Length);
+	}
+
+
+	// -------------------------------------------------------------------------
+	// Getters / Setters
+	// -------------------------------------------------------------------------
+
+	/**
+	 * Get the room under world position (World Coordinates)
+	 * Returns null if no room under this positin.
+	 */
+	public Room getRoomUnderWorldPos(Vector3 worldPos) {
 		Grid grid = this.GetComponent<Grid>();
 		Assert.IsNotNull(grid);
 
 		Vector3Int gridPos = grid.WorldToCell(worldPos);
 		int x = gridPos.x / this.roomWidth;
 		int y = gridPos.y / this.roomHeight;
-		Debug.Log("WORLD: " + worldPos + " --- LOCAL: " + (new Vector2Int(x,y)));
-		return new Vector2Int(x, y);
+		int id = this.convertCellPosToID(x, y);
+
+		if(!this.isValidCellPos(x, y) || !this.isValidCellID(id)) {
+			return null;
+		}
+		return this.listRooms[id];
 	}
 }

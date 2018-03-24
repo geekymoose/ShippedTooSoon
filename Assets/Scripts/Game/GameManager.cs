@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 	private GameTimeManager timeManager = new GameTimeManager();
 
 	// Room management
-	private int currentRoomId = 0;
+	private Room currentRoom = null;
 	private int oldRoomId = 0;
 	private bool hasSwitchedRoom = false;
 
@@ -46,9 +46,6 @@ public class GameManager : MonoBehaviour {
 		if(this.hasSwitchedRoom) {
 			// TODO
 		}
-
-		// TODO: TMP
-		Vector2Int v =  this.gameMap.getCellFromWorld(this.player.transform.position);
 	}
 
 
@@ -56,11 +53,17 @@ public class GameManager : MonoBehaviour {
 	// Core Methods
 	// -------------------------------------------------------------------------
 	private void updateCurrentRoom() {
-		float x = this.player.gameObject.transform.position.x;
-		float y = this.player.gameObject.transform.position.y;
-		//this.currentRoomId = this.gameMap.getRoomId((int)x, (int)y);
-		//Debug.Log("Player room: " + this.currentRoomId);
-		// TODO
+		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
+
+		Assert.IsNotNull(this.currentRoom, "Player is not in a room (But should be)");
+		
+		if(this.currentRoom != null) {
+			this.hasSwitchedRoom = false;
+			if(this.currentRoom.getId() != this.oldRoomId) {
+				this.hasSwitchedRoom = true;
+			}
+		}
+
 	}
 
 	private void updateCameraPosition() {
