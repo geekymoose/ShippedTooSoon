@@ -52,14 +52,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f775d827fbdd44bb6f72bd316754b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 2
+  width: 1
   roomWidth: 16
   roomHeight: 9
   listRooms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 114779114802954694, guid: 2918a0b9ba432164580632e5defc16a7, type: 2}
+  - {fileID: 114074291852827184, guid: 2918a0b9ba432164580632e5defc16a7, type: 2}
+  - {fileID: 114982269949419860, guid: 2918a0b9ba432164580632e5defc16a7, type: 2}
+  - {fileID: 114845218553879196, guid: 2918a0b9ba432164580632e5defc16a7, type: 2}
 --- !u!156049354 &2569400267024983494
 Grid:
   m_ObjectHideFlags: 1

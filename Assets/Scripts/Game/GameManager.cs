@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 	private GameTimeManager timeManager = new GameTimeManager();
 
 	// Room management
-	private Room currentRoom = null;
+	public Room currentRoom = null;
 	private int oldRoomId = 0;
 	private bool hasSwitchedRoom = false;
 
@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(this.currentRoom, "Player is not in a room (But should be)");
 
 		if(this.currentRoom != null) {
+		Debug.Log("CURRENT: " + this.currentRoom + " -- CUrrent ID: " + this.currentRoom.getId());
 			this.hasSwitchedRoom = false;
 			if(this.currentRoom.getId() != this.oldRoomId) {
 				this.hasSwitchedRoom = true;

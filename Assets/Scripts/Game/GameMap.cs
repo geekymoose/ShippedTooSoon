@@ -11,7 +11,7 @@ public class GameMap : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	[Tooltip("Number of rooms per row in the GameMap")]
-	public int width = 2;
+	public int width = 0;
 
 	[Tooltip("Number of tiles per room (RoomRow)")]
 	public int roomWidth = 16;
@@ -129,14 +129,20 @@ public class GameMap : MonoBehaviour {
 			return new Vector3(0.0f, 0.0f, 0.0f);
 		}
 		Tilemap tilemap = this.listRooms[id].getTilemap();
-		Debug.Log("DEBUG: " + tilemap);
-		Vector2Int v = this.convertCellIDtoPos(id);
-		Debug.Log("V:::  " + v);
-		Vector3 center = tilemap.GetCellCenterWorld(new Vector3Int(v.x, v.y, 0));
+		Vector2Int cellPos = this.convertCellIDtoPos(id);
+
+		/* 
+		Vector3 center = tilemap.GetCellCenterWorld(new Vector3Int(cellPos.x, cellPos.y, 0));
 		float x = center.x + this.roomWidth / 2;
 		float y = center.y + this.roomHeight / 2;
 		center = new Vector3(x, y, 0.0f);
-		Debug.Log("Center:::  " + center);
+		*/
+
+		float x = cellPos.x * this.roomWidth + this.roomWidth / 2;
+		float y = cellPos.y * this.roomHeight + this.roomHeight / 2;
+		Vector3 center = new Vector3(x, y, 0.0f);
+
+		Debug.Log("ID: " + id + " ::: TileMap: " + tilemap + " ::: CellPos: " + cellPos + " ::: Center: " + center);
 		return center;
 	}
 }
