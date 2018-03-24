@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f775d827fbdd44bb6f72bd316754b3, type: 3}
+  m_Name: GameMap
+  m_EditorClassIdentifier: 
+  width: 2
+  roomWidth: 16
+  roomHeight: 9
+  grid: {fileID: 1108251302581140, guid: b6bb10c61c340964ebff4158a09dbf8c, type: 2}
+  listRooms:
+  - {fileID: 11400000, guid: b1cd3e3afb7c81449a78f73ae12e8f74, type: 2}
+  - {fileID: 11400000, guid: ac16730c64b2c494f8f009a6d8cbcc2c, type: 2}
+  - {fileID: 11400000, guid: c0d0355b8f97f324e83fc588b80417a6, type: 2}

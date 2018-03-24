@@ -8,9 +8,6 @@ public class Room : ScriptableObject {
 	// True if this room has been finished already
 	private bool isDone;
 
-	[Tooltip("A simple and beautiful name of this room")]
-	private string name;
-
 	[Tooltip("Prefab of the room")]
 	public GameObject prefabRoom;
 }

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug.Log("Start Game");
-		this.gameMap = Resources.Load<GameMap>("Debug/DebugGameMap") as GameMap;
+		this.gameMap = Resources.Load<GameMap>("GameMap") as GameMap;
 		Assert.IsNotNull(this.gameMap, "Unable to load the GameMap Data");
 	}
 	
