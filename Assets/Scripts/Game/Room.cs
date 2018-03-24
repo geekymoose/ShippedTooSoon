@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewRoom", menuName = "Room", order = 1)]
-public class Room : ScriptableObject {
+public class Room : MonoBehaviour {
 
 	// True if this room has been finished already
-	private bool isDone;
+	private bool isDone = false;
 
-	[Tooltip("Prefab of the room")]
-	public GameObject prefabRoom;
+	public void Update() {
+		
+	}
 }

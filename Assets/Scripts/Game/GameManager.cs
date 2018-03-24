@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class GameManager : MonoBehaviour {
-	private GameMap gameMap;
+	private GameMap gameMap = null;
+
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("Start Game");
-		this.gameMap = Resources.Load<GameMap>("GameMap") as GameMap;
-		Assert.IsNotNull(this.gameMap, "Unable to load the GameMap Data");
+		Debug.Log("GameManager::Start()");
+		//this.gameMap = (GameMap)GameObject.Find("GameMap") as GameObject;
 	}
 	
 	// Update is called once per frame

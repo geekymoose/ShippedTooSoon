@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4205041179024766}
   - component: {fileID: 8195094282814418206}
   - component: {fileID: 3664157345532739270}
+  - component: {fileID: 114855690458463558}
   m_Layer: 0
   m_Name: Room_11
   m_TagString: Untagged
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114855690458463558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735811987241294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b564d6b16ef6d24eb5b11cb8d1ebb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!483693784 &3664157345532739270
 TilemapRenderer:
   m_ObjectHideFlags: 1
