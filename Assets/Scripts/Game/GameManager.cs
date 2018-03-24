@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour {
 		if(this.hasSwitchedRoom) {
 			// TODO
 		}
+
+		// TODO: TMP
+		Vector2Int v =  this.gameMap.getCellFromWorld(this.player.transform.position);
 	}
 
 
@@ -55,7 +58,8 @@ public class GameManager : MonoBehaviour {
 	private void updateCurrentRoom() {
 		float x = this.player.gameObject.transform.position.x;
 		float y = this.player.gameObject.transform.position.y;
-		this.currentRoomId = this.gameMap.getRoomId((int)x, (int)y);
+		//this.currentRoomId = this.gameMap.getRoomId((int)x, (int)y);
+		//Debug.Log("Player room: " + this.currentRoomId);
 		// TODO
 	}
 

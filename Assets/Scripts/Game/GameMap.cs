@@ -53,7 +53,7 @@ public class GameMap : MonoBehaviour {
 	/**
 	 * Get Room at specific position. (Grid Coordinates)
 	 */
-	public Room getRoomAt(int x, int y) {
+	public Room getRoomAtCellPos(int x, int y) {
 		int id = this.getRoomId(x, y);
 		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
 		if(id < 0 || id >= this.listRooms.Length) {
@@ -77,12 +77,27 @@ public class GameMap : MonoBehaviour {
 	public void instanciateRoomById(int id) {
 		Assert.IsTrue(id >= 0 && id < this.listRooms.Length, "Unexpected Room ID value");
 
-		int xPos = (id % this.width) * 16;
-		int yPos = (id / this.width) * 9;
+		float xPos = (id % this.width) * 16;
+		float yPos = (id / this.width) * 9;
+
+	// This is to make bottom left corner at 0:0
+		xPos += (float)this.roomWidth / 2.0f; 
+		yPos += (float)this.roomHeight / 2.0f;
 
 		Vector3 pos = new Vector3(xPos, yPos, 0.0f);
 		Room room = this.listRooms[id];
 
 		Object.Instantiate(room, pos, Quaternion.identity, this.grid.transform);
+	}
+
+	public Vector2Int getCellFromWorld(Vector3 worldPos) {
+		Grid grid = this.GetComponent<Grid>();
+		Assert.IsNotNull(grid);
+
+		Vector3Int gridPos = grid.WorldToCell(worldPos);
+		int x = gridPos.x / this.roomWidth;
+		int y = gridPos.y / this.roomHeight;
+		Debug.Log("WORLD: " + worldPos + " --- LOCAL: " + (new Vector2Int(x,y)));
+		return new Vector2Int(x, y);
 	}
 }
