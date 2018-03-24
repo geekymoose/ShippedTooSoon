@@ -13,24 +13,26 @@ public class GameMap : ScriptableObject {
 	[Tooltip("Number of rooms per row in the GameMap")]
 	public int width = 2;
 
-	// Number of rooms per column in the GameMap
-	[Tooltip("Number of rooms per column in the GameMap")]
-	public int height = 2;
+	[Tooltip("Number of tiles per room (Row)")]
+	public int roomWidth = 16;
 
-	[Tooltip("All rooms. (Size must be equals to width * height)")]
-	public Room[] listRooms;
+	[Tooltip("Number of tiles per room (Column)")]
+	public int roomHeight = 9;
 
 	[Tooltip("The TileMap Grid where to place rooms")]
 	public GameObject grid;
+
+	[Tooltip("All rooms. (Size must be equals to width * height)")]
+	public Room[] listRooms;
 
 
 	// -------------------------------------------------------------------------
 	// Unity Methods
 	// -------------------------------------------------------------------------
 	public void Awake() {
+		Assert.IsNotNull(this.grid, "Missing Grid prefabs");
 		Assert.IsTrue(width > 0, "Invalid GameMap size (width)");
-		Assert.IsTrue(height >= 0, "Invalid GameMap size (height)");
-		Assert.IsTrue(width * height == listRooms.Length, "Invalid number of rooms, must be width * height size");
+
 		this.init();
 	}
 
@@ -41,7 +43,8 @@ public class GameMap : ScriptableObject {
 
 	private void init() {
 		Debug.Log("Initialize GameMap");
-		this.grid = Instantiate(this.grid);
+		Vector3 gridPos = new Vector3(0.0f, 0.0f, 0.0f);
+		this.grid = Instantiate(this.grid, gridPos, Quaternion.identity);
 		for(int k = 0; k < this.listRooms.Length; k++){
 			this.instanciateRoomById(k);
 		}
@@ -64,13 +67,22 @@ public class GameMap : ScriptableObject {
 	 */
 	public int getRoomId(int x, int y) {
 		int id = x + (x * y);
-		Assert.IsTrue( id >= 0 && id < this.listRooms.Length);
+		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
 		return id;
 	}
 
+	/**
+	 * Instanciate the specific room
+	 */
 	public void instanciateRoomById(int id) {
-		Vector3 roomCenterPos = new Vector3(0.0f, 0.0f, 0.0f);
+		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
+
+		int xPos = (id % this.width) * 16;
+		int yPos = (id / this.width) * 9;
+
+		Vector3 pos = new Vector3(xPos, yPos, 0.0f);
 		Room room = this.listRooms[id];
-		Object.Instantiate(room.prefabRoom, this.grid.transform);
+
+		Object.Instantiate(room.prefabRoom, pos, Quaternion.identity, this.grid.transform);
 	}
 }

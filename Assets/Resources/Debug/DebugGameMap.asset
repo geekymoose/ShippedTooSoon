@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f775d827fbdd44bb6f72bd316754b3, type: 3}
   m_Name: DebugGameMap
   m_EditorClassIdentifier: 
-  width: 3
-  height: 0
+  width: 2
+  roomWidth: 16
+  roomHeight: 9
   listRooms:
   - {fileID: 11400000, guid: 352f4605d3b4f2c4596967875a5eb6ce, type: 2}
   - {fileID: 11400000, guid: 352f4605d3b4f2c4596967875a5eb6ce, type: 2}
