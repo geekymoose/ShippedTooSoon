@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour {
 	private GameTimeManager timeManager = new GameTimeManager();
 
 	// Room management
-	public Room currentRoom = null;
-	private int oldRoomId = 0;
+	private Room currentRoom = null;
+	private Room previousRoom = null;
 	private bool hasSwitchedRoom = false;
 
 
@@ -37,14 +37,20 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
 		Assert.IsNotNull(this.player, "Unable to recover the player script");
 
+		// Init setup
+		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
+		this.previousRoom = this.currentRoom;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		this.updateCurrentRoom();
 		this.updateCameraPosition();
+
 		if(this.hasSwitchedRoom) {
-			// TODO
+			this.previousRoom.onRoomExit();
+			this.currentRoom.onRoomEnter();
+			this.previousRoom = this.currentRoom;
 		}
 	}
 
@@ -54,12 +60,11 @@ public class GameManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	private void updateCurrentRoom() {
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
-
 		Assert.IsNotNull(this.currentRoom, "Player is not in a room (But should be)");
 
 		if(this.currentRoom != null) {
 			this.hasSwitchedRoom = false;
-			if(this.currentRoom.getId() != this.oldRoomId) {
+			if(this.currentRoom.getId() != this.previousRoom.getId()) {
 				this.hasSwitchedRoom = true;
 			}
 		}

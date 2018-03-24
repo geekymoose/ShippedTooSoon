@@ -18,7 +18,27 @@ public class Room : MonoBehaviour {
 
 
 	// -------------------------------------------------------------------------
-	// Methods
+	// GamePlay methods
+	// -------------------------------------------------------------------------
+
+	/**
+	 * Executed whenever player enter this room 
+	 */
+	public void onRoomEnter() {
+		Debug.Log("Room::onRoomEnter() - ID: " + this.id);
+	}
+
+	/**
+	 * Executed whenever player exit this room 
+	 */
+	public void onRoomExit() {
+		Debug.Log("Room::onRoomExit() - ID: " + this.id);
+	}
+
+
+
+	// -------------------------------------------------------------------------
+	// Getter / Setters
 	// -------------------------------------------------------------------------
 	public void setId(int value) {
 		this.id = value;
