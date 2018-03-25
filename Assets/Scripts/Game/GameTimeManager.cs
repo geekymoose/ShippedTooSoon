@@ -8,6 +8,8 @@ public class GameTimeManager {
 	private float minScale = 0.0f;
 	private float maxScale = 2.0f;
 
+	private float stopwatchStart = 0.0f;
+
 
 	// -------------------------------------------------------------------------
 	// Functions
@@ -30,6 +32,10 @@ public class GameTimeManager {
 		Time.timeScale = 1.5f;
 	}
 
+	public void startStopwatch() {
+		this.stopwatchStart = Time.time;
+	}
+
 
 	// -------------------------------------------------------------------------
 	// Getters / Setters
@@ -44,5 +50,9 @@ public class GameTimeManager {
 
 	public bool isSpeededDown() {
 		return Time.timeScale < 1.0f;
+	}
+
+	public float getStopwatchTime() {
+		return Time.time - this.stopwatchStart;
 	}
 }

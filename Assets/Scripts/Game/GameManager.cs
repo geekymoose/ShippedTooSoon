@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	private GameTimeManager timeManager = new GameTimeManager();
 
 	private Text goalCounterTextUI = null;
+	private Text timeCounterTextUI = null;
 
 	private Transform spawnPoint;
 
@@ -31,36 +32,39 @@ public class GameManager : MonoBehaviour {
 		GameObject playerObject 	= GameObject.FindGameObjectWithTag("Player");
 		GameObject spawnObject 		= GameObject.Find("SpawnPoint");
 		GameObject goalCounterObject = GameObject.Find("Goal Counter TextUI");
+		GameObject timeCounterObject = GameObject.Find("Time Counter TextUI");
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
 		Assert.IsNotNull(playerObject, "Unable to recover the Player GameObject");
 		Assert.IsNotNull(spawnObject, "Unable to recover the SpawnObject GameObject");
 		Assert.IsNotNull(goalCounterObject, "Unable to find GoalCounter Object");
+		Assert.IsNotNull(timeCounterObject, "Unable to find TimeCounter Object");
 
 		this.gameMap = gameMapObject.GetComponent<GameMap>();
 		this.player = playerObject.GetComponent<PlayerMovement>();
 		this.roomCamera = cameraObject.GetComponent<CameraController>();
 		this.spawnPoint = spawnObject.transform;
 		this.goalCounterTextUI = goalCounterObject.GetComponent<Text>();
+		this.timeCounterTextUI = timeCounterObject.GetComponent<Text>();
 
 		Assert.IsNotNull(this.gameMap, "Unable to recover GameMap script from GameMap Object");
 		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
 		Assert.IsNotNull(this.player, "Unable to recover the player script");
 		Assert.IsNotNull(this.goalCounterTextUI, "Unable to recover Text component from Goal Counter");
+		Assert.IsNotNull(this.timeCounterTextUI, "Unable to recover Text component from Time Counter");
 
 		// Init setup
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
 		this.currentRoom.onRoomEnter();
 		this.currentRoom.setActive(true);
 		this.previousRoom = this.currentRoom;
-
-		this.updateGoalCounter();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		this.inputKeyHandler();
+		this.updateTimeCounter();
 		this.updateGoalCounter();
 		this.updateCurrentRoom();
 		this.updateCameraPosition();
@@ -114,6 +118,10 @@ public class GameManager : MonoBehaviour {
 	private void updateGoalCounter() {
 		int remaining = this.getNbRemainingGoals();
 		this.goalCounterTextUI.text = "Rooms left: " + remaining;
+	}
+
+	private void updateTimeCounter() {
+
 	}
 
 
