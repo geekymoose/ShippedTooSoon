@@ -36,35 +36,48 @@ public class PlayerMovement : MonoBehaviour
             canPickup = false;
             Drop();
         }
-    }
-
-    public void FixedUpdate()
-    {
         //movement with the axis of the xbox gamepad
         movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
         movementVector.y = Input.GetAxisRaw("Vertical") * speed;
 
-        if (movementVector.x < 0.0f)
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        {
+            anim.SetBool("canMove", true);
+            DefinePlayerDirection(movementVector);
+            Debug.Log("canMove");
+        }
+        else
+        {
+            anim.SetBool("canMove", false);
+        }
+
+        /*
+        Debug.Log(anim.GetFloat("MoveX"));
+
+        if (anim.GetFloat("MoveX") < 0.0f)
         {
             anim.SetTrigger("moveLeft");
         }
 
-        if (movementVector.x > 0.0f)
+        if (anim.GetFloat("MoveX") > 0.0f)
         {
             anim.SetTrigger("moveRight");
         }
 
-        if (movementVector.y < 0.0f)
+        if (anim.GetFloat("MoveY") < 0.0f)
         {
             anim.SetTrigger("moveDown");
         }
 
-        if (movementVector.y > 0.0f)
+        if (anim.GetFloat("MoveY") > 0.0f)
         {
             anim.SetTrigger("moveUp­");
-        }
+        }*/
+    }
 
-
+    public void FixedUpdate()
+    {
+       
         //move the player
         body2d.velocity = new Vector2(movementVector.x, movementVector.y);
     }
@@ -105,5 +118,11 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         canPickup = false;
+    }
+
+    public void DefinePlayerDirection(Vector2 move)
+    {
+        anim.SetFloat("MoveX", movementVector.x);
+        anim.SetFloat("MoveY", movementVector.y);
     }
 }
