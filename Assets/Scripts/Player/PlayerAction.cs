@@ -22,7 +22,6 @@ public class PlayerAction : MonoBehaviour {
 
 	void Update () {
         if (Input.GetButtonDown("Fire1")) {
-			Debug.Log("PlayerMovement::PICKUP");
 			this.currentPickedObj = this.getFirstPickupInRange();
 			if(this.currentPickedObj != null) {
 				this.currentPickedObj.transform.parent = this.playerHand;
@@ -31,7 +30,6 @@ public class PlayerAction : MonoBehaviour {
         //when the player release the button drop the object
         else if (Input.GetButtonUp("Fire1")) {
 			if(this.currentPickedObj != null) {
-				Debug.Log("PlayerMovement::DROP");
 				this.drop();
 			}
         }
@@ -52,7 +50,6 @@ public class PlayerAction : MonoBehaviour {
 
     public void drop() {
         if(this.currentPickedObj != null) {
-            Debug.Log("PlayerMovement::drop()");
             this.currentPickedObj.parent = null;
             //this.pickObj.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
             //this.pickObj.gameObject.GetComponent<Rigidbody2D>().simulated = true;
