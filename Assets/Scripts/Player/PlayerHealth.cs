@@ -18,7 +18,6 @@ public class PlayerHealth : MonoBehaviour {
         //set all the starting value for the player
         healthStats.SetValue(hp, maxHp, 1);
         panelHp.SetHealthBar(healthStats.GetValuePercent());
-        Debug.Log("player hp: " + healthStats.GetValuePercent());
 	}
 
     private void Update()

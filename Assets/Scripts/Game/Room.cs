@@ -12,6 +12,8 @@ public class Room : MonoBehaviour {
 	[Tooltip("Condition of victory for this room")]
 	public VictoryCondition victoryCondition;
 
+	public DoorController[] doors; // TheDoors
+
 
 	// -------------------------------------------------------------------------
 	// Unity methods
@@ -19,6 +21,9 @@ public class Room : MonoBehaviour {
 	public void Start() {
 		this.isDone = false;
 		this.isActive = false;
+
+		this.doors = this.GetComponentsInChildren<DoorController>();
+		Debug.Log(this.doors);
 		Assert.IsNotNull(this.victoryCondition, "VictoryCondition is not set");
 	}
 
@@ -43,6 +48,9 @@ public class Room : MonoBehaviour {
 		this.isActive = true;
 		this.victoryCondition.initConditions();
 		// TODO: Sound + init
+		foreach(DoorController dc in this.doors) {
+			dc.closeDoor();
+		}
 	}
 
 	/**
@@ -52,12 +60,18 @@ public class Room : MonoBehaviour {
 		Debug.Log("Room::onRoomExit() - ID: " + this.id);
 		this.isActive = false;
 		// TODO: Sound + destroye things
+		foreach(DoorController dc in this.doors) {
+			dc.closeDoor();
+		}
 	}
 
 	public void onRoomSuccess() {
 		Debug.Log("Room::onRoomSuccess() - ID: " + this.id);
 		this.isDone = true;
 		// TODO: Open doors + sounds + success crap things etc etc
+		foreach(DoorController dc in this.doors) {
+			dc.openDoor();
+		}
 	}
 
 
