@@ -20,20 +20,21 @@ public class Room : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	public void Start() {
 		this.isDone = false;
-		this.isActive = false;
 
 		this.doors = this.GetComponentsInChildren<RoomDoor>();
-		this.goals = this.GetComponents<RoomGoal>();
+		this.goals = this.GetComponentsInChildren<RoomGoal>();
+
+		Debug.Log(this.goals.Length);
 		
 		Assert.IsTrue(this.doors.Length > 0, "There is a room without doors?");
-		Assert.IsTrue(this.goals.Length > 0, "There is a room without goal?");
+		//Assert.IsTrue(this.goals.Length > 0, "There is a room without goal?");
 		
 		this.openAllDoors();
 	}
 
 	public void Update() {
 		if(this.isActive && !this.isDone) {
-			if(this.goals.Length == 0) {
+			if(this.isGoalDone()) {
 				this.onRoomSuccess();
 			}
 		}
@@ -87,6 +88,15 @@ public class Room : MonoBehaviour {
 		}
 	}
 
+	public bool isGoalDone() {
+		for(int k = 0; k < this.goals.Length; ++k) {
+			if(this.goals[k] != null) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 
 	// -------------------------------------------------------------------------
 	// Getter / Setters
@@ -102,5 +112,9 @@ public class Room : MonoBehaviour {
 	public Tilemap getTilemap() {
 		Assert.IsNotNull(this.GetComponent<Tilemap>(), "Unable to recover the TileMap component");
 		return this.GetComponent<Tilemap>();
+	}
+
+	public void setActive(bool value) {
+		this.isActive = value;
 	}
 }

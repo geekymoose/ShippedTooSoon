@@ -44,8 +44,9 @@ public class GameManager : MonoBehaviour {
 
 		// Init setup
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
-		this.previousRoom = this.currentRoom;
 		this.currentRoom.onRoomEnter();
+		this.currentRoom.setActive(true);
+		this.previousRoom = this.currentRoom;
 	}
 	
 	// Update is called once per frame

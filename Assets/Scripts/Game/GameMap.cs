@@ -63,10 +63,8 @@ public class GameMap : MonoBehaviour {
 		yPos += (float)this.roomHeight / 2.0f;
 
 		Vector3 pos = new Vector3(xPos, yPos, 0.0f);
-		Room room = this.listRooms[id];
-		room.setId(id);
-
-		this.listRooms[id] = Object.Instantiate(room, pos, Quaternion.identity, this.grid.transform);
+		
+		this.listRooms[id] = Object.Instantiate(this.listRooms[id], pos, Quaternion.identity, this.grid.transform);
 		this.listRooms[id].setId(id);
 	}
 
