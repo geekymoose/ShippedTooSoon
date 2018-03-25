@@ -23,25 +23,19 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //the player have to be in the collider of the pickup object if he want to pick up the object
-        if (Input.GetButtonDown("A"))
+        if (Input.GetButtonDown("A") && canPickup)
         {
-            if (canPickup)
-            {
-                objectToPickUp.transform.parent = transform;
-                
-                objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = false;
-            }
+            objectToPickUp.transform.parent = transform;
+
+            objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
-        
 
         //when the player release the button drop the object
         if (Input.GetButtonUp("A"))
         {
+            canPickup = false;
             Drop();
         }
-
-        //Vector2 vectorToTarget = transform.position - new Vector3(movementVector.x,movementVector.y);
-        //float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x);
     }
 
     private void FixedUpdate()
@@ -50,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         movementVector.x = Input.GetAxis("LeftJoystickX") * speed;
         movementVector.y = Input.GetAxis("LeftJoystickY") * speed;
 
+        
         //move the player
         body2d.velocity = new Vector2(movementVector.x, movementVector.y);
 
@@ -70,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
         objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
         objectToPickUp.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
         objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = true;
-        canPickup = false;
     }
 
     private void OnDrawGizmos()
@@ -87,7 +81,11 @@ public class PlayerMovement : MonoBehaviour
         {
             canPickup = true;
         }
+    }
 
-        
+    //desactivate the pickup when the player exit the collider
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        canPickup = false;
     }
 }
