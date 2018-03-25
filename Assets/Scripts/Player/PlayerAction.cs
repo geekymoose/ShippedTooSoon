@@ -4,52 +4,59 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class PlayerAction : MonoBehaviour {
-    private bool canPickup = false;
-    private Transform objectToPickUp;
+    private Transform pickObj = null;
+	private Collider2D pickupCollider = null;
 
-	// Use this for initialization
-	void Start () {
-		
+	public Transform playerHand = null;
+
+
+	// -------------------------------------------------------------------------
+	// Unity Methods
+	// -------------------------------------------------------------------------
+	public void Start() {
+		this.pickupCollider = this.GetComponent<CircleCollider2D>();
+
+		Assert.IsNotNull(this.playerHand, "Player's hand must be dragged on player script");
+		Assert.IsNotNull(this.pickupCollider, "No pickup collider in player? :/");
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-        //the player have to be in the collider of the pickup object if he want to pick up the object
-        if (Input.GetButtonDown("Fire1") && canPickup)
-        {
-            Debug.Log("PlayerMovement::PICKUP");
-            objectToPickUp.transform.parent = transform;
-            objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+        if (Input.GetButtonDown("Fire1")) {
+			if(this.pickObj != null) {
+				Debug.Log("PlayerMovement::PICKUP");
+				this.pickObj.transform.parent = this.playerHand;
+				//this.pickObj.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+			}
         }
 
         //when the player release the button drop the object
-        else if (Input.GetButtonUp("Fire1"))
-        {
-            Debug.Log("PlayerMovement::DROP");
-            canPickup = false;
-            this.Drop();
+        else if (Input.GetButtonUp("Fire1")) {
+			if(this.pickObj != null) {
+				Debug.Log("PlayerMovement::DROP");
+				this.drop();
+			}
         }
 	}
-	
+
+
+	// -------------------------------------------------------------------------
+	// GamePlay Methods
+	// -------------------------------------------------------------------------
+
     //drop the object when the player release the button
-    public void Drop()
-    {
-        if(this.objectToPickUp != null) {
-            Debug.Log("PlayerMovement::Drop()");
-            objectToPickUp.parent = null;
-            //objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
-            objectToPickUp.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-            objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = true;
+    public void drop() {
+        if(this.pickObj != null) {
+            Debug.Log("PlayerMovement::drop()");
+            this.pickObj.parent = null;
+            //this.pickObj.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+            //this.pickObj.gameObject.GetComponent<Rigidbody2D>().simulated = true;
         }
     }
 
     //if the player collide on the object that he can pickup
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Pickup")
-        {
-            this.objectToPickUp = other.gameObject.transform;
-            canPickup = true;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.tag == "Pickup") {
+            this.pickObj = other.gameObject.transform;
         }
         else if(other.CompareTag("Goal")) {
             RoomGoal roger = other.gameObject.GetComponent<RoomGoal>();
@@ -59,8 +66,11 @@ public class PlayerAction : MonoBehaviour {
     }
 
     //deactivate the pickup when the player exit the collider
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        canPickup = false;
+    private void OnTriggerExit2D(Collider2D other) {
+		if(this.pickObj != null && this.pickObj.name == other.gameObject.name) {
+			this.pickObj = null;
+		}
     }
+
+
 }
