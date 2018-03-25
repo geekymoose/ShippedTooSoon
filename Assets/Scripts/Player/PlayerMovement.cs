@@ -16,35 +16,36 @@ public class PlayerMovement : MonoBehaviour
     {
         body2d = GetComponent<Rigidbody2D>();
 
-        objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
+        //objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
         //the player have to be in the collider of the pickup object if he want to pick up the object
-        if (Input.GetButtonDown("A") && canPickup)
+        if (Input.GetButtonDown("Fire1") && canPickup)
         {
+            Debug.Log("PICKUP: " + objectToPickUp);
             objectToPickUp.transform.parent = transform;
 
             objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
 
         //when the player release the button drop the object
-        if (Input.GetButtonUp("A"))
+        if (Input.GetButtonUp("Fire1"))
         {
+            Debug.Log("DROP: " + objectToPickUp);
             canPickup = false;
             Drop();
         }
     }
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         //movement with the axis of the xbox gamepad
-        movementVector.x = Input.GetAxis("LeftJoystickX") * speed;
-        movementVector.y = Input.GetAxis("LeftJoystickY") * speed;
+        movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
+        movementVector.y = Input.GetAxisRaw("Vertical") * speed;
 
-        
         //move the player
         body2d.velocity = new Vector2(movementVector.x, movementVector.y);
 
@@ -75,16 +76,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //if the player collide on the object that he can pickup
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Pickup")
         {
+            this.objectToPickUp = collision.gameObject.transform;
             canPickup = true;
         }
     }
 
     //deactivate the pickup when the player exit the collider
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         canPickup = false;
     }
