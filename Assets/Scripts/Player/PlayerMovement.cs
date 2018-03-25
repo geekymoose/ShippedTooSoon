@@ -40,11 +40,11 @@ public class PlayerMovement : MonoBehaviour
         movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
         movementVector.y = Input.GetAxisRaw("Vertical") * speed;
 
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")|| Input.GetAxisRaw("Horizontal") !=0|| Input.GetAxisRaw("Horizontal")!=0)
         {
             anim.SetBool("canMove", true);
             DefinePlayerDirection(movementVector);
-            Debug.Log("canMove");
+            
         }
         else
         {
