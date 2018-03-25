@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
 	private Room previousRoom = null;
 	private bool hasSwitchedRoom = false;
 
+	private float stopwatchTime = 0.0f;
+
 
 	// -------------------------------------------------------------------------
 	// Unity Methods
@@ -59,6 +61,8 @@ public class GameManager : MonoBehaviour {
 		this.currentRoom.onRoomEnter();
 		this.currentRoom.setActive(true);
 		this.previousRoom = this.currentRoom;
+
+		this.timeManager.startStopwatch();
 	}
 	
 	// Update is called once per frame
@@ -110,6 +114,7 @@ public class GameManager : MonoBehaviour {
 		int remaining = this.getNbRemainingGoals();
 		if(remaining == 0) {
 			// JUST WON
+			this.stopwatchTime = this.timeManager.getStopwatchTime();
 			this.timeManager.freezeGame();
 			Debug.Log("GG, you won!");
 		}
@@ -121,7 +126,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void updateTimeCounter() {
-
+		string timeStr = this.timeManager.getStopwatchTime().ToString("0.00");
+		this.timeCounterTextUI.text = "Time: " + timeStr;
 	}
 
 
