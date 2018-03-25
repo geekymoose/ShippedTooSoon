@@ -10,7 +10,7 @@ public class Room : MonoBehaviour {
 	private bool isActive = false; // Active when player is inside
 
 	private RoomDoor[] doors; // TheDoors
-	private RoomGoal[] goals;
+	public RoomGoal[] goals;
 
 	private float doorDelay = 1.0f;
 
@@ -24,6 +24,7 @@ public class Room : MonoBehaviour {
 		this.doors = this.GetComponentsInChildren<RoomDoor>();
 		this.goals = this.GetComponentsInChildren<RoomGoal>();
 		
+		Assert.IsNotNull(this.goals, "No goal set for this room");
 		Assert.IsTrue(this.doors.Length > 0, "There is a room without doors?");
 		Assert.IsTrue(this.goals.Length > 0, "There is a room without goal?");
 		
