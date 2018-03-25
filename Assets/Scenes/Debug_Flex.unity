@@ -179,11 +179,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4221526054484878, guid: a800714d6fd07604e9a00a89a3f27e7f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 10.13
       objectReference: {fileID: 0}
     - target: {fileID: 4221526054484878, guid: a800714d6fd07604e9a00a89a3f27e7f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 5.69
       objectReference: {fileID: 0}
     - target: {fileID: 4221526054484878, guid: a800714d6fd07604e9a00a89a3f27e7f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -216,7 +216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1889636580783140, guid: a800714d6fd07604e9a00a89a3f27e7f, type: 2}
       propertyPath: m_TagString
-      value: Pickup
+      value: Goal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a800714d6fd07604e9a00a89a3f27e7f, type: 2}

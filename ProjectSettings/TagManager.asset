@@ -11,6 +11,7 @@ TagManager:
   - PostPanel1
   - Walls
   - PanelHP
+  - Goal
   layers:
   - Default
   - TransparentFX

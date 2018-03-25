@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23309991543188518}
   - component: {fileID: 61238121006768972}
   m_Layer: 0
-  m_Name: SimpleGoal
+  m_Name: SimplePickupGoal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

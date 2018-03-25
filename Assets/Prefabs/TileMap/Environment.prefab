@@ -6781,7 +6781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
+  victoryCondition: {fileID: 11400000, guid: 7e947ed2050a6f444a025ffc062eb154, type: 2}
   doorDelay: 1
 --- !u!114 &114636131548888116
 MonoBehaviour:

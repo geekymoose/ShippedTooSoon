@@ -35,6 +35,10 @@ public class Room : MonoBehaviour {
 		if(this.isActive) {
 			if(this.victoryCondition.isValidated() && !this.isDone) {
 				this.onRoomSuccess(); // TODO To un-comment later
+				Debug.Log("VICTORY");
+			}
+			else {
+				Debug.Log("TRY AGAIN");
 			}
 		}
 		else {

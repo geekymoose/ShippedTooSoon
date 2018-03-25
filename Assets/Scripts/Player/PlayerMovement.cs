@@ -63,12 +63,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //if the player collide on the object that he can pickup
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Pickup")
+        if (other.gameObject.tag == "Pickup")
         {
-            this.objectToPickUp = collision.gameObject.transform;
+            this.objectToPickUp = other.gameObject.transform;
             canPickup = true;
+        }
+        else if(other.CompareTag("Goal")) {
+            GameObject.DestroyObject(other.gameObject);
         }
     }
 
