@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Assertions;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -71,7 +72,9 @@ public class PlayerMovement : MonoBehaviour
             canPickup = true;
         }
         else if(other.CompareTag("Goal")) {
-            GameObject.DestroyObject(other.gameObject);
+            RoomGoal roger = other.gameObject.GetComponent<RoomGoal>();
+            Assert.IsNotNull(roger, "Goal object doesn't have a RoomGoal script");
+            roger.activate();
         }
     }
 

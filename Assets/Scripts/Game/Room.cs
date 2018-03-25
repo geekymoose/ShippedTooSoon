@@ -88,7 +88,7 @@ public class Room : MonoBehaviour {
 
 	private bool isGoalDone() {
 		for(int k = 0; k < this.goals.Length; ++k) {
-			if(this.goals[k] != null) {
+			if(!this.goals[k].getIsDone()) {
 				return false;
 			}
 		}
