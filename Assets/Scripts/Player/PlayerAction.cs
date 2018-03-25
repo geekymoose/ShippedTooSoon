@@ -18,6 +18,8 @@ public class PlayerAction : MonoBehaviour {
 
 		Assert.IsNotNull(this.playerHand, "Player's hand must be dragged on player script");
 		Assert.IsNotNull(this.pickupCollider, "No pickup collider in player? :/");
+
+		this.pickupCollider.enabled = false; // Important. Used only for range value.
 	}
 
 	void Update () {
