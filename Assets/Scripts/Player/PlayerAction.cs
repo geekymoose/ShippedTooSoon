@@ -23,14 +23,14 @@ public class PlayerAction : MonoBehaviour {
 	}
 
 	void Update () {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
 			this.currentPickedObj = this.getFirstPickupInRange();
 			if(this.currentPickedObj != null) {
 				this.currentPickedObj.transform.parent = this.playerHand;
 			}
         }
         //when the player release the button drop the object
-        else if (Input.GetButtonUp("Fire1")) {
+        else if (Input.GetButtonUp("Fire1") || Input.GetButtonUp("Jump")) {
 			if(this.currentPickedObj != null) {
 				this.drop();
 			}

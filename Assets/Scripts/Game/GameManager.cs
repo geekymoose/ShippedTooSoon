@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour {
 
 	private void updateTimeCounter() {
 		string timeStr = this.timeManager.getStopwatchTime().ToString("0.00");
-		this.timeCounterTextUI.text = "Time: " + timeStr;
+		this.timeCounterTextUI.text = timeStr;
 	}
 
 
