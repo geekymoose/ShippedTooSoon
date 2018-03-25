@@ -10,14 +10,6 @@ public class Room : MonoBehaviour {
 
 
 	// -------------------------------------------------------------------------
-	// Unity methods
-	// -------------------------------------------------------------------------
-
-	public void Start() {
-	}
-
-
-	// -------------------------------------------------------------------------
 	// GamePlay methods
 	// -------------------------------------------------------------------------
 
@@ -25,14 +17,14 @@ public class Room : MonoBehaviour {
 	 * Executed whenever player enter this room 
 	 */
 	public void onRoomEnter() {
-		Debug.Log("Room::onRoomEnter() - ID: " + this.id);
+		//Debug.Log("Room::onRoomEnter() - ID: " + this.id);
 	}
 
 	/**
 	 * Executed whenever player exit this room 
 	 */
 	public void onRoomExit() {
-		Debug.Log("Room::onRoomExit() - ID: " + this.id);
+		//Debug.Log("Room::onRoomExit() - ID: " + this.id);
 	}
 
 

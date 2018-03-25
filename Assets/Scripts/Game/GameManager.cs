@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour {
 				this.hasSwitchedRoom = true;
 			}
 		}
-
 	}
 
 	private void updateCameraPosition() {
