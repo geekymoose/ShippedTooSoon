@@ -66,7 +66,8 @@ public class GameMap : MonoBehaviour {
 		Room room = this.listRooms[id];
 		room.setId(id);
 
-		Object.Instantiate(room, pos, Quaternion.identity, this.grid.transform);
+		this.listRooms[id] = Object.Instantiate(room, pos, Quaternion.identity, this.grid.transform);
+		this.listRooms[id].setId(id);
 	}
 
 	/**
