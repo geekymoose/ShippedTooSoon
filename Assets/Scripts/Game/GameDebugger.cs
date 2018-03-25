@@ -23,10 +23,16 @@ public class GameDebugger : MonoBehaviour {
 	}
 
 	private void handleInputKey(){
+		// Game state (Win etc..)
 		if(Input.GetKeyDown(KeyCode.F8)) {
 			Debug.LogWarning("[DEBUG] : Force win game");
 			this.winRightNow();
 		}
+		else if(Input.GetKeyDown(KeyCode.F7)) {
+			this.gameManager.respawnPlayer();
+		}
+
+		// Game speed / Time
 		else if(Input.GetKeyDown(KeyCode.F9)) {
 			Debug.LogWarning("[DEBUG] : SlowDown game. Current scale: " + Time.timeScale);
 			this.gameManager.getTimeManager().slowDownGame(0.1f);
