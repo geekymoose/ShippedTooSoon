@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour {
 		this.inputKeyHandler();
 		this.updateCurrentRoom();
 		this.updateCameraPosition();
+		this.updateVictory();
 
 		if(this.hasSwitchedRoom) {
 			this.previousRoom.onRoomExit();
@@ -88,6 +89,20 @@ public class GameManager : MonoBehaviour {
 		if(this.currentRoom != null) {
 			Vector3 center = this.gameMap.getCellCenterWorldFromId(this.currentRoom.getId());
 			this.roomCamera.targetPosition = center;
+		}
+	}
+
+	private void updateVictory() {
+		int remaining = this.gameMap.listRooms.Length;
+		foreach(Room roro in this.gameMap.listRooms){
+			if(roro.getIsDone() == true) {
+				remaining--;
+			}
+		}
+		if(remaining == 0) {
+			// JUST WON
+			this.timeManager.freezeGame();
+			Debug.Log("GG, you won!");
 		}
 	}
 

@@ -27,7 +27,7 @@ public class Room : MonoBehaviour {
 		Debug.Log(this.goals.Length);
 		
 		Assert.IsTrue(this.doors.Length > 0, "There is a room without doors?");
-		//Assert.IsTrue(this.goals.Length > 0, "There is a room without goal?");
+		Assert.IsTrue(this.goals.Length > 0, "There is a room without goal?");
 		
 		this.openAllDoors();
 	}
@@ -52,7 +52,7 @@ public class Room : MonoBehaviour {
 	 * Executed whenever player enter this room 
 	 */
 	public void onRoomEnter() {
-		Debug.Log("Room::onRoomEnter() - ID: " + this.id);
+		//Debug.Log("Room::onRoomEnter() - ID: " + this.id);
 		this.isActive = true;
 		if(!this.isDone){
 			Invoke("closeAllDoors", this.doorDelay);
@@ -63,32 +63,32 @@ public class Room : MonoBehaviour {
 	 * Executed whenever player exit this room 
 	 */
 	public void onRoomExit() {
-		Debug.Log("Room::onRoomExit() - ID: " + this.id);
+		//Debug.Log("Room::onRoomExit() - ID: " + this.id);
 		this.isActive = false;
 		this.openAllDoors();
 		// TODO: Sound + destroye things
 	}
 
 	public void onRoomSuccess() {
-		Debug.Log("Room::onRoomSuccess() - ID: " + this.id);
+		//Debug.Log("Room::onRoomSuccess() - ID: " + this.id);
 		this.isDone = true;
 		Invoke("openAllDoors", this.doorDelay);
 		// TODO: Open doors + sounds + success crap things etc etc
 	}
 
-	public void closeAllDoors() {
+	private void closeAllDoors() {
 		foreach(RoomDoor dc in this.doors) {
 			dc.closeDoor();
 		}
 	}
 
-	public void openAllDoors() {
+	private void openAllDoors() {
 		foreach(RoomDoor dc in this.doors) {
 			dc.openDoor();
 		}
 	}
 
-	public bool isGoalDone() {
+	private bool isGoalDone() {
 		for(int k = 0; k < this.goals.Length; ++k) {
 			if(this.goals[k] != null) {
 				return false;
@@ -116,5 +116,9 @@ public class Room : MonoBehaviour {
 
 	public void setActive(bool value) {
 		this.isActive = value;
+	}
+
+	public bool getIsDone() {
+		return this.isDone;
 	}
 }
