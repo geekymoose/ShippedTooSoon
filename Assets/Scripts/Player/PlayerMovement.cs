@@ -49,13 +49,13 @@ public class PlayerMovement : MonoBehaviour
         body2d.velocity = new Vector2(movementVector.x, movementVector.y);
 
         //rotate the player forward the direction
-        float degrees = Mathf.Atan2(movementVector.y, movementVector.x) * Mathf.Rad2Deg;
+        //float degrees = Mathf.Atan2(movementVector.y, movementVector.x) * Mathf.Rad2Deg;
 
         //to make only rotate in 90 degrees
-        if (degrees % 90 == 0)
-        {
-            body2d.rotation = degrees;
-        }
+        //if (degrees % 90 == 0)
+        //{
+        //    body2d.rotation = degrees;
+        //}
     }
 
     //drop the object when the player release the button
@@ -80,6 +80,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Pickup")
         {
             canPickup = true;
+        }
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            
         }
     }
 
