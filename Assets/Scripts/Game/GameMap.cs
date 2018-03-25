@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Tilemaps;
 
 
 public class GameMap : MonoBehaviour {
@@ -10,7 +11,7 @@ public class GameMap : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	[Tooltip("Number of rooms per row in the GameMap")]
-	public int width = 2;
+	public int width = 0;
 
 	[Tooltip("Number of tiles per room (RoomRow)")]
 	public int roomWidth = 16;
@@ -38,7 +39,6 @@ public class GameMap : MonoBehaviour {
 		Assert.IsNotNull(this.grid, "Missing GameMap. Script may be applied on the wrong GameObject.");
 		Assert.IsTrue(width > 0, "Invalid GameMap size (width)");
 
-		Vector3 gridPos = new Vector3(0.0f, 0.0f, 0.0f);
 		for(int k = 0; k < this.listRooms.Length; k++){
 			this.instanciateRoomById(k);
 		}
@@ -46,42 +46,93 @@ public class GameMap : MonoBehaviour {
 
 
 	// -------------------------------------------------------------------------
-	// Methods
+	// Private methods / Assets
 	// -------------------------------------------------------------------------
 
 	/**
-	 * Get Room at specific position.
+	 * Instanciate the specific room using its ID.
 	 */
-	public Room getRoomAt(int x, int y) {
-		int id = this.getRoomId(x, y);
-		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
-		if(id < 0 || id >= this.listRooms.Length) {
+	private void instanciateRoomById(int id) {
+		Assert.IsTrue(id >= 0 && id < this.listRooms.Length, "Unexpected Room ID value");
+
+		float xPos = (id % this.width) * 16;
+		float yPos = (id / this.width) * 9;
+
+		// This is to make bottom left corner at 0:0
+		xPos += (float)this.roomWidth / 2.0f; 
+		yPos += (float)this.roomHeight / 2.0f;
+
+		Vector3 pos = new Vector3(xPos, yPos, 0.0f);
+		Room room = this.listRooms[id];
+		room.setId(id);
+
+		Object.Instantiate(room, pos, Quaternion.identity, this.grid.transform);
+	}
+
+	/**
+	 * Get room ID by its position in grid. (Grid Coordinates)
+	 * Start at 0:0
+	 */
+	private int convertCellPosToID(int x, int y) {
+		int id = x + (y * this.width);
+		return id;
+	}
+
+	/**
+	 * Convert Cell ID to Grid coordinate.
+	 */
+	private Vector2Int convertCellIDtoPos(int id) {
+		int x = id % this.width;
+		int y = id / this.width;
+		return new Vector2Int(x, y);
+	}
+
+	private bool isValidCellPos(int x, int y) {
+		int h = this.listRooms.Length / this.width;
+		return (x >= 0 && x < this.width && y >= 0 && y < h);
+	}
+
+	private bool isValidCellID(int id) {
+		return (id >= 0 && id < this.listRooms.Length);
+	}
+
+
+	// -------------------------------------------------------------------------
+	// Getters / Setters
+	// -------------------------------------------------------------------------
+
+	/**
+	 * Get the room under world position (World Coordinates)
+	 * Returns null if no room under this positin.
+	 */
+	public Room getRoomUnderWorldPos(Vector3 worldPos) {
+		Grid grid = this.GetComponent<Grid>();
+		Assert.IsNotNull(grid);
+
+		Vector3Int gridPos = grid.WorldToCell(worldPos);
+		int x = gridPos.x / this.roomWidth;
+		int y = gridPos.y / this.roomHeight;
+		int id = this.convertCellPosToID(x, y);
+
+		if(!this.isValidCellID(id)) {
 			return null;
 		}
 		return this.listRooms[id];
 	}
 
 	/**
-	 * Get room ID by its position.
+	 * Get the center position in world space of the specific room.
 	 */
-	public int getRoomId(int x, int y) {
-		int id = x + (x * y);
-		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
-		return id;
-	}
+	public Vector3 getCellCenterWorldFromId(int id) {
+		if(!this.isValidCellID(id)) {
+			return new Vector3(0.0f, 0.0f, 0.0f);
+		}
+		Vector2Int cellPos = this.convertCellIDtoPos(id);
 
-	/**
-	 * Instanciate the specific room
-	 */
-	public void instanciateRoomById(int id) {
-		Assert.IsTrue(id >= 0 && id < this.listRooms.Length);
+		float x = cellPos.x * this.roomWidth + this.roomWidth / 2;
+		float y = cellPos.y * this.roomHeight + this.roomHeight / 2;
+		Vector3 center = new Vector3(x, y, 0.0f);
 
-		int xPos = (id % this.width) * 16;
-		int yPos = (id / this.width) * 9;
-
-		Vector3 pos = new Vector3(xPos, yPos, 0.0f);
-		Room room = this.listRooms[id];
-
-		Object.Instantiate(room, pos, Quaternion.identity, this.grid.transform);
+		return center;
 	}
 }

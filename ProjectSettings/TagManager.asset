@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Pickup
   - ItemPickup
+  - Destructable
+  - Weapon
+  - PostPanel1
   layers:
   - Default
   - TransparentFX
