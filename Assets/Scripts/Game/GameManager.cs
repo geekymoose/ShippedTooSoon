@@ -140,10 +140,12 @@ public class GameManager : MonoBehaviour {
 		if(remaining == 0) {
 			// JUST WON
 			this.stopwatchTime = this.timeManager.getStopwatchTime();
-			this.timeManager.freezeGame();
-			Debug.Log("GG, you won!");
 			this.victoryScoreTextUI.text = this.timeManager.getStopwatchTime().ToString("0.0");
-			this.victoryPanelUI.SetActive(false);
+			this.victoryPanelUI.SetActive(true);
+			this.goalCounterTextUI.enabled = false;
+	 		this.timeCounterTextUI.enabled = false;
+			Debug.Log("GG, you won!");
+			this.timeManager.freezeGame();
 		}
 	}
 
