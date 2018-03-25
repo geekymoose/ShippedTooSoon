@@ -12,6 +12,7 @@ TagManager:
   - Walls
   - PanelHP
   - Goal
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour {
 	private Text goalCounterTextUI = null;
 	private Text timeCounterTextUI = null;
 
+	private GameObject victoryPanelUI = null;
+	private Text victoryScoreTextUI = null;
+
+
+
 	private Transform spawnPoint;
 
 	// Room management
@@ -29,12 +34,15 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		Debug.Log("GameManager::Start()");
 
-		GameObject gameMapObject 	= GameObject.Find("GameMap");
-		GameObject cameraObject 	= GameObject.Find("Main Camera");
-		GameObject playerObject 	= GameObject.FindGameObjectWithTag("Player");
-		GameObject spawnObject 		= GameObject.Find("SpawnPoint");
-		GameObject goalCounterObject = GameObject.Find("Goal Counter TextUI");
-		GameObject timeCounterObject = GameObject.Find("Time Counter TextUI");
+		GameObject gameMapObject 		= GameObject.Find("GameMap");
+		GameObject cameraObject 		= GameObject.Find("Main Camera");
+		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
+		GameObject spawnObject 			= GameObject.Find("SpawnPoint");
+		GameObject goalCounterObject 	= GameObject.Find("Goal Counter TextUI");
+		GameObject timeCounterObject 	= GameObject.Find("Time Counter TextUI");
+		GameObject scoreUIObject 		= GameObject.Find("ScoreTextUI");
+		this.victoryPanelUI 			= GameObject.Find("VictoryPanelUI");
+
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
@@ -42,6 +50,8 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(spawnObject, "Unable to recover the SpawnObject GameObject");
 		Assert.IsNotNull(goalCounterObject, "Unable to find GoalCounter Object");
 		Assert.IsNotNull(timeCounterObject, "Unable to find TimeCounter Object");
+		Assert.IsNotNull(this.victoryPanelUI, "Unable to find Victory UI");
+		Assert.IsNotNull(scoreUIObject);
 
 		this.gameMap = gameMapObject.GetComponent<GameMap>();
 		this.player = playerObject.GetComponent<PlayerMovement>();
@@ -49,6 +59,7 @@ public class GameManager : MonoBehaviour {
 		this.spawnPoint = spawnObject.transform;
 		this.goalCounterTextUI = goalCounterObject.GetComponent<Text>();
 		this.timeCounterTextUI = timeCounterObject.GetComponent<Text>();
+		this.victoryScoreTextUI = scoreUIObject.GetComponent<Text>();
 
 		Assert.IsNotNull(this.gameMap, "Unable to recover GameMap script from GameMap Object");
 		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
@@ -63,6 +74,8 @@ public class GameManager : MonoBehaviour {
 		this.previousRoom = this.currentRoom;
 
 		this.timeManager.startStopwatch();
+
+		this.victoryPanelUI.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -127,8 +140,12 @@ public class GameManager : MonoBehaviour {
 		if(remaining == 0) {
 			// JUST WON
 			this.stopwatchTime = this.timeManager.getStopwatchTime();
-			this.timeManager.freezeGame();
+			this.victoryScoreTextUI.text = this.timeManager.getStopwatchTime().ToString("0.0");
+			this.victoryPanelUI.SetActive(true);
+			this.goalCounterTextUI.enabled = false;
+	 		this.timeCounterTextUI.enabled = false;
 			Debug.Log("GG, you won!");
+			this.timeManager.freezeGame();
 		}
 	}
 
@@ -139,7 +156,7 @@ public class GameManager : MonoBehaviour {
 
 	private void updateTimeCounter() {
 		string timeStr = this.timeManager.getStopwatchTime().ToString("0.00");
-		this.timeCounterTextUI.text = "Time: " + timeStr;
+		this.timeCounterTextUI.text = timeStr;
 	}
 
 

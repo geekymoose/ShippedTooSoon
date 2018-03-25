@@ -20,11 +20,6 @@ public class PlayerHealth : MonoBehaviour {
         panelHp.SetHealthBar(healthStats.GetValuePercent());
 	}
 
-    private void Update()
-    {
-        
-    }
-
     //player take damage
     public void TakeDamage(float dmgValue)
     {
