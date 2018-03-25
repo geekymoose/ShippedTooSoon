@@ -1,0 +1,669 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c660d9d8cfdfc44eab7ad8d6c35f989, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - Guid: '{15BD33C6-931B-4529-BC30-68FCF3BAA6C8}'
+    m_lastTimePart2: -1999269391
+    m_lastTimePsrt1: -918858414
+    ParentPhysicalPath: 
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    List: []
+  autoPopulateEnabled: 1
+  AuxBusWwu:
+  - Guid: '{E8C84236-4D13-497A-AE2E-D528D16B2816}'
+    m_lastTimePart2: -1999269360
+    m_lastTimePsrt1: 381731263
+    ParentPhysicalPath: 
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    List: []
+  BankWwu:
+  - Guid: '{81727055-AA37-480B-96B5-88385438393C}'
+    m_lastTimePart2: -1999269264
+    m_lastTimePsrt1: 2037353737
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
+    List:
+    - Guid: 9e9d80d14372c346b5fb494459a8f86c
+      ID: 2123122572
+      Name: WIP_TITLE
+      Path: Default Work Unit\WIP_TITLE
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: WIP_TITLE
+        ObjectType: 7
+  basePath: Audio\GeneratedSoundBanks
+  callbackManagerBufferSize: 4
+  CurrentPluginConfig: 
+  defaultPoolSize: 4096
+  EventWwu:
+  - Guid: '{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}'
+    m_lastTimePart2: -1999269360
+    m_lastTimePsrt1: 1355366952
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Default Work Unit.wwu
+    List:
+    - Guid: be072b28bc77fe4b9f66891fe2227d00
+      ID: -450520497
+      Name: bug_buzz_A
+      Path: Default Work Unit\BUG\bug_buzz_A
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: bug_buzz_A
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7753cf97ca8cc04fb7ccf9943cd910f5
+      ID: -450520500
+      Name: bug_buzz_B
+      Path: Default Work Unit\BUG\bug_buzz_B
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: bug_buzz_B
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 74cf9d236ec600418cafdf6fc619c24a
+      ID: 972419010
+      Name: bug_noise
+      Path: Default Work Unit\BUG\bug_noise
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: bug_noise
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: e5e5e55b2a6f384797af16480c9ca8c5
+      ID: 529726532
+      Name: end
+      Path: Default Work Unit\MUS\end
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: end
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 221885223661714bb47cb14ea892cd32
+      ID: -1425551693
+      Name: fx_att
+      Path: Default Work Unit\SFX\fx_att
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_att
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: aa89bd3df6cf9447be69a6188c3672fb
+      ID: -422077986
+      Name: fx_button
+      Path: Default Work Unit\SFX\fx_button
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_button
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 9362c58f289d3645aa0390a7a45931f9
+      ID: -1969844236
+      Name: fx_destroy
+      Path: Default Work Unit\SFX\fx_destroy
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_destroy
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 0599a641f17a3e44b3ed7feef7b2833a
+      ID: 1252715098
+      Name: fx_door
+      Path: Default Work Unit\SFX\fx_door
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_door
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ed2a064365312f41ab7813939bacbf30
+      ID: -1133914096
+      Name: fx_grab
+      Path: Default Work Unit\SFX\fx_grab
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_grab
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 71ff419e4689dc40804d94d765bf2f99
+      ID: -1709638319
+      Name: fx_hit
+      Path: Default Work Unit\SFX\fx_hit
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_hit
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4f4177bcdc9c8046b4463994fd463b75
+      ID: -946867115
+      Name: fx_next
+      Path: Default Work Unit\SFX\fx_next
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_next
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a36a1c6fbc29a647bba387a0e914d7cc
+      ID: 35998224
+      Name: mus_bug_light_A
+      Path: Default Work Unit\BUG\mus_bug_light_A
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_light_A
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 8e2033e2b686d34b88f983f3376a09ef
+      ID: 35998227
+      Name: mus_bug_light_B
+      Path: Default Work Unit\BUG\mus_bug_light_B
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_light_B
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7b02c24a07f5b64598095486e6653205
+      ID: 35998226
+      Name: mus_bug_light_C
+      Path: Default Work Unit\BUG\mus_bug_light_C
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_light_C
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: dd3b4819d001f84d9613bf5eaa8f1940
+      ID: 418530418
+      Name: mus_bug_loop_A
+      Path: Default Work Unit\BUG\mus_bug_loop_A
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_loop_A
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 157922302225c74c9578d4ee628d95a5
+      ID: 418530417
+      Name: mus_bug_loop_B
+      Path: Default Work Unit\BUG\mus_bug_loop_B
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_loop_B
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: f47b3494f8482f4d8451946882b7d403
+      ID: 418530416
+      Name: mus_bug_loop_C
+      Path: Default Work Unit\BUG\mus_bug_loop_C
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_loop_C
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 002ab81eb7c2c047bca8ee2b43cb31f2
+      ID: 418530423
+      Name: mus_bug_loop_D
+      Path: Default Work Unit\BUG\mus_bug_loop_D
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_loop_D
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ce6e514e32f30c44a531fb746ef3543a
+      ID: 418530422
+      Name: mus_bug_loop_E
+      Path: Default Work Unit\BUG\mus_bug_loop_E
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_loop_E
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 0d77f70a8265394ba9d7dfab2ea26ab7
+      ID: 418530421
+      Name: mus_bug_loop_F
+      Path: Default Work Unit\BUG\mus_bug_loop_F
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_loop_F
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: eb954126b08f5b428a093b1ef8bbb107
+      ID: 418530420
+      Name: mus_bug_loop_G
+      Path: Default Work Unit\BUG\mus_bug_loop_G
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_loop_G
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a8575e512afccf4eb6f2dbb1fe467c19
+      ID: -154921904
+      Name: mus_bug_smp_A
+      Path: Default Work Unit\BUG\mus_bug_smp_A
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_smp_A
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 4331ab4b879eb24c9f1f700348463cce
+      ID: -154921901
+      Name: mus_bug_smp_B
+      Path: Default Work Unit\BUG\mus_bug_smp_B
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_smp_B
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 579762164bb3834fba144b650700f3a6
+      ID: -154921902
+      Name: mus_bug_smp_C
+      Path: Default Work Unit\BUG\mus_bug_smp_C
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_smp_C
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: b91e7b58ac45fe43898dda5a8400b100
+      ID: -154921899
+      Name: mus_bug_smp_D
+      Path: Default Work Unit\BUG\mus_bug_smp_D
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: mus_bug_smp_D
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 08784020cfae094b988a7ca47e389c5c
+      ID: 1973954843
+      Name: mus_start
+      Path: Default Work Unit\MUS\mus_start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: mus_start
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: cc9af6c2e5ee284aa8747e6eeb011954
+      ID: 410419961
+      Name: mus_stop
+      Path: Default Work Unit\MUS\mus_stop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: mus_stop
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 650d7e8a0a9cb64aae815d54f8c6cd15
+      ID: -895087682
+      Name: room_01
+      Path: Default Work Unit\MUS\room_01
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_01
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ef7d78d002f9c5448527b6ffdea71d76
+      ID: -895087683
+      Name: room_02
+      Path: Default Work Unit\MUS\room_02
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_02
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 58274ec72c0f7948bf7222bfa09a12b6
+      ID: -895087684
+      Name: room_03
+      Path: Default Work Unit\MUS\room_03
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_03
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a53544114ea37549b1f4bff803883769
+      ID: -895087685
+      Name: room_04
+      Path: Default Work Unit\MUS\room_04
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_04
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 63ef5d35ba694048b82d82eb65da1e69
+      ID: -895087686
+      Name: room_05
+      Path: Default Work Unit\MUS\room_05
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_05
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 9bf1878c1ee5a8459e5c61f1dd1d19e5
+      ID: -895087687
+      Name: room_06
+      Path: Default Work Unit\MUS\room_06
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_06
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: e286d3100176c44da27300262aec0554
+      ID: -895087688
+      Name: room_07
+      Path: Default Work Unit\MUS\room_07
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_07
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7797d914a833674da9051d1ce2207bf4
+      ID: -895087689
+      Name: room_08
+      Path: Default Work Unit\MUS\room_08
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_08
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: e126e4d54d9b3b4cab85428878ef29d0
+      ID: -895087690
+      Name: room_09
+      Path: Default Work Unit\MUS\room_09
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_09
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  ExpandedItems:
+  - /WIP TITLE
+  - /WIP TITLE/Events
+  - /WIP TITLE/Events/Default Work Unit
+  - /WIP TITLE/Events/Default Work Unit/MUS
+  language: English(US)
+  lowerPoolSize: 2048
+  m_lastPopulateTimePart2: 0
+  m_lastPopulateTimePsrt1: 0
+  memoryCutoffThreshold: 0.95
+  preparePoolSize: 0
+  RtpcWwu:
+  - Guid: '{D6649D38-F7D8-4D0A-ABD1-C3BFD6EAD326}'
+    m_lastTimePart2: -1999269370
+    m_lastTimePsrt1: -1118344221
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
+    List:
+    - Guid: fcc40c8fd1e9294ea9d963fa4127bcb2
+      ID: 90678916
+      Name: SC_BUG
+      Path: Default Work Unit\SC_BUG
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SC_BUG
+        ObjectType: 13
+  StateWwu:
+  - Guid: '{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}'
+    m_lastTimePart2: -1999269362
+    m_lastTimePsrt1: -1612301151
+    ParentPhysicalPath: 
+    PhysicalPath: States\Default Work Unit.wwu
+    List:
+    - Guid: f1d53e8b94d21f439b67ff845a56443f
+      ID: 712897226
+      Name: MUS
+      Path: Default Work Unit\MUS
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 9
+      ValueGuids:
+      - bytes: 9e7812d8b9c2fe42af9912169d3bb9d6
+      - bytes: 4c51119f888b6342ab3785bd5b061964
+      - bytes: ede555cb17a5094eb11ba918dccf77b0
+      - bytes: 1810df993a1f6e4ea29ad17d22045a6f
+      - bytes: a736d687e8535f4c9ce5d81a402bad7d
+      - bytes: b76468ebef0f184390830e8a7306762e
+      - bytes: 92cc5897ea19914eb5ae084b875c534c
+      - bytes: 85dff2656caa9148b215d5610be4ffc7
+      - bytes: 08f976a04b2f84469f00ea5ca3ac16e7
+      - bytes: 6e4a4f133ca67648bdeb46fa87180183
+      - bytes: 1304b3e385d5b9498fdaafd517215034
+      - bytes: 638b61a72ac56a48a99995ac587b8238
+      ValueIcons:
+      - ElementName: END
+        ObjectType: 8
+      - ElementName: INTRO
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: ROOM_01
+        ObjectType: 8
+      - ElementName: ROOM_02
+        ObjectType: 8
+      - ElementName: ROOM_03
+        ObjectType: 8
+      - ElementName: ROOM_04
+        ObjectType: 8
+      - ElementName: ROOM_05
+        ObjectType: 8
+      - ElementName: ROOM_06
+        ObjectType: 8
+      - ElementName: ROOM_07
+        ObjectType: 8
+      - ElementName: ROOM_08
+        ObjectType: 8
+      - ElementName: ROOM_09
+        ObjectType: 8
+      valueIDs: 44fc921f29c71543db3ba32cbe0ba6cabd0ba6cabc0ba6cabb0ba6caba0ba6cab90ba6cab80ba6cab70ba6cab60ba6ca
+      values:
+      - END
+      - INTRO
+      - None
+      - ROOM_01
+      - ROOM_02
+      - ROOM_03
+      - ROOM_04
+      - ROOM_05
+      - ROOM_06
+      - ROOM_07
+      - ROOM_08
+      - ROOM_09
+  streamingPoolSize: 1024
+  SwitchWwu:
+  - Guid: '{2374FF6A-E75D-41B9-9FA5-021EEDE0C87D}'
+    m_lastTimePart2: -1999269391
+    m_lastTimePsrt1: -918738408
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Default Work Unit.wwu
+    List: []
+  TriggerWwu:
+  - Guid: '{F143701B-B947-4EC5-A331-F845C2C8268D}'
+    m_lastTimePart2: -1999269391
+    m_lastTimePsrt1: -918808412
+    ParentPhysicalPath: 
+    PhysicalPath: Triggers\Default Work Unit.wwu
+    List: []
