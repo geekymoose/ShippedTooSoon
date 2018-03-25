@@ -25,6 +25,10 @@ public class Room : MonoBehaviour {
 		this.doors = this.GetComponentsInChildren<DoorController>();
 		Debug.Log(this.doors);
 		Assert.IsNotNull(this.victoryCondition, "VictoryCondition is not set");
+		
+		foreach(DoorController dc in this.doors) {
+			dc.openDoor();
+		}
 	}
 
 	public void Update() {
@@ -61,7 +65,7 @@ public class Room : MonoBehaviour {
 		this.isActive = false;
 		// TODO: Sound + destroye things
 		foreach(DoorController dc in this.doors) {
-			dc.closeDoor();
+			dc.openDoor();
 		}
 	}
 

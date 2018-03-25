@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 	private CameraController roomCamera = null;
 	private GameTimeManager timeManager = new GameTimeManager();
 
+	private Transform spawnPoint;
+
 	// Room management
 	private Room currentRoom = null;
 	private Room previousRoom = null;
@@ -24,14 +26,17 @@ public class GameManager : MonoBehaviour {
 		GameObject gameMapObject 	= GameObject.Find("GameMap");
 		GameObject cameraObject 	= GameObject.Find("Main Camera");
 		GameObject playerObject 	= GameObject.FindGameObjectWithTag("Player");
+		GameObject spawnObject 		= GameObject.Find("SpawnPoint");
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
 		Assert.IsNotNull(playerObject, "Unable to recover the Player GameObject");
+		Assert.IsNotNull(spawnObject, "Unable to recover the SpawnObject GameObject");
 
 		this.gameMap = gameMapObject.GetComponent<GameMap>();
 		this.player = playerObject.GetComponent<PlayerMovement>();
 		this.roomCamera = cameraObject.GetComponent<CameraController>();
+		this.spawnPoint = spawnObject.transform;
 
 		Assert.IsNotNull(this.gameMap, "Unable to recover GameMap script from GameMap Object");
 		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
@@ -45,6 +50,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		this.inputKeyHandler();
 		this.updateCurrentRoom();
 		this.updateCameraPosition();
 
@@ -52,6 +58,12 @@ public class GameManager : MonoBehaviour {
 			this.previousRoom.onRoomExit();
 			this.currentRoom.onRoomEnter();
 			this.previousRoom = this.currentRoom;
+		}
+	}
+
+	private void inputKeyHandler() {
+		if(Input.GetButtonDown("Jump")) {
+			this.player.transform.position = this.spawnPoint.position;
 		}
 	}
 
