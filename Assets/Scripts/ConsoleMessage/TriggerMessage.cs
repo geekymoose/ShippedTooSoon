@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TriggerMessage : MonoBehaviour {
 
-    private GameObject post_itPanel;
+    public GameObject post_itPanel;
     
+
     private void Start()
     {
-        post_itPanel = GameObject.FindGameObjectWithTag("PostPanel1");
+        //post_itPanel = GameObject.Find("PanelMessageRoom1");
     }
 
     //activate error panel post-it
