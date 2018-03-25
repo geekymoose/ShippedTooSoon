@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         //the player have to be in the collider of the pickup object if he want to pick up the object
         if (Input.GetButtonDown("Fire1") && canPickup)
         {
+            Debug.Log("PlayerMovement::PICKUP");
             objectToPickUp.transform.parent = transform;
             objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
@@ -33,8 +34,9 @@ public class PlayerMovement : MonoBehaviour
         //when the player release the button drop the object
         else if (Input.GetButtonUp("Fire1"))
         {
+            Debug.Log("PlayerMovement::DROP");
             canPickup = false;
-            Drop();
+            this.Drop();
         }
         //movement with the axis of the xbox gamepad
         movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
@@ -50,35 +52,10 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("canMove", false);
         }
-
-        /*
-        Debug.Log(anim.GetFloat("MoveX"));
-
-        if (anim.GetFloat("MoveX") < 0.0f)
-        {
-            anim.SetTrigger("moveLeft");
-        }
-
-        if (anim.GetFloat("MoveX") > 0.0f)
-        {
-            anim.SetTrigger("moveRight");
-        }
-
-        if (anim.GetFloat("MoveY") < 0.0f)
-        {
-            anim.SetTrigger("moveDown");
-        }
-
-        if (anim.GetFloat("MoveY") > 0.0f)
-        {
-            anim.SetTrigger("moveUp­");
-        }*/
     }
 
     public void FixedUpdate()
     {
-       
-        //move the player
         body2d.velocity = new Vector2(movementVector.x, movementVector.y);
     }
 
@@ -86,8 +63,9 @@ public class PlayerMovement : MonoBehaviour
     public void Drop()
     {
         if(this.objectToPickUp != null) {
+            Debug.Log("PlayerMovement::Drop()");
             objectToPickUp.parent = null;
-            objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
+            //objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
             objectToPickUp.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
             objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = true;
         }
