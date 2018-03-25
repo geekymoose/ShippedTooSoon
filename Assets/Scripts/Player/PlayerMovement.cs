@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //desactivate the pickup when the player exit the collider
+    //deactivate the pickup when the player exit the collider
     private void OnCollisionExit2D(Collision2D collision)
     {
         canPickup = false;
