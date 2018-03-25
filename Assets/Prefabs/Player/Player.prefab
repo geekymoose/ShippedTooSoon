@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 70656929376043230}
   - component: {fileID: 212918403280586696}
   - component: {fileID: 114487480196180328}
+  - component: {fileID: 95118003196103952}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -40,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4279931895112998}
   - component: {fileID: 212775950534515900}
-  - component: {fileID: 95311841391364430}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -139,13 +139,13 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.7}
   m_Size: {x: 0.75, y: 0.5}
   m_Direction: 1
---- !u!95 &95311841391364430
+--- !u!95 &95118003196103952
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1389834562909850}
+  m_GameObject: {fileID: 1247046092030158}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: af16eced95665cb40814851a632d459f, type: 2}
@@ -170,7 +170,7 @@ MonoBehaviour:
   speed: 7
 --- !u!114 &114487480196180328
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247046092030158}
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

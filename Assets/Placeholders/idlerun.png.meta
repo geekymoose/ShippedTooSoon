@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -74,7 +74,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -91,40 +91,40 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,10 +137,10 @@ TextureImporter:
       name: idlerun_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 10
-        width: 162
-        height: 171
+        x: 0
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,10 +151,10 @@ TextureImporter:
       name: idlerun_1
       rect:
         serializedVersion: 2
-        x: 217
-        y: 10
-        width: 169
-        height: 174
+        x: 210
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +165,10 @@ TextureImporter:
       name: idlerun_2
       rect:
         serializedVersion: 2
-        x: 431
-        y: 10
-        width: 163
-        height: 163
+        x: 420
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: idlerun_3
       rect:
         serializedVersion: 2
-        x: 642
-        y: 10
-        width: 162
-        height: 178
+        x: 630
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: idlerun_4
       rect:
         serializedVersion: 2
-        x: 849
-        y: 32
-        width: 170
-        height: 160
+        x: 840
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,10 +207,10 @@ TextureImporter:
       name: idlerun_5
       rect:
         serializedVersion: 2
-        x: 1065
-        y: 10
-        width: 160
-        height: 167
+        x: 1050
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: idlerun_6
       rect:
         serializedVersion: 2
-        x: 1273
-        y: 10
-        width: 168
-        height: 174
+        x: 1260
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: idlerun_7
       rect:
         serializedVersion: 2
-        x: 1480
-        y: 32
-        width: 170
-        height: 160
+        x: 1470
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: idlerun_8
       rect:
         serializedVersion: 2
-        x: 1696
-        y: 10
-        width: 158
-        height: 167
+        x: 1680
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,10 +263,10 @@ TextureImporter:
       name: idlerun_9
       rect:
         serializedVersion: 2
-        x: 1917
-        y: 10
-        width: 152
-        height: 171
+        x: 1890
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,10 +277,10 @@ TextureImporter:
       name: idlerun_10
       rect:
         serializedVersion: 2
-        x: 2119
-        y: 10
-        width: 166
-        height: 174
+        x: 2100
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +291,10 @@ TextureImporter:
       name: idlerun_11
       rect:
         serializedVersion: 2
-        x: 2333
-        y: 10
-        width: 160
-        height: 168
+        x: 2310
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,10 +305,10 @@ TextureImporter:
       name: idlerun_12
       rect:
         serializedVersion: 2
-        x: 2546
-        y: 10
-        width: 157
-        height: 176
+        x: 2520
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +319,10 @@ TextureImporter:
       name: idlerun_13
       rect:
         serializedVersion: 2
-        x: 2753
-        y: 33
-        width: 166
-        height: 165
+        x: 2730
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,10 +333,10 @@ TextureImporter:
       name: idlerun_14
       rect:
         serializedVersion: 2
-        x: 2967
-        y: 10
-        width: 160
-        height: 171
+        x: 2940
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,10 +347,10 @@ TextureImporter:
       name: idlerun_15
       rect:
         serializedVersion: 2
-        x: 3180
-        y: 10
-        width: 155
-        height: 179
+        x: 3150
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: idlerun_16
       rect:
         serializedVersion: 2
-        x: 3385
-        y: 32
-        width: 165
-        height: 166
+        x: 3360
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,10 +375,10 @@ TextureImporter:
       name: idlerun_17
       rect:
         serializedVersion: 2
-        x: 3598
-        y: 10
-        width: 158
-        height: 171
+        x: 3570
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +389,10 @@ TextureImporter:
       name: idlerun_18
       rect:
         serializedVersion: 2
-        x: 3806
-        y: 10
-        width: 158
-        height: 171
+        x: 3780
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: idlerun_19
       rect:
         serializedVersion: 2
-        x: 4009
-        y: 10
-        width: 165
-        height: 179
+        x: 3990
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,10 +417,10 @@ TextureImporter:
       name: idlerun_20
       rect:
         serializedVersion: 2
-        x: 4223
-        y: 10
-        width: 161
-        height: 168
+        x: 4200
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,10 +431,10 @@ TextureImporter:
       name: idlerun_21
       rect:
         serializedVersion: 2
-        x: 4437
-        y: 10
-        width: 154
-        height: 178
+        x: 4410
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: idlerun_22
       rect:
         serializedVersion: 2
-        x: 4644
-        y: 33
-        width: 161
-        height: 159
+        x: 4620
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,10 +459,10 @@ TextureImporter:
       name: idlerun_23
       rect:
         serializedVersion: 2
-        x: 4855
-        y: 10
-        width: 157
-        height: 168
+        x: 4830
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,10 +473,10 @@ TextureImporter:
       name: idlerun_24
       rect:
         serializedVersion: 2
-        x: 5066
-        y: 10
-        width: 154
-        height: 174
+        x: 5040
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,10 +487,10 @@ TextureImporter:
       name: idlerun_25
       rect:
         serializedVersion: 2
-        x: 5273
-        y: 32
-        width: 164
-        height: 160
+        x: 5250
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -501,94 +501,10 @@ TextureImporter:
       name: idlerun_26
       rect:
         serializedVersion: 2
-        x: 5483
-        y: 10
-        width: 161
-        height: 168
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerun_27
-      rect:
-        serializedVersion: 2
-        x: 899
-        y: 10
-        width: 80
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerun_28
-      rect:
-        serializedVersion: 2
-        x: 1530
-        y: 10
-        width: 79
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerun_29
-      rect:
-        serializedVersion: 2
-        x: 2798
-        y: 10
-        width: 71
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerun_30
-      rect:
-        serializedVersion: 2
-        x: 3429
-        y: 10
-        width: 69
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerun_31
-      rect:
-        serializedVersion: 2
-        x: 4689
-        y: 10
-        width: 69
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerun_32
-      rect:
-        serializedVersion: 2
-        x: 5320
-        y: 10
-        width: 69
-        height: 13
+        x: 5460
+        y: 0
+        width: 210
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

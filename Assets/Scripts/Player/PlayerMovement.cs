@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     private Transform objectToPickUp;
     private Vector2 movementVector;
     private Vector2 forward;
+    private Animator anim;
 
     // Use this for initialization
     private void Start()
     {
         body2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,6 +42,27 @@ public class PlayerMovement : MonoBehaviour
         //movement with the axis of the xbox gamepad
         movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
         movementVector.y = Input.GetAxisRaw("Vertical") * speed;
+
+        if (movementVector.x < 0.0f)
+        {
+            anim.SetTrigger("moveLeft");
+        }
+
+        if (movementVector.x > 0.0f)
+        {
+            anim.SetTrigger("moveRight");
+        }
+
+        if (movementVector.y < 0.0f)
+        {
+            anim.SetTrigger("moveDown");
+        }
+
+        if (movementVector.y > 0.0f)
+        {
+            anim.SetTrigger("moveUp­");
+        }
+
 
         //move the player
         body2d.velocity = new Vector2(movementVector.x, movementVector.y);
