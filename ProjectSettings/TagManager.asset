@@ -9,6 +9,7 @@ TagManager:
   - Destructable
   - Weapon
   - PostPanel1
+  - Walls
   - PanelHP
   layers:
   - Default
