@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	// Getters / Setters
 	// -------------------------------------------------------------------------
-	GameTimeManager GetTimeManager() {
+	public GameTimeManager getTimeManager() {
 		return this.timeManager;
 	}
 
