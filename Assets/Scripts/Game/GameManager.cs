@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 	private GameMap gameMap = null;
 	private PlayerMovement player = null;
 	private CameraController roomCamera = null;
 	private GameTimeManager timeManager = new GameTimeManager();
+
+	private Text goalCounterTextUI = null;
 
 	private Transform spawnPoint;
 
@@ -27,31 +30,38 @@ public class GameManager : MonoBehaviour {
 		GameObject cameraObject 	= GameObject.Find("Main Camera");
 		GameObject playerObject 	= GameObject.FindGameObjectWithTag("Player");
 		GameObject spawnObject 		= GameObject.Find("SpawnPoint");
+		GameObject goalCounterObject = GameObject.Find("Goal Counter TextUI");
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
 		Assert.IsNotNull(playerObject, "Unable to recover the Player GameObject");
 		Assert.IsNotNull(spawnObject, "Unable to recover the SpawnObject GameObject");
+		Assert.IsNotNull(goalCounterObject, "Unable to find GoalCounter Object");
 
 		this.gameMap = gameMapObject.GetComponent<GameMap>();
 		this.player = playerObject.GetComponent<PlayerMovement>();
 		this.roomCamera = cameraObject.GetComponent<CameraController>();
 		this.spawnPoint = spawnObject.transform;
+		this.goalCounterTextUI = goalCounterObject.GetComponent<Text>();
 
 		Assert.IsNotNull(this.gameMap, "Unable to recover GameMap script from GameMap Object");
 		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
 		Assert.IsNotNull(this.player, "Unable to recover the player script");
+		Assert.IsNotNull(this.goalCounterTextUI, "Unable to recover Text component from Goal Counter");
 
 		// Init setup
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
 		this.currentRoom.onRoomEnter();
 		this.currentRoom.setActive(true);
 		this.previousRoom = this.currentRoom;
+
+		this.updateGoalCounter();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		this.inputKeyHandler();
+		this.updateGoalCounter();
 		this.updateCurrentRoom();
 		this.updateCameraPosition();
 		this.updateVictory();
@@ -93,12 +103,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void updateVictory() {
-		int remaining = this.gameMap.listRooms.Length;
-		foreach(Room roro in this.gameMap.listRooms){
-			if(roro.getIsDone() == true) {
-				remaining--;
-			}
-		}
+		int remaining = this.getNbRemainingGoals();
 		if(remaining == 0) {
 			// JUST WON
 			this.timeManager.freezeGame();
@@ -106,11 +111,26 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	private void updateGoalCounter() {
+		int remaining = this.getNbRemainingGoals();
+		this.goalCounterTextUI.text = "Rooms left: " + remaining;
+	}
+
 
 	// -------------------------------------------------------------------------
-	// Time Methods
+	// Getters / Setters
 	// -------------------------------------------------------------------------
 	GameTimeManager GetTimeManager() {
 		return this.timeManager;
+	}
+
+	public int getNbRemainingGoals() {
+		int remaining = this.gameMap.listRooms.Length;
+		foreach(Room roro in this.gameMap.listRooms){
+			if(roro.getIsDone() == true) {
+				remaining--;
+			}
+		}
+		return remaining;
 	}
 }

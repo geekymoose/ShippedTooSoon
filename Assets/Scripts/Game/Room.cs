@@ -23,8 +23,6 @@ public class Room : MonoBehaviour {
 
 		this.doors = this.GetComponentsInChildren<RoomDoor>();
 		this.goals = this.GetComponentsInChildren<RoomGoal>();
-
-		Debug.Log(this.goals.Length);
 		
 		Assert.IsTrue(this.doors.Length > 0, "There is a room without doors?");
 		Assert.IsTrue(this.goals.Length > 0, "There is a room without goal?");
