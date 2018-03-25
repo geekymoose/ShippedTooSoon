@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         body2d = GetComponent<Rigidbody2D>();
-
-        //objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
     }
 
     // Update is called once per frame
@@ -25,16 +23,13 @@ public class PlayerMovement : MonoBehaviour
         //the player have to be in the collider of the pickup object if he want to pick up the object
         if (Input.GetButtonDown("Fire1") && canPickup)
         {
-            Debug.Log("PICKUP: " + objectToPickUp);
             objectToPickUp.transform.parent = transform;
-
             objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = false;
         }
 
         //when the player release the button drop the object
-        if (Input.GetButtonUp("Fire1"))
+        else if (Input.GetButtonUp("Fire1"))
         {
-            Debug.Log("DROP: " + objectToPickUp);
             canPickup = false;
             Drop();
         }
@@ -48,30 +43,22 @@ public class PlayerMovement : MonoBehaviour
 
         //move the player
         body2d.velocity = new Vector2(movementVector.x, movementVector.y);
-
-        //rotate the player forward the direction
-        //float degrees = Mathf.Atan2(movementVector.y, movementVector.x) * Mathf.Rad2Deg;
-
-        //to make only rotate in 90 degrees
-        //if (degrees % 90 == 0)
-        //{
-        //    body2d.rotation = degrees;
-        //}
     }
 
     //drop the object when the player release the button
     public void Drop()
     {
-        objectToPickUp.parent = null;
-        objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
-        objectToPickUp.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-        objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = true;
+        if(this.objectToPickUp != null) {
+            objectToPickUp.parent = null;
+            objectToPickUp = GameObject.FindGameObjectWithTag("Pickup").transform;
+            objectToPickUp.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+            objectToPickUp.gameObject.GetComponent<Rigidbody2D>().simulated = true;
+        }
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-
         Gizmos.DrawRay(transform.position, movementVector.normalized);
     }
 
@@ -82,11 +69,6 @@ public class PlayerMovement : MonoBehaviour
         {
             this.objectToPickUp = collision.gameObject.transform;
             canPickup = true;
-        }
-
-        if (collision.gameObject.tag == "Wall")
-        {
-            
         }
     }
 

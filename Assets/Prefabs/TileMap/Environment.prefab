@@ -6602,7 +6602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114139462744290040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6616,7 +6616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114185203155306244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6674,7 +6674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114274372582580966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6721,7 +6721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114462101043282892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6768,7 +6768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114624494614751936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6782,7 +6782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114636131548888116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6851,7 +6851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114919016436704896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6876,7 +6876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114956103406993904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6890,7 +6890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   victoryCondition: {fileID: 11400000, guid: 09cfe788acf9f42478a30ee01f65dfb1, type: 2}
-  doors: []
+  doorDelay: 1
 --- !u!114 &114965228340476014
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,10 +9,13 @@ public class Room : MonoBehaviour {
 	private bool isDone = false; // True if this room has been finished already
 	public bool isActive = false; // Active when player is inside
 
+	private DoorController[] doors; // TheDoors
+	
 	[Tooltip("Condition of victory for this room")]
 	public VictoryCondition victoryCondition;
 
-	public DoorController[] doors; // TheDoors
+	[Tooltip("When doors are closing or opening, this is the delay before it is actually done")]
+	public float doorDelay = 1.0f;
 
 
 	// -------------------------------------------------------------------------
@@ -23,19 +26,19 @@ public class Room : MonoBehaviour {
 		this.isActive = false;
 
 		this.doors = this.GetComponentsInChildren<DoorController>();
-		Debug.Log(this.doors);
 		Assert.IsNotNull(this.victoryCondition, "VictoryCondition is not set");
 		
-		foreach(DoorController dc in this.doors) {
-			dc.openDoor();
-		}
+		this.openAllDoors();
 	}
 
 	public void Update() {
 		if(this.isActive) {
 			if(this.victoryCondition.isValidated() && !this.isDone) {
-				this.onRoomSuccess();
+				this.onRoomSuccess(); // TODO To un-comment later
 			}
+		}
+		else {
+			this.openAllDoors();
 		}
 	}
 
@@ -52,9 +55,8 @@ public class Room : MonoBehaviour {
 		this.isActive = true;
 		this.victoryCondition.initConditions();
 		// TODO: Sound + init
-		foreach(DoorController dc in this.doors) {
-			dc.closeDoor();
-		}
+
+		Invoke("closeAllDoors", this.doorDelay);
 	}
 
 	/**
@@ -64,15 +66,23 @@ public class Room : MonoBehaviour {
 		Debug.Log("Room::onRoomExit() - ID: " + this.id);
 		this.isActive = false;
 		// TODO: Sound + destroye things
-		foreach(DoorController dc in this.doors) {
-			dc.openDoor();
-		}
+		this.openAllDoors();
 	}
 
 	public void onRoomSuccess() {
 		Debug.Log("Room::onRoomSuccess() - ID: " + this.id);
 		this.isDone = true;
 		// TODO: Open doors + sounds + success crap things etc etc
+		Invoke("openAllDoors", this.doorDelay);
+	}
+
+	public void closeAllDoors() {
+		foreach(DoorController dc in this.doors) {
+			dc.closeDoor();
+		}
+	}
+
+	public void openAllDoors() {
 		foreach(DoorController dc in this.doors) {
 			dc.openDoor();
 		}
