@@ -81,25 +81,37 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+
+	// -------------------------------------------------------------------------
+	// GamePlay Methods
+	// -------------------------------------------------------------------------
+
 	private void inputKeyHandler() {
-		if(Input.GetButtonDown("Jump")) {
-			this.player.transform.position = this.spawnPoint.position;
+		if(Input.GetKeyDown(KeyCode.F7)) {
+			// For debug purpose, but should be kept in release as well in case of blocked.
+			this.respawnPlayer();
 		}
+	}
+
+	public void respawnPlayer() {
+		this.player.transform.position = this.spawnPoint.position;
 	}
 
 
 	// -------------------------------------------------------------------------
-	// Core Methods
+	// Update Methods
 	// -------------------------------------------------------------------------
 	private void updateCurrentRoom() {
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
-		Assert.IsNotNull(this.currentRoom, "Player is not in a room (But should be)");
 
 		if(this.currentRoom != null) {
 			this.hasSwitchedRoom = false;
 			if(this.currentRoom.getId() != this.previousRoom.getId()) {
 				this.hasSwitchedRoom = true;
 			}
+		}
+		else {
+			this.respawnPlayer();
 		}
 	}
 
@@ -134,7 +146,7 @@ public class GameManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	// Getters / Setters
 	// -------------------------------------------------------------------------
-	GameTimeManager GetTimeManager() {
+	public GameTimeManager getTimeManager() {
 		return this.timeManager;
 	}
 

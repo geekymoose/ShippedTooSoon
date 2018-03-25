@@ -6,7 +6,7 @@ public class GameTimeManager {
 	private bool isFreezed = false;
 	private float timeScale = 1.0f;
 	private float minScale = 0.0f;
-	private float maxScale = 2.0f;
+	private float maxScale = 3.0f;
 
 	private float stopwatchStart = 0.0f;
 
@@ -23,13 +23,15 @@ public class GameTimeManager {
 	}
 
 	public void slowDownGame(float value) {
-		value = Mathf.Clamp(value, minScale, maxScale);
-		Time.timeScale = value;
+		float newTimeScale = Time.timeScale - value;
+		newTimeScale = Mathf.Clamp(newTimeScale, minScale, maxScale);
+		Time.timeScale = newTimeScale;
 	}
 
 	public void speedUpGame(float value) {
-		value = Mathf.Clamp(value, minScale, maxScale);
-		Time.timeScale = 1.5f;
+		float newTimeScale = Time.timeScale + value;
+		newTimeScale = Mathf.Clamp(newTimeScale, minScale, maxScale);
+		Time.timeScale = newTimeScale;
 	}
 
 	public void startStopwatch() {
