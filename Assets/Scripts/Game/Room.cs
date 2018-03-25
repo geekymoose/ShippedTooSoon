@@ -24,7 +24,6 @@ public class Room : MonoBehaviour {
 
 	public void Update() {
 		if(this.isActive) {
-			Debug.Log("Room::Update() - ID: " + this.id);
 			if(this.victoryCondition.isValidated() && !this.isDone) {
 				this.onRoomSuccess();
 			}

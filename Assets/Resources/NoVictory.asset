@@ -9,7 +9,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81b89daa408cc0f40b22cabe14806314, type: 3}
-  m_Name: SimplePickupVictory
+  m_Name: NoVictory
   m_EditorClassIdentifier: 
-  listGoals:
-  - {fileID: 1889636580783140, guid: a800714d6fd07604e9a00a89a3f27e7f, type: 2}
+  listGoals: []
