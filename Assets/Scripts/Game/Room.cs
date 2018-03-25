@@ -9,7 +9,7 @@ public class Room : MonoBehaviour {
 	private bool isDone = false; // True if this room has been finished already
 	public bool isActive = false; // Active when player is inside
 
-	private DoorController[] doors; // TheDoors
+	private RoomDoor[] doors; // TheDoors
 	
 	[Tooltip("Condition of victory for this room")]
 	public VictoryCondition victoryCondition;
@@ -25,7 +25,7 @@ public class Room : MonoBehaviour {
 		this.isDone = false;
 		this.isActive = false;
 
-		this.doors = this.GetComponentsInChildren<DoorController>();
+		this.doors = this.GetComponentsInChildren<RoomDoor>();
 		Assert.IsNotNull(this.victoryCondition, "VictoryCondition is not set");
 		
 		this.openAllDoors();
@@ -57,10 +57,12 @@ public class Room : MonoBehaviour {
 	public void onRoomEnter() {
 		Debug.Log("Room::onRoomEnter() - ID: " + this.id);
 		this.isActive = true;
-		this.victoryCondition.initConditions();
+		if(!this.isDone) {
 		// TODO: Sound + init
+			this.victoryCondition.initConditions();
+			Invoke("closeAllDoors", this.doorDelay);
+		}
 
-		Invoke("closeAllDoors", this.doorDelay);
 	}
 
 	/**
@@ -81,13 +83,13 @@ public class Room : MonoBehaviour {
 	}
 
 	public void closeAllDoors() {
-		foreach(DoorController dc in this.doors) {
+		foreach(RoomDoor dc in this.doors) {
 			dc.closeDoor();
 		}
 	}
 
 	public void openAllDoors() {
-		foreach(DoorController dc in this.doors) {
+		foreach(RoomDoor dc in this.doors) {
 			dc.openDoor();
 		}
 	}

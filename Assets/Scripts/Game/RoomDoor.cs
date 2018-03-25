@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class DoorController : MonoBehaviour {
+public class RoomDoor : MonoBehaviour {
 	private bool isOpen = false;
 
 	public void openDoor() {
