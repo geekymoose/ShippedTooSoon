@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114315162504636562}
   - component: {fileID: 70656929376043230}
   - component: {fileID: 212918403280586696}
+  - component: {fileID: 114487480196180328}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -169,7 +170,7 @@ MonoBehaviour:
   speed: 7
 --- !u!114 &114487480196180328
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247046092030158}
