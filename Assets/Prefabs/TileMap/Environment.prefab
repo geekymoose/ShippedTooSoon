@@ -2177,6 +2177,7 @@ GameObject:
   - component: {fileID: 212939675882119210}
   - component: {fileID: 114110545999959502}
   - component: {fileID: 61988044955836706}
+  - component: {fileID: 4980282369171330}
   m_Layer: 0
   m_Name: Goal Button
   m_TagString: Goal
