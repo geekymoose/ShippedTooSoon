@@ -44,7 +44,6 @@ namespace AK
         static const AkUniqueID ROOM_02 = 3399879613U;
         static const AkUniqueID ROOM_03 = 3399879612U;
         static const AkUniqueID ROOM_04 = 3399879611U;
-        static const AkUniqueID ROOM_ALL = 3772329932U;
         static const AkUniqueID ROOM_BUG_A = 4243244639U;
         static const AkUniqueID ROOM_BUG_B = 4243244636U;
         static const AkUniqueID ROOM_BUG_C = 4243244637U;

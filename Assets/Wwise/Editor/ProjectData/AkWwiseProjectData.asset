@@ -28,8 +28,8 @@ MonoBehaviour:
     List: []
   BankWwu:
   - Guid: '{81727055-AA37-480B-96B5-88385438393C}'
-    m_lastTimePart2: -1999269264
-    m_lastTimePsrt1: 2037353737
+    m_lastTimePart2: -1999269260
+    m_lastTimePsrt1: 779595246
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -48,8 +48,8 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}'
-    m_lastTimePart2: -1999269360
-    m_lastTimePsrt1: 1355366952
+    m_lastTimePart2: -1999269259
+    m_lastTimePsrt1: -2139414988
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -487,72 +487,72 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: 63ef5d35ba694048b82d82eb65da1e69
-      ID: -895087686
-      Name: room_05
-      Path: Default Work Unit\MUS\room_05
+    - Guid: 36d5e7f88ba0aa42aff1a3700383ddcf
+      ID: -522637364
+      Name: room_all
+      Path: Default Work Unit\MUS\room_all
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: MUS
         ObjectType: 4
-      - ElementName: room_05
+      - ElementName: room_all
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 63ef5d35ba694048b82d82eb65da1e69
+      ID: -51722657
+      Name: room_bug_A
+      Path: Default Work Unit\MUS\room_bug_A
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUS
+        ObjectType: 4
+      - ElementName: room_bug_A
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: 9bf1878c1ee5a8459e5c61f1dd1d19e5
-      ID: -895087687
-      Name: room_06
-      Path: Default Work Unit\MUS\room_06
+      ID: -51722660
+      Name: room_bug_B
+      Path: Default Work Unit\MUS\room_bug_B
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: MUS
         ObjectType: 4
-      - ElementName: room_06
+      - ElementName: room_bug_B
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: e286d3100176c44da27300262aec0554
-      ID: -895087688
-      Name: room_07
-      Path: Default Work Unit\MUS\room_07
+      ID: -51722659
+      Name: room_bug_C
+      Path: Default Work Unit\MUS\room_bug_C
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: MUS
         ObjectType: 4
-      - ElementName: room_07
+      - ElementName: room_bug_C
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - Guid: 7797d914a833674da9051d1ce2207bf4
-      ID: -895087689
-      Name: room_08
-      Path: Default Work Unit\MUS\room_08
+      ID: -51722662
+      Name: room_bug_D
+      Path: Default Work Unit\MUS\room_bug_D
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: MUS
         ObjectType: 4
-      - ElementName: room_08
-        ObjectType: 3
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - Guid: e126e4d54d9b3b4cab85428878ef29d0
-      ID: -895087690
-      Name: room_09
-      Path: Default Work Unit\MUS\room_09
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: MUS
-        ObjectType: 4
-      - ElementName: room_09
+      - ElementName: room_bug_D
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -570,8 +570,8 @@ MonoBehaviour:
   preparePoolSize: 0
   RtpcWwu:
   - Guid: '{D6649D38-F7D8-4D0A-ABD1-C3BFD6EAD326}'
-    m_lastTimePart2: -1999269370
-    m_lastTimePsrt1: -1118344221
+    m_lastTimePart2: -1999269263
+    m_lastTimePsrt1: 848774116
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
     List:
@@ -586,8 +586,8 @@ MonoBehaviour:
         ObjectType: 13
   StateWwu:
   - Guid: '{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}'
-    m_lastTimePart2: -1999269362
-    m_lastTimePsrt1: -1612301151
+    m_lastTimePart2: -1999269261
+    m_lastTimePsrt1: -265264517
     ParentPhysicalPath: 
     PhysicalPath: States\Default Work Unit.wwu
     List:
@@ -608,11 +608,11 @@ MonoBehaviour:
       - bytes: a736d687e8535f4c9ce5d81a402bad7d
       - bytes: b76468ebef0f184390830e8a7306762e
       - bytes: 92cc5897ea19914eb5ae084b875c534c
+      - bytes: 303237e24e31f64ea011e45ff0246cac
       - bytes: 85dff2656caa9148b215d5610be4ffc7
       - bytes: 08f976a04b2f84469f00ea5ca3ac16e7
       - bytes: 6e4a4f133ca67648bdeb46fa87180183
       - bytes: 1304b3e385d5b9498fdaafd517215034
-      - bytes: 638b61a72ac56a48a99995ac587b8238
       ValueIcons:
       - ElementName: END
         ObjectType: 8
@@ -628,17 +628,17 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: ROOM_04
         ObjectType: 8
-      - ElementName: ROOM_05
+      - ElementName: ROOM_ALL
         ObjectType: 8
-      - ElementName: ROOM_06
+      - ElementName: ROOM_BUG_A
         ObjectType: 8
-      - ElementName: ROOM_07
+      - ElementName: ROOM_BUG_B
         ObjectType: 8
-      - ElementName: ROOM_08
+      - ElementName: ROOM_BUG_C
         ObjectType: 8
-      - ElementName: ROOM_09
+      - ElementName: ROOM_BUG_D
         ObjectType: 8
-      valueIDs: 44fc921f29c71543db3ba32cbe0ba6cabd0ba6cabc0ba6cabb0ba6caba0ba6cab90ba6cab80ba6cab70ba6cab60ba6ca
+      valueIDs: 44fc921f29c71543db3ba32cbe0ba6cabd0ba6cabc0ba6cabb0ba6cacc2fd9e05fc6eafc5cc6eafc5dc6eafc5ac6eafc
       values:
       - END
       - INTRO
@@ -647,11 +647,11 @@ MonoBehaviour:
       - ROOM_02
       - ROOM_03
       - ROOM_04
-      - ROOM_05
-      - ROOM_06
-      - ROOM_07
-      - ROOM_08
-      - ROOM_09
+      - ROOM_ALL
+      - ROOM_BUG_A
+      - ROOM_BUG_B
+      - ROOM_BUG_C
+      - ROOM_BUG_D
   streamingPoolSize: 1024
   SwitchWwu:
   - Guid: '{2374FF6A-E75D-41B9-9FA5-021EEDE0C87D}'

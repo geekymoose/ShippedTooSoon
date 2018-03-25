@@ -9,5 +9,5 @@
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2017.2.2.6553</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../MCGJ 2018 - WIP TITLE WW/WIP TITLE.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../TP/MCGJ 2018 - WIP TITLE WW/WIP TITLE.wproj</WwiseProjectPath>
 </WwiseSettings>
