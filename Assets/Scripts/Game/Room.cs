@@ -7,15 +7,12 @@ using UnityEngine.Tilemaps;
 public class Room : MonoBehaviour {
 	private int id = 0; // Internal use for TileMap Grid
 	private bool isDone = false; // True if this room has been finished already
-	public bool isActive = false; // Active when player is inside
+	private bool isActive = false; // Active when player is inside
 
 	private RoomDoor[] doors; // TheDoors
-	
-	[Tooltip("Condition of victory for this room")]
-	public VictoryCondition victoryCondition;
+	private RoomGoal[] goals;
 
-	[Tooltip("When doors are closing or opening, this is the delay before it is actually done")]
-	public float doorDelay = 1.0f;
+	private float doorDelay = 1.0f;
 
 
 	// -------------------------------------------------------------------------
@@ -26,19 +23,18 @@ public class Room : MonoBehaviour {
 		this.isActive = false;
 
 		this.doors = this.GetComponentsInChildren<RoomDoor>();
-		Assert.IsNotNull(this.victoryCondition, "VictoryCondition is not set");
+		this.goals = this.GetComponents<RoomGoal>();
+		
+		Assert.IsTrue(this.doors.Length > 0, "There is a room without doors?");
+		Assert.IsTrue(this.goals.Length > 0, "There is a room without goal?");
 		
 		this.openAllDoors();
 	}
 
 	public void Update() {
-		if(this.isActive) {
-			if(this.victoryCondition.isValidated() && !this.isDone) {
-				this.onRoomSuccess(); // TODO To un-comment later
-				Debug.Log("VICTORY");
-			}
-			else {
-				Debug.Log("TRY AGAIN");
+		if(this.isActive && !this.isDone) {
+			if(this.goals.Length == 0) {
+				this.onRoomSuccess();
 			}
 		}
 		else {
@@ -57,12 +53,9 @@ public class Room : MonoBehaviour {
 	public void onRoomEnter() {
 		Debug.Log("Room::onRoomEnter() - ID: " + this.id);
 		this.isActive = true;
-		if(!this.isDone) {
-		// TODO: Sound + init
-			this.victoryCondition.initConditions();
+		if(!this.isDone){
 			Invoke("closeAllDoors", this.doorDelay);
 		}
-
 	}
 
 	/**
@@ -71,15 +64,15 @@ public class Room : MonoBehaviour {
 	public void onRoomExit() {
 		Debug.Log("Room::onRoomExit() - ID: " + this.id);
 		this.isActive = false;
-		// TODO: Sound + destroye things
 		this.openAllDoors();
+		// TODO: Sound + destroye things
 	}
 
 	public void onRoomSuccess() {
 		Debug.Log("Room::onRoomSuccess() - ID: " + this.id);
 		this.isDone = true;
-		// TODO: Open doors + sounds + success crap things etc etc
 		Invoke("openAllDoors", this.doorDelay);
+		// TODO: Open doors + sounds + success crap things etc etc
 	}
 
 	public void closeAllDoors() {

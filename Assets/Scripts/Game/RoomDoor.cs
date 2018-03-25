@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class RoomDoor : MonoBehaviour {
-	private bool isOpen = false;
-
+	
 	public void openDoor() {
 		SpriteRenderer soso = this.GetComponent<SpriteRenderer>();
 		BoxCollider2D coco = this.GetComponent<BoxCollider2D>();
