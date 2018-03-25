@@ -18,7 +18,7 @@ public class RoomDoor : MonoBehaviour {
 		Assert.IsNotNull(coco, "Unable to recover TheDoors collider buddy!");
         Assert.IsNotNull(anim, "Unable to recover TheDoors animator buddy!");
 
-        //soso.enabled = false;
+        soso.enabled = false;
 		coco.enabled = false;
 
         //anim.SetTrigger("openDoor");
@@ -35,7 +35,7 @@ public class RoomDoor : MonoBehaviour {
 		Assert.IsNotNull(coco, "Unable to recover TheDoors collider buddy!");
         Assert.IsNotNull(anim, "Unable to recover TheDoors animator buddy!");
 
-        //soso.enabled = true;
+        soso.enabled = true;
 		coco.enabled = true;
         
         //anim.SetTrigger("closeDoor");
