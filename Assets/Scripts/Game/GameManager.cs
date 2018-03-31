@@ -4,19 +4,22 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 
+/**
+ * General GameManager.
+ */
 public class GameManager : MonoBehaviour {
+	// Game
 	private GameMap gameMap = null;
 	private PlayerMovement player = null;
 	private CameraController roomCamera = null;
 	private GameTimeManager timeManager = new GameTimeManager();
 
+	// UI
 	private Text goalCounterTextUI = null;
 	private Text timeCounterTextUI = null;
 
 	private GameObject victoryPanelUI = null;
 	private Text victoryScoreTextUI = null;
-
-
 
 	private Transform spawnPoint;
 
