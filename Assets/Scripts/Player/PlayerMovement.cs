@@ -25,12 +25,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")|| Input.GetAxisRaw("Horizontal") !=0|| Input.GetAxisRaw("Horizontal")!=0)
         {
-            anim.SetBool("canMove", true);
+            anim.SetBool("isWalking", true);
             DefinePlayerDirection(movementVector);
         }
         else
         {
-            anim.SetBool("canMove", false);
+            anim.SetBool("isWalking", false);
         }
     }
 

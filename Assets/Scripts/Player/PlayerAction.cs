@@ -4,35 +4,36 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class PlayerAction : MonoBehaviour {
-    private Transform currentPickedObj = null;
-	private CircleCollider2D pickupCollider = null;
+	private CircleCollider2D attackRangeCollider = null;
+    private Animator anim = null;
+	private Transform attackCenter = null;
 
-	public Transform playerHand = null;
+	public bool canAttack = false;
 
 
 	// -------------------------------------------------------------------------
 	// Unity Methods
 	// -------------------------------------------------------------------------
 	public void Start() {
-		this.pickupCollider = this.GetComponent<CircleCollider2D>();
+		this.attackRangeCollider = this.GetComponent<CircleCollider2D>();
+		this.attackCenter = GameObject.Find("PlayerAttackCenter").transform;
+        this.anim = this.GetComponent<Animator>();
 
-		Assert.IsNotNull(this.playerHand, "Player's hand must be dragged on player script");
-		Assert.IsNotNull(this.pickupCollider, "No pickup collider in player? :/");
+		Assert.IsNotNull(this.attackRangeCollider, "No range collider in player? :/");
+		Assert.IsNotNull(this.attackCenter, "Player's hand must be dragged on player script");
+		Assert.IsNotNull(this.anim, "Unable to get the player animator");
 
-		this.pickupCollider.enabled = false; // Important. Used only for range value.
+		this.attackRangeCollider.enabled = false; // Important. Used only for range value.
 	}
 
 	void Update () {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
-			this.currentPickedObj = this.getFirstPickupInRange();
-			if(this.currentPickedObj != null) {
-				this.currentPickedObj.transform.parent = this.playerHand;
+			if(this.canAttack) {
+				Debug.Log("ATTACK!!");
+				this.attack();
 			}
-        }
-        //when the player release the button drop the object
-        else if (Input.GetButtonUp("Fire1") || Input.GetButtonUp("Jump")) {
-			if(this.currentPickedObj != null) {
-				this.drop();
+			else {
+				Debug.Log("You can't attack...");
 			}
         }
 	}
@@ -43,6 +44,10 @@ public class PlayerAction : MonoBehaviour {
             Assert.IsNotNull(roger, "Goal object doesn't have a RoomGoal script");
             roger.activate();
         }
+		else if(other.gameObject.name == "sword") {
+			this.canAttack = true;
+			this.anim.SetTrigger("pickupSword");
+		}
     }
 
 
@@ -50,23 +55,19 @@ public class PlayerAction : MonoBehaviour {
 	// GamePlay Methods
 	// -------------------------------------------------------------------------
 
-    public void drop() {
-        if(this.currentPickedObj != null) {
-            this.currentPickedObj.parent = null;
-            //this.pickObj.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-            //this.pickObj.gameObject.GetComponent<Rigidbody2D>().simulated = true;
-        }
-    }
-
-	private Transform getFirstPickupInRange() {
-		Vector2 center = new Vector2(this.transform.position.x, this.transform.position.y);
-		Collider2D[] cocos = Physics2D.OverlapCircleAll(center, this.pickupCollider.radius/2);
+	private void attack() {
+		this.anim.SetTrigger("attack");
+		
+		Vector2 center = new Vector2(this.attackCenter.position.x, this.attackCenter.position.y);
+		Collider2D[] cocos = Physics2D.OverlapCircleAll(center, this.attackRangeCollider.radius/2);
 		
 		foreach(Collider2D coco in cocos) {
+			// TODO
+			/*
 			if(coco.CompareTag("Pickup") || coco.CompareTag("Destructable")) {
 				return coco.transform;
 			}
+			*/
 		}
-		return null;
 	}
 }
