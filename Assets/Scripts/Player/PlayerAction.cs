@@ -7,8 +7,7 @@ public class PlayerAction : MonoBehaviour {
 	private CircleCollider2D attackRangeCollider = null;
     private Animator anim = null;
 	private Transform attackCenter = null;
-
-	public bool canAttack = false;
+	private bool canAttack = false;
 
 
 	// -------------------------------------------------------------------------
@@ -28,12 +27,11 @@ public class PlayerAction : MonoBehaviour {
 
 	void Update () {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
-			this.canAttack = true; //TODO TMP DEBUG
 			if(this.canAttack) {
 				this.attack();
 			}
 			else {
-				Debug.Log("You can't attack...");
+				//TODO: Can't attack, sound?
 			}
         }
 	}
@@ -47,6 +45,7 @@ public class PlayerAction : MonoBehaviour {
 		else if(other.gameObject.name == "sword") {
 			this.canAttack = true;
 			this.anim.SetTrigger("PickupSword");
+			//TODO: sound?
 		}
     }
 
@@ -56,8 +55,8 @@ public class PlayerAction : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	private void attack() {
-		Debug.Log("ATTACK!!");
 		this.anim.SetTrigger("Attack");
+		//TODO: sound?
 		
 		Vector2 center = new Vector2(this.attackCenter.position.x, this.attackCenter.position.y);
 		Collider2D[] cocos = Physics2D.OverlapCircleAll(center, this.attackRangeCollider.radius/2);

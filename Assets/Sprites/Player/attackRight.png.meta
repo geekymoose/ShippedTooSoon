@@ -1,18 +1,13 @@
 fileFormatVersion: 2
-guid: 2e7a93433030f2a47b610aee3edf1c8f
-timeCreated: 1521987347
+guid: 73af93e6730c1db40bb9bf8101ffee8d
+timeCreated: 1521940499
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: idlerunleft_0
-    21300002: idlerunleft_1
-    21300004: idlerunleft_2
-    21300006: idlerunleft_3
-    21300008: idlerunleft_4
-    21300010: idlerunleft_5
-    21300012: idlerunleft_6
-    21300014: idlerunleft_7
-    21300016: idlerunleft_8
+    21300000: attack_0
+    21300002: attack_1
+    21300004: attack_2
+    21300006: attack_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -68,7 +63,7 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -78,7 +73,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -88,7 +83,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - buildTarget: Android
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -98,7 +93,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - buildTarget: WebGL
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -110,12 +105,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idlerunleft_0
+      name: attack_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 210
+        width: 330
         height: 210
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -124,12 +119,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: idlerunleft_1
+      name: attack_1
       rect:
         serializedVersion: 2
-        x: 210
+        x: 369
         y: 0
-        width: 210
+        width: 330
         height: 210
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -138,12 +133,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: idlerunleft_2
+      name: attack_2
       rect:
         serializedVersion: 2
-        x: 420
+        x: 725
         y: 0
-        width: 210
+        width: 330
         height: 210
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -152,82 +147,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: idlerunleft_3
+      name: attack_3
       rect:
         serializedVersion: 2
-        x: 630
+        x: 1082
         y: 0
-        width: 210
-        height: 210
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerunleft_4
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 0
-        width: 210
-        height: 210
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerunleft_5
-      rect:
-        serializedVersion: 2
-        x: 1050
-        y: 0
-        width: 210
-        height: 210
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerunleft_6
-      rect:
-        serializedVersion: 2
-        x: 1260
-        y: 0
-        width: 210
-        height: 210
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerunleft_7
-      rect:
-        serializedVersion: 2
-        x: 1470
-        y: 0
-        width: 210
-        height: 210
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: idlerunleft_8
-      rect:
-        serializedVersion: 2
-        x: 1680
-        y: 0
-        width: 210
+        width: 330
         height: 210
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

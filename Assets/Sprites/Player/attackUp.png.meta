@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 73af93e6730c1db40bb9bf8101ffee8d
-timeCreated: 1521940499
+guid: 90478db5eecf23b4297aad66dd21dd86
+timeCreated: 1522538442
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: attack_0
-    21300002: attack_1
-    21300004: attack_2
-    21300006: attack_3
+    21300000: attackUp_0
+    21300002: attackUp_2
+    21300004: attackUp_3
+    21300006: attackUp_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -35,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -65,7 +65,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -75,17 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 1
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,57 +95,57 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack_0
+      name: attackUp_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 51
         y: 0
-        width: 330
-        height: 210
+        width: 210
+        height: 270
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: attack_1
+      name: attackUp_2
       rect:
         serializedVersion: 2
-        x: 367
+        x: 353
         y: 0
-        width: 330
-        height: 210
+        width: 210
+        height: 270
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: attack_2
+      name: attackUp_3
       rect:
         serializedVersion: 2
-        x: 725
+        x: 648
         y: 0
-        width: 330
-        height: 210
+        width: 210
+        height: 270
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: attack_3
+      name: attackUp_4
       rect:
         serializedVersion: 2
-        x: 1082
+        x: 954
         y: 0
-        width: 330
-        height: 210
+        width: 210
+        height: 270
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
