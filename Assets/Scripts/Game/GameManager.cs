@@ -14,6 +14,15 @@ public class GameManager : MonoBehaviour {
 	private CameraController roomCamera = null;
 	private GameTimeManager timeManager = new GameTimeManager();
 
+	// Gameplay
+	private Transform spawnPoint;
+	private float stopwatchTime = 0.0f;
+
+	// Room management
+	private Room currentRoom = null;
+	private Room previousRoom = null;
+	private bool hasSwitchedRoom = false;
+
 	// UI
 	private Text goalCounterTextUI = null;
 	private Text timeCounterTextUI = null;
@@ -21,14 +30,8 @@ public class GameManager : MonoBehaviour {
 	private GameObject victoryPanelUI = null;
 	private Text victoryScoreTextUI = null;
 
-	private Transform spawnPoint;
-
-	// Room management
-	private Room currentRoom = null;
-	private Room previousRoom = null;
-	private bool hasSwitchedRoom = false;
-
-	private float stopwatchTime = 0.0f;
+	// Debug / Editor
+	private GameObject gameMapCreator; // Used in editor to create GameMap.
 
 
 	// -------------------------------------------------------------------------
@@ -39,13 +42,13 @@ public class GameManager : MonoBehaviour {
 
 		GameObject gameMapObject 		= GameObject.Find("GameMap");
 		GameObject cameraObject 		= GameObject.Find("Main Camera");
-		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
 		GameObject spawnObject 			= GameObject.Find("SpawnPoint");
 		GameObject goalCounterObject 	= GameObject.Find("Goal Counter TextUI");
 		GameObject timeCounterObject 	= GameObject.Find("Time Counter TextUI");
 		GameObject scoreUIObject 		= GameObject.Find("ScoreTextUI");
 		this.victoryPanelUI 			= GameObject.Find("VictoryPanelUI");
-
+		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
+		this.gameMapCreator 				= GameObject.Find("GameMapCreator");
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
@@ -56,13 +59,20 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(this.victoryPanelUI, "Unable to find Victory UI");
 		Assert.IsNotNull(scoreUIObject);
 
-		this.gameMap = gameMapObject.GetComponent<GameMap>();
-		this.player = playerObject.GetComponent<PlayerMovement>();
-		this.roomCamera = cameraObject.GetComponent<CameraController>();
-		this.spawnPoint = spawnObject.transform;
-		this.goalCounterTextUI = goalCounterObject.GetComponent<Text>();
-		this.timeCounterTextUI = timeCounterObject.GetComponent<Text>();
-		this.victoryScoreTextUI = scoreUIObject.GetComponent<Text>();
+		if(this.gameMapCreator != null) {
+			// Env is just used to create the map by game designer.
+			// If env is still present in editor. Must be removed first!
+			// (Because the env is re-generated at runtime)
+			GameObject.Destroy(this.gameMapCreator); 
+		}
+
+		this.gameMap 					= gameMapObject.GetComponent<GameMap>();
+		this.player 					= playerObject.GetComponent<PlayerMovement>();
+		this.roomCamera 				= cameraObject.GetComponent<CameraController>();
+		this.spawnPoint 				= spawnObject.transform;
+		this.goalCounterTextUI 			= goalCounterObject.GetComponent<Text>();
+		this.timeCounterTextUI 			= timeCounterObject.GetComponent<Text>();
+		this.victoryScoreTextUI 		= scoreUIObject.GetComponent<Text>();
 
 		Assert.IsNotNull(this.gameMap, "Unable to recover GameMap script from GameMap Object");
 		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
@@ -70,7 +80,7 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(this.goalCounterTextUI, "Unable to recover Text component from Goal Counter");
 		Assert.IsNotNull(this.timeCounterTextUI, "Unable to recover Text component from Time Counter");
 
-		// Init setup
+		// Init setup (Don't forget that)
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
 		this.currentRoom.onRoomEnter();
 		this.currentRoom.setActive(true);
@@ -170,6 +180,9 @@ public class GameManager : MonoBehaviour {
 		return this.timeManager;
 	}
 
+	/**
+	 * Get how many goals remain.
+	 */
 	public int getNbRemainingGoals() {
 		int remaining = this.gameMap.listRooms.Length;
 		foreach(Room roro in this.gameMap.listRooms){
