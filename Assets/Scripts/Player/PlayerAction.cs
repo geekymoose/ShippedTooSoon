@@ -15,9 +15,9 @@ public class PlayerAction : MonoBehaviour {
 	// Unity Methods
 	// -------------------------------------------------------------------------
 	public void Start() {
-		this.attackRangeCollider = this.GetComponent<CircleCollider2D>();
-		this.attackCenter = GameObject.Find("PlayerAttackCenter").transform;
-        this.anim = this.GetComponent<Animator>();
+		this.attackRangeCollider	= this.GetComponent<CircleCollider2D>();
+		this.attackCenter 			= GameObject.Find("PlayerAttackCenter").transform;
+        this.anim 					= this.GetComponent<Animator>();
 
 		Assert.IsNotNull(this.attackRangeCollider, "No range collider in player? :/");
 		Assert.IsNotNull(this.attackCenter, "Player's hand must be dragged on player script");
@@ -28,8 +28,8 @@ public class PlayerAction : MonoBehaviour {
 
 	void Update () {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
+			this.canAttack = true; //TODO TMP DEBUG
 			if(this.canAttack) {
-				Debug.Log("ATTACK!!");
 				this.attack();
 			}
 			else {
@@ -46,7 +46,7 @@ public class PlayerAction : MonoBehaviour {
         }
 		else if(other.gameObject.name == "sword") {
 			this.canAttack = true;
-			this.anim.SetTrigger("pickupSword");
+			this.anim.SetTrigger("PickupSword");
 		}
     }
 
@@ -56,7 +56,8 @@ public class PlayerAction : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	private void attack() {
-		this.anim.SetTrigger("attack");
+		Debug.Log("ATTACK!!");
+		this.anim.SetTrigger("Attack");
 		
 		Vector2 center = new Vector2(this.attackCenter.position.x, this.attackCenter.position.y);
 		Collider2D[] cocos = Physics2D.OverlapCircleAll(center, this.attackRangeCollider.radius/2);

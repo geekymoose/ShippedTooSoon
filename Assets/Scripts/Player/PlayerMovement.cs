@@ -2,12 +2,22 @@
 
 public class PlayerMovement : MonoBehaviour
 {
+    // -------------------------------------------------------------------------
+    // Attributes
+    // -------------------------------------------------------------------------
+
     [Range(0, 100)]
     public float speed = 5f;
 
     private Rigidbody2D body2d;
-    private Vector2 movementVector;
     private Animator anim;
+    private Vector2 movementVector;
+    private bool canMove = true;
+
+
+    // -------------------------------------------------------------------------
+    // Unity Methods
+    // -------------------------------------------------------------------------
 
     // Use this for initialization
     private void Start()
@@ -19,15 +29,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        //movement with the axis of the xbox gamepad
-        movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
-        movementVector.y = Input.GetAxisRaw("Vertical") * speed;
-
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if(this.canMove)
         {
-            this.anim.SetBool("IsWalking", true);
-            this.anim.SetFloat("MoveX", movementVector.x);
-            this.anim.SetFloat("MoveY", movementVector.y);
+            this.HandleMovement();
         }
         else
         {
@@ -44,5 +48,32 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position, movementVector.normalized);
+    }
+
+
+    // -------------------------------------------------------------------------
+    // Methods
+    // -------------------------------------------------------------------------
+
+    private void HandleMovement()
+    {
+        movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
+        movementVector.y = Input.GetAxisRaw("Vertical") * speed;
+
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        {
+            this.anim.SetBool("IsWalking", true);
+            this.anim.SetFloat("MoveX", movementVector.x);
+            this.anim.SetFloat("MoveY", movementVector.y);
+        }
+        else
+        {
+            anim.SetBool("IsWalking", false);
+        }
+    }
+
+    public void SetCanMove(bool value)
+    {
+        this.canMove = value;
     }
 }
