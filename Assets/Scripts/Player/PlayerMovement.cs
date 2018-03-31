@@ -23,14 +23,15 @@ public class PlayerMovement : MonoBehaviour
         movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
         movementVector.y = Input.GetAxisRaw("Vertical") * speed;
 
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")|| Input.GetAxisRaw("Horizontal") !=0|| Input.GetAxisRaw("Horizontal")!=0)
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
-            anim.SetBool("isWalking", true);
-            DefinePlayerDirection(movementVector);
+            this.anim.SetBool("IsWalking", true);
+            this.anim.SetFloat("MoveX", movementVector.x);
+            this.anim.SetFloat("MoveY", movementVector.y);
         }
         else
         {
-            anim.SetBool("isWalking", false);
+            anim.SetBool("IsWalking", false);
         }
     }
 
@@ -43,11 +44,5 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawRay(transform.position, movementVector.normalized);
-    }
-
-    public void DefinePlayerDirection(Vector2 move)
-    {
-        anim.SetFloat("MoveX", movementVector.x);
-        anim.SetFloat("MoveY", movementVector.y);
     }
 }

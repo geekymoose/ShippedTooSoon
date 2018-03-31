@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4976145882449870}
   - component: {fileID: 50174315332649648}
-  - component: {fileID: 114315162504636562}
   - component: {fileID: 70656929376043230}
-  - component: {fileID: 212918403280586696}
-  - component: {fileID: 114487480196180328}
-  - component: {fileID: 95118003196103952}
   - component: {fileID: 58125310829232038}
+  - component: {fileID: 212918403280586696}
+  - component: {fileID: 95118003196103952}
+  - component: {fileID: 114315162504636562}
+  - component: {fileID: 114487480196180328}
   - component: {fileID: 114844389804135496}
   m_Layer: 0
   m_Name: Player
@@ -221,7 +221,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.1, y: 2.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
