@@ -66,15 +66,13 @@ public class PlayerAction : MonoBehaviour {
 		Vector3 center = this.transform.position + (dir * range);
 		Vector2 attackCenter = new Vector2(center.x, center.y);
 
-		Debug.DrawLine(this.transform.position, center, Color.red, 2.0f);
-		Debug.Log(this.attackRangeCollider.radius);
-		Debug.DrawLine(center, center + (Vector3.up * this.attackRangeCollider.radius), Color.yellow, 2.0f);
-
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(attackCenter, this.attackRangeCollider.radius/2);
 
 		foreach(Collider2D coco in colliders) {
 			if(coco.gameObject.CompareTag("Destructable")) {
-				GameObject.Destroy(coco.gameObject);
+				Destructable dd = coco.gameObject.GetComponent<Destructable>();
+				Assert.IsNotNull(dd, "Destructable object without Destructable script :/");
+				dd.destroy();
 			}
 		}
 		// TODO: sound?
