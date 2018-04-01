@@ -27,7 +27,6 @@ public class PlayerAction : MonoBehaviour {
 
 	void Update () {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
-			this.canAttack = true; // TODO: TMP
 			if(this.canAttack) {
 				this.attack();
 			}
@@ -44,6 +43,7 @@ public class PlayerAction : MonoBehaviour {
             roger.activate();
         }
 		else if(other.gameObject.name == "sword") {
+			GameObject.Destroy(other.gameObject);
 			this.canAttack = true;
 			this.anim.SetTrigger("PickupSword");
 			//TODO: sound?

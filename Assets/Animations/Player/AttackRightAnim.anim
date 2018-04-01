@@ -82,7 +82,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.75
+  - time: 0.5
     functionName: AllowMovement
     data: 
     objectReferenceParameter: {fileID: 0}
