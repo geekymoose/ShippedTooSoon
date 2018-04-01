@@ -3,18 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/**
+ * Game Debugger.
+ * Gives cheatcodes / Godmode.
+ * All possibles actions are listed (Variables started by 'key')
+ */
 public class GameDebugger : MonoBehaviour {
+	// -------------------------------------------------------------------------
+	// Parameters
+	// -------------------------------------------------------------------------
 	private GameObject[] goals;
 	private GameManager gameManager = null;
+	private GameObject player = null;
 
+	// Shortcuts keys
+	private KeyCode	keyGiveWeapon 			= KeyCode.F6;
+	private KeyCode keyRespawnPlayer 		= KeyCode.F7;
+	private KeyCode keyForceWin 			= KeyCode.F8;
+	private KeyCode keySlowDownGame 		= KeyCode.F9;
+	private KeyCode keySpeedUpGame 			= KeyCode.F10;
+	private KeyCode keyFreezeGame 			= KeyCode.F11;
+	private KeyCode keyUnfreezeGame 		= KeyCode.F12;
+
+
+	// -------------------------------------------------------------------------
+	// Unity Methods
+	// -------------------------------------------------------------------------
     private void Start() {
         if(!Debug.isDebugBuild) {
             // Script enabled ONLY in debug build
+        	Debug.Log("[DEBUGGER] GameDebugger is not activated");
             this.gameObject.GetComponent<GameDebugger>().enabled = false;
             return;
         }
         Debug.LogWarning("[WARNING] GameDebugger activated");
+
 		this.gameManager =  this.GetComponent<GameManager>();
+		this.player = GameObject.FindGameObjectWithTag("Player");
+
+		Assert.IsNotNull(this.gameManager);
+		Assert.IsNotNull(this.player);
     }
 	
 	// Update is called once per frame
@@ -24,32 +52,38 @@ public class GameDebugger : MonoBehaviour {
 
 	private void handleInputKey(){
 		// Game state (Win etc..)
-		if(Input.GetKeyDown(KeyCode.F8)) {
-			Debug.LogWarning("[DEBUG] : Force win game");
+		if(Input.GetKeyDown(this.keyForceWin)) {
+			Debug.LogWarning("[DEBUG]: Force win game");
 			this.winRightNow();
 		}
-		else if(Input.GetKeyDown(KeyCode.F7)) {
+		else if(Input.GetKeyDown(this.keyRespawnPlayer)) {
+			Debug.LogWarning("[DEBUG]: Respawn player");
 			this.gameManager.respawnPlayer();
+		}
+		else if(Input.GetKeyDown(this.keyGiveWeapon)) {
+			Debug.LogWarning("[DEBUG]: Give weapon");
+			this.player.GetComponent<PlayerAction>().pickupWeapon();
 		}
 
 		// Game speed / Time
-		else if(Input.GetKeyDown(KeyCode.F9)) {
-			Debug.LogWarning("[DEBUG] : SlowDown game. Current scale: " + Time.timeScale);
+		else if(Input.GetKeyDown(this.keySlowDownGame)) {
+			Debug.LogWarning("[DEBUG]: SlowDown game. Current scale: " + Time.timeScale);
 			this.gameManager.getTimeManager().slowDownGame(0.1f);
 		}
-		else if(Input.GetKeyDown(KeyCode.F10)) {
-			Debug.LogWarning("[DEBUG] : SpeedUp game. Current scale: " + Time.timeScale);
+		else if(Input.GetKeyDown(this.keySpeedUpGame)) {
+			Debug.LogWarning("[DEBUG]: SpeedUp game. Current scale: " + Time.timeScale);
 			this.gameManager.getTimeManager().speedUpGame(0.2f);
 		}
-		else if(Input.GetKeyDown(KeyCode.F11)) {
-			Debug.LogWarning("[DEBUG] : Freeze game. Current scale: " + Time.timeScale);
+		else if(Input.GetKeyDown(this.keyFreezeGame)) {
+			Debug.LogWarning("[DEBUG]: Freeze game. Current scale: " + Time.timeScale);
 			this.gameManager.getTimeManager().freezeGame();
 		}
-		else if(Input.GetKeyDown(KeyCode.F12)) {
-			Debug.LogWarning("[DEBUG] : Unfreeze game. Current scale: " + Time.timeScale);
+		else if(Input.GetKeyDown(this.keyUnfreezeGame)) {
+			Debug.LogWarning("[DEBUG]: Unfreeze game. Current scale: " + Time.timeScale);
 			this.gameManager.getTimeManager().unFreezeGame();
 		}
 	}
+
 
 	// -------------------------------------------------------------------------
 	// Debug / Cheat functions

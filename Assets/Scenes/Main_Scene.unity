@@ -274,7 +274,16 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: b0cb2f4b8781de749bd0955336dcf75b,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 4777208087067276, guid: ae40837eb8a5b2c42b544d9c25fe173f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777208087067276, guid: ae40837eb8a5b2c42b544d9c25fe173f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 58125310829232038, guid: ae40837eb8a5b2c42b544d9c25fe173f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ae40837eb8a5b2c42b544d9c25fe173f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &616481865
@@ -490,6 +499,26 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a170070522c17594ca2ac673daf16f12, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1248327502 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1735504355514266, guid: ae40837eb8a5b2c42b544d9c25fe173f,
+    type: 2}
+  m_PrefabInternal: {fileID: 561644377}
+--- !u!58 &1248327504
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1248327502}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1001 &1250524342
 Prefab:
   m_ObjectHideFlags: 0
@@ -1028,6 +1057,16 @@ Prefab:
     - target: {fileID: 4064672604230798, guid: 2918a0b9ba432164580632e5defc16a7, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 61737825061747308, guid: 2918a0b9ba432164580632e5defc16a7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61929914459171832, guid: 2918a0b9ba432164580632e5defc16a7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2918a0b9ba432164580632e5defc16a7, type: 2}

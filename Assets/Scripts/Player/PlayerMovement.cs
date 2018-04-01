@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D body2d;
     private Animator anim;
+    private Vector2 playerDirection; // Orientation of the player
     private Vector2 movementVector;
     private bool canMove = true;
 
@@ -65,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
             this.anim.SetBool("IsWalking", true);
             this.anim.SetFloat("MoveX", movementVector.x);
             this.anim.SetFloat("MoveY", movementVector.y);
+            this.playerDirection = this.movementVector.normalized;
         }
         else
         {
@@ -81,6 +83,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public Vector2 getDirection() {
-        return this.movementVector.normalized;
+        return this.playerDirection;
     }
 }

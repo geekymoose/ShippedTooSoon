@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class PlayerAction : MonoBehaviour {
-	private PlayerMovement playerMovement;
-	private CircleCollider2D attackRangeCollider = null;
     private Animator anim = null;
-	private Transform attackCenter = null;
+	private PlayerMovement playerMovement;
 	private bool canAttack = false;
-
-	public float attackRange = 2.0f;
+	
+	private Transform attackCenter = null;
+	private CircleCollider2D attackRangeCollider = null;
 
 
 	// -------------------------------------------------------------------------
@@ -18,7 +17,7 @@ public class PlayerAction : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	public void Start() {
 		this.playerMovement 		= this.GetComponent<PlayerMovement>();
-		this.attackRangeCollider	= this.GetComponent<CircleCollider2D>();
+		this.attackRangeCollider	= this.GetComponentInChildren<CircleCollider2D>();
         this.anim 					= this.GetComponent<Animator>();
 		this.attackCenter 			= GameObject.Find("PlayerAttackCenter").transform;
 
@@ -32,7 +31,6 @@ public class PlayerAction : MonoBehaviour {
 
 	void Update () {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
-				this.attack();
 			if(this.canAttack) {
 				this.attack();
 			}
@@ -50,9 +48,7 @@ public class PlayerAction : MonoBehaviour {
         }
 		else if(other.gameObject.name == "sword") {
 			GameObject.Destroy(other.gameObject);
-			this.canAttack = true;
-			this.anim.SetTrigger("PickupSword");
-			//TODO: sound?
+			this.pickupWeapon();
 		}
     }
 
@@ -64,16 +60,33 @@ public class PlayerAction : MonoBehaviour {
 	private void attack() {
 		this.anim.SetTrigger("Attack");
 
-		int layer_mask = LayerMask.GetMask("Destructable");
-		Vector2 pos2D = new Vector2(this.transform.position.x, this.transform.position.y);
-		RaycastHit2D hit = Physics2D.Raycast(pos2D, playerMovement.getDirection(), this.attackRange, layer_mask);
+		// Update position of attack center position
+		float range = Vector3.Distance(this.attackCenter.transform.position, this.transform.position);
+		Vector3 dir = this.playerMovement.getDirection();
+		Vector3 center = this.transform.position + (dir * range);
+		Vector2 attackCenter = new Vector2(center.x, center.y);
 
-		if(hit.collider != null) {
-			GameObject target = hit.collider.gameObject;
-			Debug.Log(target);
-			if(target.CompareTag("Destructable")) {
-				GameObject.Destroy(target);
+		Debug.DrawLine(this.transform.position, center, Color.red, 2.0f);
+		Debug.Log(this.attackRangeCollider.radius);
+		Debug.DrawLine(center, center + (Vector3.up * this.attackRangeCollider.radius), Color.yellow, 2.0f);
+
+		Collider2D[] colliders = Physics2D.OverlapCircleAll(attackCenter, this.attackRangeCollider.radius/2);
+
+		foreach(Collider2D coco in colliders) {
+			if(coco.gameObject.CompareTag("Destructable")) {
+				GameObject.Destroy(coco.gameObject);
 			}
 		}
+		// TODO: sound?
+	}
+
+	/**
+	 * Pickup a weapon. Player can now attack.
+	 * Plays pickup animation.
+	 */
+	public void pickupWeapon() {
+		this.canAttack = true;
+		this.anim.SetTrigger("PickupSword");
+		//TODO: sound?
 	}
 }
