@@ -29,19 +29,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if(this.canMove)
-        {
-            this.HandleMovement();
-        }
-        else
-        {
-            anim.SetBool("IsWalking", false);
-        }
+        this.HandleMovement();
     }
 
     public void FixedUpdate()
     {
-        body2d.velocity = new Vector2(movementVector.x, movementVector.y);
+        if(this.canMove)
+        {
+            body2d.velocity = new Vector2(movementVector.x, movementVector.y);
+        }
+        else
+        {
+            body2d.velocity = Vector2.zero;
+        }
     }
 
     private void OnDrawGizmos()
@@ -72,8 +72,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void SetCanMove(bool value)
-    {
-        this.canMove = value;
+    public void FreezeMovement() {
+        this.canMove = false;
+    }
+
+    public void AllowMovement() {
+        this.canMove = true;
     }
 }

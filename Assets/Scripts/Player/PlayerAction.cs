@@ -27,6 +27,7 @@ public class PlayerAction : MonoBehaviour {
 
 	void Update () {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
+			this.canAttack = true; // TODO: TMP
 			if(this.canAttack) {
 				this.attack();
 			}
