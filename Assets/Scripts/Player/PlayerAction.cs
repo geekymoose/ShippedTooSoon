@@ -4,20 +4,25 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class PlayerAction : MonoBehaviour {
+	private PlayerMovement playerMovement;
 	private CircleCollider2D attackRangeCollider = null;
     private Animator anim = null;
 	private Transform attackCenter = null;
 	private bool canAttack = false;
+
+	public float attackRange = 2.0f;
 
 
 	// -------------------------------------------------------------------------
 	// Unity Methods
 	// -------------------------------------------------------------------------
 	public void Start() {
+		this.playerMovement 		= this.GetComponent<PlayerMovement>();
 		this.attackRangeCollider	= this.GetComponent<CircleCollider2D>();
-		this.attackCenter 			= GameObject.Find("PlayerAttackCenter").transform;
         this.anim 					= this.GetComponent<Animator>();
+		this.attackCenter 			= GameObject.Find("PlayerAttackCenter").transform;
 
+		Assert.IsNotNull(this.playerMovement, "Unable to get playerMovement");
 		Assert.IsNotNull(this.attackRangeCollider, "No range collider in player? :/");
 		Assert.IsNotNull(this.attackCenter, "Player's hand must be dragged on player script");
 		Assert.IsNotNull(this.anim, "Unable to get the player animator");
@@ -27,6 +32,7 @@ public class PlayerAction : MonoBehaviour {
 
 	void Update () {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
+				this.attack();
 			if(this.canAttack) {
 				this.attack();
 			}
@@ -57,18 +63,17 @@ public class PlayerAction : MonoBehaviour {
 
 	private void attack() {
 		this.anim.SetTrigger("Attack");
-		//TODO: sound?
-		
-		Vector2 center = new Vector2(this.attackCenter.position.x, this.attackCenter.position.y);
-		Collider2D[] cocos = Physics2D.OverlapCircleAll(center, this.attackRangeCollider.radius/2);
-		
-		foreach(Collider2D coco in cocos) {
-			// TODO
-			/*
-			if(coco.CompareTag("Pickup") || coco.CompareTag("Destructable")) {
-				return coco.transform;
+
+		int layer_mask = LayerMask.GetMask("Destructable");
+		Vector2 pos2D = new Vector2(this.transform.position.x, this.transform.position.y);
+		RaycastHit2D hit = Physics2D.Raycast(pos2D, playerMovement.getDirection(), this.attackRange, layer_mask);
+
+		if(hit.collider != null) {
+			GameObject target = hit.collider.gameObject;
+			Debug.Log(target);
+			if(target.CompareTag("Destructable")) {
+				GameObject.Destroy(target);
 			}
-			*/
 		}
 	}
 }

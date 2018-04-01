@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 61530756030444908}
   - component: {fileID: 61064137365839148}
   - component: {fileID: 95856203358982184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (48)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 61529150784097558}
   - component: {fileID: 61356320408975468}
   - component: {fileID: 95550685487071510}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (17)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 61639015529588766}
   - component: {fileID: 61299490607895520}
   - component: {fileID: 95255722311363464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (28)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 61868386217072210}
   - component: {fileID: 61594181895193142}
   - component: {fileID: 95535022382527522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (1)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 61253308863888494}
   - component: {fileID: 61914148290141330}
   - component: {fileID: 95770354924786606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (49)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 61269182245034282}
   - component: {fileID: 61172877698337102}
   - component: {fileID: 95732170977671570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (9)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 61208581587521670}
   - component: {fileID: 61874027236672094}
   - component: {fileID: 95501276166689008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (25)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 61910904248339454}
   - component: {fileID: 61762886925780756}
   - component: {fileID: 95260036636295522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (11)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -443,9 +443,9 @@ GameObject:
   - component: {fileID: 212294880392102446}
   - component: {fileID: 61859005379218164}
   - component: {fileID: 61890624210092130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (18)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 61818584728288490}
   - component: {fileID: 61159247324045670}
   - component: {fileID: 95927234242288940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (34)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 61397870959685260}
   - component: {fileID: 61879697878138498}
   - component: {fileID: 95519365764415074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 61619187693118788}
   - component: {fileID: 61154693495034738}
   - component: {fileID: 95466483622677648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (14)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 61929914459171832}
   - component: {fileID: 61737825061747308}
   - component: {fileID: 95688454402482750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (4)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -757,9 +757,9 @@ GameObject:
   - component: {fileID: 212520278980344720}
   - component: {fileID: 61383509651404692}
   - component: {fileID: 61965137622528164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (25)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 61206662938664072}
   - component: {fileID: 61176321007021756}
   - component: {fileID: 95444636029368448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (33)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 61875221405172684}
   - component: {fileID: 61537288090803670}
   - component: {fileID: 95053960345572222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (27)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 61537941640752642}
   - component: {fileID: 61781546614679738}
   - component: {fileID: 95823200245201512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (44)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 61316863766622158}
   - component: {fileID: 61088697280772124}
   - component: {fileID: 95673067784409012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (29)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1110,9 +1110,9 @@ GameObject:
   - component: {fileID: 212590584957728468}
   - component: {fileID: 61335441900100686}
   - component: {fileID: 61732527873111072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (21)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 61726853261895336}
   - component: {fileID: 61057200201463066}
   - component: {fileID: 95605879828983762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (41)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1198,9 +1198,9 @@ GameObject:
   - component: {fileID: 212052752265284158}
   - component: {fileID: 61169431316299628}
   - component: {fileID: 61311048189077074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (17)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 61742687773063092}
   - component: {fileID: 61427028411553700}
   - component: {fileID: 95206727211551942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (28)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1321,9 +1321,9 @@ GameObject:
   - component: {fileID: 212840696177254552}
   - component: {fileID: 61175615196583476}
   - component: {fileID: 61356180196005416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (10)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1373,9 +1373,9 @@ GameObject:
   - component: {fileID: 212657570821600624}
   - component: {fileID: 61338742449786646}
   - component: {fileID: 61569247772719856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (22)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1410,7 +1410,7 @@ GameObject:
   - component: {fileID: 61042123471071848}
   - component: {fileID: 61631847119657070}
   - component: {fileID: 95601316711091660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (32)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1479,7 +1479,7 @@ GameObject:
   - component: {fileID: 61535239653586954}
   - component: {fileID: 61739656629591394}
   - component: {fileID: 95311101978855218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (31)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1532,9 +1532,9 @@ GameObject:
   - component: {fileID: 212305385245361116}
   - component: {fileID: 61599567415073700}
   - component: {fileID: 61323557314954526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (2)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 61998248427148788}
   - component: {fileID: 61661651851586814}
   - component: {fileID: 95198076969597916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (33)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1674,7 +1674,7 @@ GameObject:
   - component: {fileID: 61970897257648290}
   - component: {fileID: 61290709936202562}
   - component: {fileID: 95441290170771750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (31)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 61177493757482388}
   - component: {fileID: 61404894102385254}
   - component: {fileID: 95816525958959802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (22)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1729,7 +1729,7 @@ GameObject:
   - component: {fileID: 61128282725991796}
   - component: {fileID: 61779629337106356}
   - component: {fileID: 95770034008731404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (35)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1799,9 +1799,9 @@ GameObject:
   - component: {fileID: 212010711146332912}
   - component: {fileID: 61043288192012682}
   - component: {fileID: 61077724514927788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (13)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1837,7 +1837,7 @@ GameObject:
   - component: {fileID: 61868914888751202}
   - component: {fileID: 61853818920738802}
   - component: {fileID: 95823084635644570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (18)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 61664932369475386}
   - component: {fileID: 61184162207056556}
   - component: {fileID: 95087426416514000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (15)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1909,7 +1909,7 @@ GameObject:
   - component: {fileID: 61227290452651146}
   - component: {fileID: 61546704875174714}
   - component: {fileID: 95120113833401608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (32)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1944,9 +1944,9 @@ GameObject:
   - component: {fileID: 212966881797603772}
   - component: {fileID: 61821412229975376}
   - component: {fileID: 61023089817575488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (7)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1980,7 +1980,7 @@ GameObject:
   - component: {fileID: 61414375524711480}
   - component: {fileID: 61072310033943936}
   - component: {fileID: 95615811528830242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (2)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -1999,7 +1999,7 @@ GameObject:
   - component: {fileID: 61519081428085068}
   - component: {fileID: 61975389160176948}
   - component: {fileID: 95334776914659868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (46)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2017,9 +2017,9 @@ GameObject:
   - component: {fileID: 212464336010631546}
   - component: {fileID: 61528654755439246}
   - component: {fileID: 61353955069988882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (3)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2053,7 +2053,7 @@ GameObject:
   - component: {fileID: 61844540407589986}
   - component: {fileID: 61134107479068212}
   - component: {fileID: 95838411419291296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (23)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2072,7 +2072,7 @@ GameObject:
   - component: {fileID: 61983676582363890}
   - component: {fileID: 61385303966519174}
   - component: {fileID: 95146851444826516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (26)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2123,7 +2123,7 @@ GameObject:
   - component: {fileID: 61846860542728330}
   - component: {fileID: 61243468444109414}
   - component: {fileID: 95857452541184700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (9)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2142,7 +2142,7 @@ GameObject:
   - component: {fileID: 61096932236858244}
   - component: {fileID: 61243442480791258}
   - component: {fileID: 95071006705714486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (43)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2180,7 +2180,7 @@ GameObject:
   - component: {fileID: 61366334026481608}
   - component: {fileID: 61090819962156684}
   - component: {fileID: 95753058792213702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (12)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2262,9 +2262,9 @@ GameObject:
   - component: {fileID: 212958469882066172}
   - component: {fileID: 61606668145836426}
   - component: {fileID: 61679248938043602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (18)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2317,7 +2317,7 @@ GameObject:
   - component: {fileID: 61169003604051480}
   - component: {fileID: 61817350521164556}
   - component: {fileID: 95361957032416654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (47)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2368,9 +2368,9 @@ GameObject:
   - component: {fileID: 212491604606167736}
   - component: {fileID: 61112156897681950}
   - component: {fileID: 61765196005563486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (1)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2404,7 +2404,7 @@ GameObject:
   - component: {fileID: 61006281712692698}
   - component: {fileID: 61159567267332180}
   - component: {fileID: 95487983233068782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (26)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2423,7 +2423,7 @@ GameObject:
   - component: {fileID: 61905139589985778}
   - component: {fileID: 61519982580925022}
   - component: {fileID: 95669056688185310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (30)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2476,7 +2476,7 @@ GameObject:
   - component: {fileID: 61686796166376322}
   - component: {fileID: 61096347454322292}
   - component: {fileID: 95137090617919868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (37)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2546,7 +2546,7 @@ GameObject:
   - component: {fileID: 61495160202470520}
   - component: {fileID: 61715264770729678}
   - component: {fileID: 95280748984687062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (8)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2665,9 +2665,9 @@ GameObject:
   - component: {fileID: 212572560343983734}
   - component: {fileID: 61431570077475586}
   - component: {fileID: 61441466865865150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2752,9 +2752,9 @@ GameObject:
   - component: {fileID: 212661692155490484}
   - component: {fileID: 61846811755670126}
   - component: {fileID: 61764269024526988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (4)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2771,7 +2771,7 @@ GameObject:
   - component: {fileID: 61814638444724792}
   - component: {fileID: 61663430746306012}
   - component: {fileID: 95707993400894372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (3)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2942,7 +2942,7 @@ GameObject:
   - component: {fileID: 61326524337547420}
   - component: {fileID: 61354941779445770}
   - component: {fileID: 95786268831690238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (6)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -2977,9 +2977,9 @@ GameObject:
   - component: {fileID: 212118229359650896}
   - component: {fileID: 61424668929961932}
   - component: {fileID: 61306711686918572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (17)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3045,7 +3045,7 @@ GameObject:
   - component: {fileID: 61647511051134408}
   - component: {fileID: 61032776678242878}
   - component: {fileID: 95534784972961328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (34)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -3100,7 +3100,7 @@ GameObject:
   - component: {fileID: 61872910462528522}
   - component: {fileID: 61955002644053812}
   - component: {fileID: 95423257333946912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (39)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -3118,9 +3118,9 @@ GameObject:
   - component: {fileID: 212495202209144300}
   - component: {fileID: 61410712897986348}
   - component: {fileID: 61496761077924652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (19)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3151,9 +3151,9 @@ GameObject:
   - component: {fileID: 212250516005362186}
   - component: {fileID: 61677514305671176}
   - component: {fileID: 61424798359686478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (19)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3221,9 +3221,9 @@ GameObject:
   - component: {fileID: 212698308107013218}
   - component: {fileID: 61694740358718048}
   - component: {fileID: 61826718696910682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (20)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3239,9 +3239,9 @@ GameObject:
   - component: {fileID: 212625134344297306}
   - component: {fileID: 61888114516128214}
   - component: {fileID: 61288080728812696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (12)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3274,9 +3274,9 @@ GameObject:
   - component: {fileID: 212194968302336820}
   - component: {fileID: 61891982784349524}
   - component: {fileID: 61387465784043090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (24)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3326,9 +3326,9 @@ GameObject:
   - component: {fileID: 212061101150023780}
   - component: {fileID: 61175522637288302}
   - component: {fileID: 61559700056550218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (8)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3362,7 +3362,7 @@ GameObject:
   - component: {fileID: 61311579302292968}
   - component: {fileID: 61716847400522394}
   - component: {fileID: 95672818873897186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (45)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -3433,9 +3433,9 @@ GameObject:
   - component: {fileID: 212222588610929646}
   - component: {fileID: 61980552356031488}
   - component: {fileID: 61049204542972800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (11)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3502,9 +3502,9 @@ GameObject:
   - component: {fileID: 212539028306288460}
   - component: {fileID: 61497071427454384}
   - component: {fileID: 61307259283177320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (5)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3556,7 +3556,7 @@ GameObject:
   - component: {fileID: 61931688073144738}
   - component: {fileID: 61039195381215984}
   - component: {fileID: 95978431704724054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (40)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -3626,7 +3626,7 @@ GameObject:
   - component: {fileID: 61453386697142256}
   - component: {fileID: 61176486658939382}
   - component: {fileID: 95696463154417506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (13)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -3645,7 +3645,7 @@ GameObject:
   - component: {fileID: 61544279662206230}
   - component: {fileID: 61826717158397158}
   - component: {fileID: 95573333358365326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (16)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -3899,7 +3899,7 @@ GameObject:
   - component: {fileID: 61913629295413912}
   - component: {fileID: 61274137402327496}
   - component: {fileID: 95186077527323220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (27)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -3917,9 +3917,9 @@ GameObject:
   - component: {fileID: 212294106796006922}
   - component: {fileID: 61794440177172126}
   - component: {fileID: 61453273418196566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (19)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3952,9 +3952,9 @@ GameObject:
   - component: {fileID: 212966674854739486}
   - component: {fileID: 61037035704442524}
   - component: {fileID: 61035425639138000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (23)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3989,7 +3989,7 @@ GameObject:
   - component: {fileID: 61633855597867634}
   - component: {fileID: 61822219167996770}
   - component: {fileID: 95506463057318666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (5)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -4007,9 +4007,9 @@ GameObject:
   - component: {fileID: 212035256554702840}
   - component: {fileID: 61801632538787848}
   - component: {fileID: 61306586267484326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (18)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4078,9 +4078,9 @@ GameObject:
   - component: {fileID: 212009686529331350}
   - component: {fileID: 61771542869256398}
   - component: {fileID: 61656567266452244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (15)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4097,7 +4097,7 @@ GameObject:
   - component: {fileID: 61313962121757016}
   - component: {fileID: 61513221595856656}
   - component: {fileID: 95034778823872988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (21)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -4429,9 +4429,9 @@ GameObject:
   - component: {fileID: 212425223622951712}
   - component: {fileID: 61607223097585362}
   - component: {fileID: 61920808941562820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (9)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4447,9 +4447,9 @@ GameObject:
   - component: {fileID: 212315633125735220}
   - component: {fileID: 61419773559944858}
   - component: {fileID: 61878533880195856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (20)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4466,7 +4466,7 @@ GameObject:
   - component: {fileID: 61147374474842566}
   - component: {fileID: 61661524088749756}
   - component: {fileID: 95998919585192690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (8)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -4502,7 +4502,7 @@ GameObject:
   - component: {fileID: 61534133592759570}
   - component: {fileID: 61425680395406380}
   - component: {fileID: 95484511857141058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (38)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -4572,7 +4572,7 @@ GameObject:
   - component: {fileID: 61942684624204814}
   - component: {fileID: 61848913029009162}
   - component: {fileID: 95634336072469144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (7)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -4607,9 +4607,9 @@ GameObject:
   - component: {fileID: 212583133633922726}
   - component: {fileID: 61142693916097068}
   - component: {fileID: 61090836198415996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (14)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4676,7 +4676,7 @@ GameObject:
   - component: {fileID: 61828918042498758}
   - component: {fileID: 61332913947160148}
   - component: {fileID: 95067153741388804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (36)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -4695,7 +4695,7 @@ GameObject:
   - component: {fileID: 61470130232408006}
   - component: {fileID: 61795367592495782}
   - component: {fileID: 95487823921050726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (20)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -4731,7 +4731,7 @@ GameObject:
   - component: {fileID: 61967378127130010}
   - component: {fileID: 61384666938712068}
   - component: {fileID: 95849739376628702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (24)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -4804,9 +4804,9 @@ GameObject:
   - component: {fileID: 212904511837305246}
   - component: {fileID: 61649277897814132}
   - component: {fileID: 61974645121523544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (16)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4893,9 +4893,9 @@ GameObject:
   - component: {fileID: 212968135961506370}
   - component: {fileID: 61523653041428198}
   - component: {fileID: 61852124045074284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (21)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4945,9 +4945,9 @@ GameObject:
   - component: {fileID: 212180241895245868}
   - component: {fileID: 61083593474240032}
   - component: {fileID: 61481740979286138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crate (6)
-  m_TagString: Pickup
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4964,7 +4964,7 @@ GameObject:
   - component: {fileID: 61499836082761310}
   - component: {fileID: 61451425008994790}
   - component: {fileID: 95651278380839474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (42)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -5015,7 +5015,7 @@ GameObject:
   - component: {fileID: 61810174875772290}
   - component: {fileID: 61697802008969454}
   - component: {fileID: 95891354358521088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (30)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -5070,7 +5070,7 @@ GameObject:
   - component: {fileID: 61890594019271388}
   - component: {fileID: 61404530091221750}
   - component: {fileID: 95343007900954928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (19)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -5089,7 +5089,7 @@ GameObject:
   - component: {fileID: 61371302590227452}
   - component: {fileID: 61421934173013126}
   - component: {fileID: 95164826599540248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock (29)
   m_TagString: Destructable
   m_Icon: {fileID: 0}
@@ -6407,7 +6407,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711377657889196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.1730824, y: -1.71, z: 0}
+  m_LocalPosition: {x: -5.1730824, y: -1.71, z: -0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4671349234799638}
@@ -7411,7 +7411,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169273558759810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.17, y: -1.71, z: 0}
+  m_LocalPosition: {x: -8.67, y: -1.71, z: -0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4671349234799638}

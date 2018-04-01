@@ -79,4 +79,8 @@ public class PlayerMovement : MonoBehaviour
     public void AllowMovement() {
         this.canMove = true;
     }
+
+    public Vector2 getDirection() {
+        return this.movementVector.normalized;
+    }
 }
