@@ -20,14 +20,12 @@ public class PlayerMovement : MonoBehaviour
     // Unity Methods
     // -------------------------------------------------------------------------
 
-    // Use this for initialization
     private void Start()
     {
         body2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     public void Update()
     {
         this.HandleMovement();

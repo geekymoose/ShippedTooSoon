@@ -7,6 +7,8 @@ using UnityEngine.Assertions;
  * Game Debugger.
  * Gives cheatcodes / Godmode.
  * All possibles actions are listed (Variables started by 'key')
+ *
+ * \author	Constantin
  */
 public class GameDebugger : MonoBehaviour {
 	// -------------------------------------------------------------------------
@@ -17,6 +19,8 @@ public class GameDebugger : MonoBehaviour {
 	private GameObject player = null;
 
 	// Shortcuts keys
+	private KeyCode keyDamagePlayer 		= KeyCode.F1;
+	private KeyCode keyKillPlayer 			= KeyCode.F2;
 	private KeyCode	keyGiveWeapon 			= KeyCode.F6;
 	private KeyCode keyRespawnPlayer 		= KeyCode.F7;
 	private KeyCode keyForceWin 			= KeyCode.F8;
@@ -81,6 +85,17 @@ public class GameDebugger : MonoBehaviour {
 		else if(Input.GetKeyDown(this.keyUnfreezeGame)) {
 			Debug.LogWarning("[DEBUG]: Unfreeze game. Current scale: " + Time.timeScale);
 			this.gameManager.getTimeManager().unFreezeGame();
+		}
+
+		// Player
+		else if(Input.GetKeyDown(this.keyDamagePlayer)) {
+			float damageAmount = 20f;
+			Debug.LogWarning("[DEBUG]: Damage player ("+damageAmount+")");
+			this.player.GetComponent<PlayerHealth>().takeDammage(damageAmount);
+		}
+		else if(Input.GetKeyDown(this.keyKillPlayer)) {
+			Debug.LogWarning("[DEBUG]: Kill player");
+			this.player.GetComponent<PlayerHealth>().die();
 		}
 	}
 

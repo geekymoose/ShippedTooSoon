@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/**
+ * Manage Player Action such as Attacks and Pickup Goals.
+ */
 public class PlayerAction : MonoBehaviour {
-    private Animator anim = null;
-	private PlayerMovement playerMovement;
-	private bool canAttack = false;
-	
-	private Transform attackCenter = null;
-	private CircleCollider2D attackRangeCollider = null;
+    private Animator 			anim 			= null;
+	private PlayerMovement 		playerMovement 	= null;
+	private bool 				canAttack 		= false;
+	private Transform 			attackCenter 	= null;
+	private CircleCollider2D 	attackCollider 	= null;
 
 
 	// -------------------------------------------------------------------------
@@ -17,16 +19,16 @@ public class PlayerAction : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	public void Start() {
 		this.playerMovement 		= this.GetComponent<PlayerMovement>();
-		this.attackRangeCollider	= this.GetComponentInChildren<CircleCollider2D>();
+		this.attackCollider			= this.GetComponentInChildren<CircleCollider2D>();
         this.anim 					= this.GetComponent<Animator>();
 		this.attackCenter 			= GameObject.Find("PlayerAttackCenter").transform;
 
 		Assert.IsNotNull(this.playerMovement, "Unable to get playerMovement");
-		Assert.IsNotNull(this.attackRangeCollider, "No range collider in player? :/");
+		Assert.IsNotNull(this.attackCollider, "No range collider in player? :/");
 		Assert.IsNotNull(this.attackCenter, "Player's hand must be dragged on player script");
 		Assert.IsNotNull(this.anim, "Unable to get the player animator");
 
-		this.attackRangeCollider.enabled = false; // Important. Used only for range value.
+		this.attackCollider.enabled = false; // Important. Used only for range value.
 	}
 
 	void Update () {
@@ -35,7 +37,7 @@ public class PlayerAction : MonoBehaviour {
 				this.attack();
 			}
 			else {
-				//TODO: Can't attack, sound?
+				// TODO SOUND: Can't attack, sound?
 			}
         }
 	}
@@ -45,6 +47,8 @@ public class PlayerAction : MonoBehaviour {
             RoomGoal roger = other.gameObject.GetComponent<RoomGoal>();
             Assert.IsNotNull(roger, "Goal object doesn't have a RoomGoal script");
             roger.activate();
+			
+			// TODO SOUND: GG sound
         }
 		else if(other.gameObject.name == "sword") {
 			GameObject.Destroy(other.gameObject);
@@ -59,14 +63,16 @@ public class PlayerAction : MonoBehaviour {
 
 	private void attack() {
 		this.anim.SetTrigger("Attack");
+		
+		// TODO SOUND: attack sound
 
 		// Update position of attack center position
-		float range = Vector3.Distance(this.attackCenter.transform.position, this.transform.position);
+		float distance = Vector3.Distance(this.attackCenter.transform.position, this.transform.position);
 		Vector3 dir = this.playerMovement.getDirection();
-		Vector3 center = this.transform.position + (dir * range);
+		Vector3 center = this.transform.position + (dir * distance);
 		Vector2 attackCenter = new Vector2(center.x, center.y);
 
-		Collider2D[] colliders = Physics2D.OverlapCircleAll(attackCenter, this.attackRangeCollider.radius/2);
+		Collider2D[] colliders = Physics2D.OverlapCircleAll(attackCenter, this.attackCollider.radius/2);
 
 		foreach(Collider2D coco in colliders) {
 			if(coco.gameObject.CompareTag("Destructable")) {
@@ -75,7 +81,6 @@ public class PlayerAction : MonoBehaviour {
 				dd.destroy();
 			}
 		}
-		// TODO: sound?
 	}
 
 	/**
@@ -85,6 +90,7 @@ public class PlayerAction : MonoBehaviour {
 	public void pickupWeapon() {
 		this.canAttack = true;
 		this.anim.SetTrigger("PickupSword");
-		//TODO: sound?
+		
+		// TODO SOUND: pickup weapon sound (GG)
 	}
 }

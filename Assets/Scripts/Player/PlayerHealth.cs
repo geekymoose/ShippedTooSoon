@@ -1,45 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Assertions;
 
 public class PlayerHealth : MonoBehaviour {
-    public Stats healthStats;
-    public PanelHpPlayerBar panelHp;
-    [Range(0, 100)]
-    public float hp;
-
+    // -------------------------------------------------------------------------
+    // Attributes
+    // -------------------------------------------------------------------------
+   
     [Range(0,100)]
-    public float maxHp;
+    [Tooltip("Health at the start (And maximum possible if health reset)")]
+    public float            maxHp = 100f; // Default value
 
+    private float           currentHP = 0f;
+    private Image           healthHPImgUI = null;
 
+    private PlayerMovement  playerMovement;
+    
 
-	// Use this for initialization
+    // -------------------------------------------------------------------------
+    // Unity Methods
+    // -------------------------------------------------------------------------
+
 	void Start () {
-        //set all the starting value for the player
-        healthStats.SetValue(hp, maxHp, 1);
-        panelHp.SetHealthBar(healthStats.GetValuePercent());
+        this.currentHP = this.maxHp;
+
+        GameObject objUI = GameObject.Find("PlayerHPImgUI");
+        Assert.IsNotNull(objUI, "Unable to find player HP UI");
+        this.healthHPImgUI = objUI.GetComponent<Image>();
+        this.playerMovement = this.GetComponent<PlayerMovement>();
+        Assert.IsNotNull(this.healthHPImgUI, "Unable to get Image component from PlayerUI");
+        Assert.IsNotNull(this.playerMovement, "Unable to get PlayerMovement");
+
+        this.updateHealthUI();
 	}
 
-    //player take damage
-    public void TakeDamage(float dmgValue)
-    {
-        healthStats.ReduceValue(dmgValue);
 
-        if (healthStats.GetValue() <= 0)
-        {
-            Die();
+    // -------------------------------------------------------------------------
+    // UI Methods
+    // -------------------------------------------------------------------------
+
+    private void updateHealthUI() {
+        float fillAmout = this.currentHP / this.maxHp;
+        this.healthHPImgUI.fillAmount = fillAmout;
+    }
+    
+
+    // -------------------------------------------------------------------------
+    // GamePlay Methods
+    // -------------------------------------------------------------------------
+    public void takeDammage(float dmgValue) {
+        this.currentHP -= dmgValue;
+        this.currentHP = Mathf.Clamp(this.currentHP, 0, this.maxHp);
+        this.updateHealthUI();
+
+        // TODO SOUND: Play sound damage
+
+        if(this.currentHP <= 0) {
+            this.die();
         }
     }
 
-    //if hp <=0 player die
-    public void Die()
-    {
-        Debug.Log("player si dead");
-    }
+    public void die() {
+        this.currentHP = 0;
+        this.updateHealthUI();
+        this.playerMovement.FreezeMovement();
 
-    //get the hp Percent
-    public float GetHPPercent()
-    {
-        return healthStats.GetValuePercent();
+        // TODO SOUND: Play die sound
     }
 }
