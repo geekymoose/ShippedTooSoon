@@ -122,7 +122,8 @@ public class GameManager : MonoBehaviour {
 	public void startGame() {
 		this.playerMovement.transform.position = this.spawnPoint.position;
 		this.playerMovement.AllowMovement();
-		
+		this.playerHealth.healFull();
+
 		this.resetAllRooms();
 
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.playerMovement.transform.position);

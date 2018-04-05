@@ -79,10 +79,15 @@ public class PlayerHealth : MonoBehaviour {
 
     public void die() {
         this._currentHP = 0;
-        this.updateHealthUI();
         this._playerMovement.FreezeMovement();
+        this.updateHealthUI();
 
         // TODO SOUND: Play die sound
+    }
+
+    public void healFull() {
+        this._currentHP = this._maxHp;
+        this.updateHealthUI();
     }
     
 
