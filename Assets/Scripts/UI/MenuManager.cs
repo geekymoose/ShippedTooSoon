@@ -51,7 +51,7 @@ public class MenuManager : MonoBehaviour {
 		Assert.IsNotNull(this.welcomePanelUI);
 		Assert.IsNotNull(this.gameManager);
 
-		this.anim.SetBool("Hidden", false);
+		this.anim.SetBool("Hidden", true);
 	}
 
 
