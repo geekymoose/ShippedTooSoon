@@ -16,7 +16,8 @@ public class PlayerHealth : MonoBehaviour {
     private float           currentHP = 0f;
     private Image           healthHPImgUI = null;
 
-    private PlayerMovement  playerMovement;
+    private PlayerMovement  playerMovement = null;
+    private Animator        anim = null;
     
 
     // -------------------------------------------------------------------------
@@ -30,8 +31,10 @@ public class PlayerHealth : MonoBehaviour {
         Assert.IsNotNull(objUI, "Unable to find player HP UI");
         this.healthHPImgUI = objUI.GetComponent<Image>();
         this.playerMovement = this.GetComponent<PlayerMovement>();
+        this.anim = this.GetComponent<Animator>();
         Assert.IsNotNull(this.healthHPImgUI, "Unable to get Image component from PlayerUI");
         Assert.IsNotNull(this.playerMovement, "Unable to get PlayerMovement");
+        Assert.IsNotNull(this.anim, "Unable to get Animator");
 
         this.updateHealthUI();
 	}
@@ -54,6 +57,7 @@ public class PlayerHealth : MonoBehaviour {
         this.currentHP -= dmgValue;
         this.currentHP = Mathf.Clamp(this.currentHP, 0, this.maxHp);
         this.updateHealthUI();
+        this.anim.SetTrigger("TakeDamage");
 
         // TODO SOUND: Play sound damage
 

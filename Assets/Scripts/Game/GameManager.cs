@@ -43,12 +43,12 @@ public class GameManager : MonoBehaviour {
 		GameObject gameMapObject 		= GameObject.Find("GameMap");
 		GameObject cameraObject 		= GameObject.Find("Main Camera");
 		GameObject spawnObject 			= GameObject.Find("SpawnPoint");
-		GameObject goalCounterObject 	= GameObject.Find("Goal Counter TextUI");
-		GameObject timeCounterObject 	= GameObject.Find("Time Counter TextUI");
+		GameObject goalCounterObject 	= GameObject.Find("GoalCounterTextUI");
+		GameObject timeCounterObject 	= GameObject.Find("TimeCounterTextUI");
 		GameObject scoreUIObject 		= GameObject.Find("ScoreTextUI");
 		this.victoryPanelUI 			= GameObject.Find("VictoryPanelUI");
 		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
-		this.gameMapCreator 				= GameObject.Find("GameMapCreator");
+		this.gameMapCreator 			= GameObject.Find("GameMapCreator");
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
@@ -57,10 +57,10 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(goalCounterObject, "Unable to find GoalCounter Object");
 		Assert.IsNotNull(timeCounterObject, "Unable to find TimeCounter Object");
 		Assert.IsNotNull(this.victoryPanelUI, "Unable to find Victory UI");
-		Assert.IsNotNull(scoreUIObject);
+		Assert.IsNotNull(scoreUIObject, "Unable to find score UI");
 
 		if(this.gameMapCreator != null) {
-			// Env is just used to create the map by game designer.
+			// gameMapCreator is just used to create the map by game designer.
 			// If env is still present in editor. Must be removed first!
 			// (Because the env is re-generated at runtime)
 			GameObject.Destroy(this.gameMapCreator); 
