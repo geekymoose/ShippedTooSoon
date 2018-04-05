@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour {
 
     private PlayerMovement  playerMovement = null;
     private Animator        anim = null;
+    private Animator        animUI = null;
     
 
     // -------------------------------------------------------------------------
@@ -27,14 +28,21 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () {
         this.currentHP = this.maxHp;
 
-        GameObject objUI = GameObject.Find("PlayerHPImgUI");
-        Assert.IsNotNull(objUI, "Unable to find player HP UI");
-        this.healthHPImgUI = objUI.GetComponent<Image>();
+        GameObject objImgHPUI = GameObject.Find("PlayerHPImgUI");
+        GameObject objGameStateUI = GameObject.Find("CanvasUI_GameStat");
+
+        Assert.IsNotNull(objImgHPUI, "Unable to find player HP UI");
+        Assert.IsNotNull(objGameStateUI, "Unable to find UI panel");
+
+        this.healthHPImgUI = objImgHPUI.GetComponent<Image>();
         this.playerMovement = this.GetComponent<PlayerMovement>();
         this.anim = this.GetComponent<Animator>();
+        this.animUI = objGameStateUI.GetComponent<Animator>();
+
         Assert.IsNotNull(this.healthHPImgUI, "Unable to get Image component from PlayerUI");
         Assert.IsNotNull(this.playerMovement, "Unable to get PlayerMovement");
         Assert.IsNotNull(this.anim, "Unable to get Animator");
+        Assert.IsNotNull(this.animUI, "Unable to get UI Animator");
 
         this.updateHealthUI();
 	}
@@ -58,6 +66,7 @@ public class PlayerHealth : MonoBehaviour {
         this.currentHP = Mathf.Clamp(this.currentHP, 0, this.maxHp);
         this.updateHealthUI();
         this.anim.SetTrigger("TakeDamage");
+        this.animUI.SetTrigger("TakeDamage");
 
         // TODO SOUND: Play sound damage
 

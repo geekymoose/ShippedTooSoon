@@ -14,6 +14,9 @@ public class GameDebugger : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	// Parameters
 	// -------------------------------------------------------------------------
+	[Tooltip("Amount of damage on keyDamagePlayer")]
+	public float damageAmount = 5f;
+
 	private GameObject[] goals;
 	private GameManager gameManager = null;
 	private GameObject player = null;
@@ -89,7 +92,6 @@ public class GameDebugger : MonoBehaviour {
 
 		// Player
 		else if(Input.GetKeyDown(this.keyDamagePlayer)) {
-			float damageAmount = 20f;
 			Debug.LogWarning("[DEBUG]: Damage player ("+damageAmount+")");
 			this.player.GetComponent<PlayerHealth>().takeDammage(damageAmount);
 		}

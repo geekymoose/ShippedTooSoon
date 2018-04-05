@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 /**
  * General GameManager.
+ *
+ * \author Constantin
  */
 public class GameManager : MonoBehaviour {
 	// Game
@@ -23,12 +25,16 @@ public class GameManager : MonoBehaviour {
 	private Room previousRoom = null;
 	private bool hasSwitchedRoom = false;
 
-	// UI
-	private Text goalCounterTextUI = null;
+	// UI (Player State)
+	private Text goalCounterDoneTextUI = null;
+	private Text goalCounterUndoneTextUI = null;
 	private Text timeCounterTextUI = null;
 
+	// UI (GamePanel)
 	private GameObject victoryPanelUI = null;
 	private Text victoryScoreTextUI = null;
+
+	private Animator animUI = null;
 
 	// Debug / Editor
 	private GameObject gameMapCreator; // Used in editor to create GameMap.
@@ -43,7 +49,8 @@ public class GameManager : MonoBehaviour {
 		GameObject gameMapObject 		= GameObject.Find("GameMap");
 		GameObject cameraObject 		= GameObject.Find("Main Camera");
 		GameObject spawnObject 			= GameObject.Find("SpawnPoint");
-		GameObject goalCounterObject 	= GameObject.Find("GoalCounterTextUI");
+		GameObject objGoalDoneText 		= GameObject.Find("GoalCounterDoneTextUI");
+		GameObject objGoalUndoneText 	= GameObject.Find("GoalCounterUndoneTextUI");
 		GameObject timeCounterObject 	= GameObject.Find("TimeCounterTextUI");
 		GameObject scoreUIObject 		= GameObject.Find("ScoreTextUI");
 		this.victoryPanelUI 			= GameObject.Find("VictoryPanelUI");
@@ -54,7 +61,8 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
 		Assert.IsNotNull(playerObject, "Unable to recover the Player GameObject");
 		Assert.IsNotNull(spawnObject, "Unable to recover the SpawnObject GameObject");
-		Assert.IsNotNull(goalCounterObject, "Unable to find GoalCounter Object");
+		Assert.IsNotNull(objGoalDoneText, "Unable to find GoalCounter Object");
+		Assert.IsNotNull(objGoalUndoneText, "Unable to find GoalCounter Object");
 		Assert.IsNotNull(timeCounterObject, "Unable to find TimeCounter Object");
 		Assert.IsNotNull(this.victoryPanelUI, "Unable to find Victory UI");
 		Assert.IsNotNull(scoreUIObject, "Unable to find score UI");
@@ -70,14 +78,16 @@ public class GameManager : MonoBehaviour {
 		this.player 					= playerObject.GetComponent<PlayerMovement>();
 		this.roomCamera 				= cameraObject.GetComponent<CameraController>();
 		this.spawnPoint 				= spawnObject.transform;
-		this.goalCounterTextUI 			= goalCounterObject.GetComponent<Text>();
+		this.goalCounterDoneTextUI		= objGoalDoneText.GetComponent<Text>();
+		this.goalCounterUndoneTextUI 	= objGoalUndoneText.GetComponent<Text>();
 		this.timeCounterTextUI 			= timeCounterObject.GetComponent<Text>();
 		this.victoryScoreTextUI 		= scoreUIObject.GetComponent<Text>();
 
 		Assert.IsNotNull(this.gameMap, "Unable to recover GameMap script from GameMap Object");
 		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
 		Assert.IsNotNull(this.player, "Unable to recover the player script");
-		Assert.IsNotNull(this.goalCounterTextUI, "Unable to recover Text component from Goal Counter");
+		Assert.IsNotNull(this.goalCounterDoneTextUI, "Unable to recover Text component from Goal Counter");
+		Assert.IsNotNull(this.goalCounterUndoneTextUI, "Unable to recover Text component from Goal Counter");
 		Assert.IsNotNull(this.timeCounterTextUI, "Unable to recover Text component from Time Counter");
 
 		// Init setup (Don't forget that)
@@ -113,10 +123,7 @@ public class GameManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	private void inputKeyHandler() {
-		if(Input.GetKeyDown(KeyCode.F7)) {
-			// For debug purpose, but should be kept in release as well in case of blocked.
-			this.respawnPlayer();
-		}
+		// Nothing to do? yayaya!
 	}
 
 	public void respawnPlayer() {
@@ -155,16 +162,17 @@ public class GameManager : MonoBehaviour {
 			this.stopwatchTime = this.timeManager.getStopwatchTime();
 			this.victoryScoreTextUI.text = this.timeManager.getStopwatchTime().ToString("0.0");
 			this.victoryPanelUI.SetActive(true);
-			this.goalCounterTextUI.enabled = false;
-	 		this.timeCounterTextUI.enabled = false;
 			Debug.Log("GG, you won!");
 			this.timeManager.freezeGame();
 		}
 	}
 
 	private void updateGoalCounter() {
-		int remaining = this.getNbRemainingGoals();
-		this.goalCounterTextUI.text = "Rooms left: " + remaining;
+		int remaining 	= this.getNbRemainingGoals();
+		int done 		= this.getNbGoalsDone();
+
+		this.goalCounterDoneTextUI.text = done.ToString("0");
+		this.goalCounterUndoneTextUI.text = remaining.ToString("0");
 	}
 
 	private void updateTimeCounter() {
@@ -191,5 +199,17 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 		return remaining;
+	}
+
+	public int getNbGoalsDone() {
+		int remaining = this.gameMap.listRooms.Length;
+		int totalGoals = 0;
+		foreach(Room roro in this.gameMap.listRooms){
+			totalGoals++;
+			if(roro.getIsDone() == true) {
+				remaining--;
+			}
+		}
+		return totalGoals - remaining;
 	}
 }
