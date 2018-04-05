@@ -11,14 +11,16 @@ public class PlayerHealth : MonoBehaviour {
    
     [Range(0,100)]
     [Tooltip("Health at the start (And maximum possible if health reset)")]
-    public float            maxHp = 100f; // Default value
+    [SerializeField] // To display in editor
+    private float           _maxHp = 100f; // Default value
 
-    private float           currentHP = 0f;
-    private Image           healthHPImgUI = null;
+    private float           _currentHP = 0f;
 
-    private PlayerMovement  playerMovement = null;
-    private Animator        anim = null;
-    private Animator        animUI = null;
+    private Image           _healthHPImgUI = null;
+    private Animator        _anim = null;
+    private Animator        _animUI = null;
+
+    private PlayerMovement  _playerMovement = null;
     
 
     // -------------------------------------------------------------------------
@@ -26,7 +28,7 @@ public class PlayerHealth : MonoBehaviour {
     // -------------------------------------------------------------------------
 
 	void Start () {
-        this.currentHP = this.maxHp;
+        this._currentHP = this._maxHp;
 
         GameObject objImgHPUI = GameObject.Find("PlayerHPImgUI");
         GameObject objGameStateUI = GameObject.Find("CanvasUI_GameStat");
@@ -34,15 +36,15 @@ public class PlayerHealth : MonoBehaviour {
         Assert.IsNotNull(objImgHPUI, "Unable to find player HP UI");
         Assert.IsNotNull(objGameStateUI, "Unable to find UI panel");
 
-        this.healthHPImgUI = objImgHPUI.GetComponent<Image>();
-        this.playerMovement = this.GetComponent<PlayerMovement>();
-        this.anim = this.GetComponent<Animator>();
-        this.animUI = objGameStateUI.GetComponent<Animator>();
+        this._healthHPImgUI = objImgHPUI.GetComponent<Image>();
+        this._playerMovement = this.GetComponent<PlayerMovement>();
+        this._anim = this.GetComponent<Animator>();
+        this._animUI = objGameStateUI.GetComponent<Animator>();
 
-        Assert.IsNotNull(this.healthHPImgUI, "Unable to get Image component from PlayerUI");
-        Assert.IsNotNull(this.playerMovement, "Unable to get PlayerMovement");
-        Assert.IsNotNull(this.anim, "Unable to get Animator");
-        Assert.IsNotNull(this.animUI, "Unable to get UI Animator");
+        Assert.IsNotNull(this._healthHPImgUI, "Unable to get Image component from PlayerUI");
+        Assert.IsNotNull(this._playerMovement, "Unable to get PlayerMovement");
+        Assert.IsNotNull(this._anim, "Unable to get Animator");
+        Assert.IsNotNull(this._animUI, "Unable to get UI Animator");
 
         this.updateHealthUI();
 	}
@@ -53,8 +55,8 @@ public class PlayerHealth : MonoBehaviour {
     // -------------------------------------------------------------------------
 
     private void updateHealthUI() {
-        float fillAmout = this.currentHP / this.maxHp;
-        this.healthHPImgUI.fillAmount = fillAmout;
+        float fillAmout = this._currentHP / this._maxHp;
+        this._healthHPImgUI.fillAmount = fillAmout;
     }
     
 
@@ -62,24 +64,32 @@ public class PlayerHealth : MonoBehaviour {
     // GamePlay Methods
     // -------------------------------------------------------------------------
     public void takeDammage(float dmgValue) {
-        this.currentHP -= dmgValue;
-        this.currentHP = Mathf.Clamp(this.currentHP, 0, this.maxHp);
+        this._currentHP -= dmgValue;
+        this._currentHP = Mathf.Clamp(this._currentHP, 0, this._maxHp);
         this.updateHealthUI();
-        this.anim.SetTrigger("TakeDamage");
-        this.animUI.SetTrigger("TakeDamage");
+        this._anim.SetTrigger("TakeDamage");
+        this._animUI.SetTrigger("TakeDamage");
 
         // TODO SOUND: Play sound damage
 
-        if(this.currentHP <= 0) {
+        if(this._currentHP <= 0) {
             this.die();
         }
     }
 
     public void die() {
-        this.currentHP = 0;
+        this._currentHP = 0;
         this.updateHealthUI();
-        this.playerMovement.FreezeMovement();
+        this._playerMovement.FreezeMovement();
 
         // TODO SOUND: Play die sound
+    }
+    
+
+    // -------------------------------------------------------------------------
+    // Getters / Setters
+    // -------------------------------------------------------------------------
+    public bool isAlive() {
+        return this._currentHP > 0;
     }
 }

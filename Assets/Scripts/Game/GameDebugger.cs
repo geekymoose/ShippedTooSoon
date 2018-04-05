@@ -15,22 +15,28 @@ public class GameDebugger : MonoBehaviour {
 	// Parameters
 	// -------------------------------------------------------------------------
 	[Tooltip("Amount of damage on keyDamagePlayer")]
-	public float damageAmount = 5f;
+	private float damageAmount = 5f;
 
 	private GameObject[] goals;
 	private GameManager gameManager = null;
 	private GameObject player = null;
 
 	// Shortcuts keys
-	private KeyCode keyDamagePlayer 		= KeyCode.F1;
-	private KeyCode keyKillPlayer 			= KeyCode.F2;
-	private KeyCode	keyGiveWeapon 			= KeyCode.F6;
-	private KeyCode keyRespawnPlayer 		= KeyCode.F7;
-	private KeyCode keyForceWin 			= KeyCode.F8;
-	private KeyCode keySlowDownGame 		= KeyCode.F9;
-	private KeyCode keySpeedUpGame 			= KeyCode.F10;
-	private KeyCode keyFreezeGame 			= KeyCode.F11;
-	private KeyCode keyUnfreezeGame 		= KeyCode.F12;
+	private KeyCode keySlowDownGame 		= KeyCode.F1;
+	private KeyCode keySpeedUpGame 			= KeyCode.F2;
+	private KeyCode keyFreezeGame 			= KeyCode.F3;
+	private KeyCode keyUnfreezeGame 		= KeyCode.F4;
+
+	private KeyCode	keyGiveWeapon 			= KeyCode.Alpha1;
+
+	private KeyCode keyForceVictory 		= KeyCode.F5;
+	private KeyCode keyForceGameOver 		= KeyCode.F6;
+	private KeyCode keyRestartGame 			= KeyCode.F7;
+	private KeyCode keyActivatedAllGoals 	= KeyCode.F8;
+
+	private KeyCode keyDamagePlayer 		= KeyCode.F9;
+	private KeyCode keyKillPlayer 			= KeyCode.F10;
+	private KeyCode keyRespawnPlayer 		= KeyCode.F11;
 
 
 	// -------------------------------------------------------------------------
@@ -59,9 +65,9 @@ public class GameDebugger : MonoBehaviour {
 
 	private void handleInputKey(){
 		// Game state (Win etc..)
-		if(Input.GetKeyDown(this.keyForceWin)) {
-			Debug.LogWarning("[DEBUG]: Force win game");
-			this.winRightNow();
+		if(Input.GetKeyDown(this.keyActivatedAllGoals)) {
+			Debug.LogWarning("[DEBUG]: Activate all goals");
+			this.activateAllGoals();
 		}
 		else if(Input.GetKeyDown(this.keyRespawnPlayer)) {
 			Debug.LogWarning("[DEBUG]: Respawn player");
@@ -71,6 +77,19 @@ public class GameDebugger : MonoBehaviour {
 			Debug.LogWarning("[DEBUG]: Give weapon");
 			this.player.GetComponent<PlayerAction>().pickupWeapon();
 		}
+		else if(Input.GetKeyDown(this.keyForceVictory)) {
+			Debug.LogWarning("[DEBUG]: Force Victory");
+			this.gameManager.victory();
+		}
+		else if(Input.GetKeyDown(this.keyForceGameOver)) {
+			Debug.LogWarning("[DEBUG]: Force GameOver");
+			this.gameManager.gameOver();
+		}
+		else if(Input.GetKeyDown(this.keyRestartGame)) {
+			Debug.LogWarning("[DEBUG]: Restart Game");
+			this.gameManager.startGame();
+		}
+
 
 		// Game speed / Time
 		else if(Input.GetKeyDown(this.keySlowDownGame)) {
@@ -105,7 +124,7 @@ public class GameDebugger : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	// Debug / Cheat functions
 	// -------------------------------------------------------------------------
-	private void winRightNow() {
+	private void activateAllGoals() {
 		// TODO: Has a bug and doesn't work
 
 		// If done before, goals object may have not been created yet
@@ -116,6 +135,7 @@ public class GameDebugger : MonoBehaviour {
 		foreach(GameObject o in this.goals) {
 			// Sounds like some object have the tag 'Goal' but shouldn't
 			RoomGoal roger = o.GetComponent<RoomGoal>();
+			Assert.IsNotNull(roger, "Goal tag without RoomGoal script!");
 			if(roger!= null) {
 				roger.activate();
 			}

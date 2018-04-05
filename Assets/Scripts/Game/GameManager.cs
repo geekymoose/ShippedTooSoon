@@ -11,39 +11,41 @@ using UnityEngine.UI;
  */
 public class GameManager : MonoBehaviour {
 	// Game
-	private GameMap gameMap = null;
-	private PlayerMovement player = null;
-	private CameraController roomCamera = null;
-	private GameTimeManager timeManager = new GameTimeManager();
+	private GameMap 			gameMap = null;
+	private PlayerMovement 		playerMovement = null;
+	private PlayerHealth		playerHealth = null;
+	private CameraController 	roomCamera = null;
+	private GameTimeManager 	timeManager = new GameTimeManager();
 
 	// Gameplay
-	private Transform spawnPoint;
-	private float stopwatchTime = 0.0f;
+	private Transform 			spawnPoint = null;
+	private float 				stopwatchTime = 0.0f;
+	private bool 				isRunning = false;
 
 	// Room management
-	private Room currentRoom = null;
-	private Room previousRoom = null;
-	private bool hasSwitchedRoom = false;
+	private Room 				currentRoom = null;
+	private Room 				previousRoom = null;
+	private bool 				hasSwitchedRoom = false;
 
 	// UI (Player State)
-	private Text goalCounterDoneTextUI = null;
-	private Text goalCounterUndoneTextUI = null;
-	private Text timeCounterTextUI = null;
+	private Text 				goalCounterDoneTextUI = null;
+	private Text 				goalCounterUndoneTextUI = null;
+	private Text 				timeCounterTextUI = null;
 
 	// UI (GamePanel)
-	private GameObject victoryPanelUI = null;
-	private Text victoryScoreTextUI = null;
+	private GameObject 			victoryPanelUI = null;
+	private Text 				victoryScoreTextUI = null;
 
-	private Animator animUI = null;
+	private Animator 			animMenuUI = null;
 
 	// Debug / Editor
-	private GameObject gameMapCreator; // Used in editor to create GameMap.
+	private GameObject 			gameMapCreator; // Used in editor to create GameMap.
 
 
 	// -------------------------------------------------------------------------
 	// Unity Methods
 	// -------------------------------------------------------------------------
-	void Start () {
+	public void Start () {
 		Debug.Log("GameManager::Start()");
 
 		GameObject gameMapObject 		= GameObject.Find("GameMap");
@@ -53,8 +55,8 @@ public class GameManager : MonoBehaviour {
 		GameObject objGoalUndoneText 	= GameObject.Find("GoalCounterUndoneTextUI");
 		GameObject timeCounterObject 	= GameObject.Find("TimeCounterTextUI");
 		GameObject scoreUIObject 		= GameObject.Find("ScoreTextUI");
-		this.victoryPanelUI 			= GameObject.Find("VictoryPanelUI");
 		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
+		this.victoryPanelUI 			= GameObject.Find("VictoryPanelUI");
 		this.gameMapCreator 			= GameObject.Find("GameMapCreator");
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
@@ -75,7 +77,8 @@ public class GameManager : MonoBehaviour {
 		}
 
 		this.gameMap 					= gameMapObject.GetComponent<GameMap>();
-		this.player 					= playerObject.GetComponent<PlayerMovement>();
+		this.playerMovement 			= playerObject.GetComponent<PlayerMovement>();
+		this.playerHealth 				= playerObject.GetComponent<PlayerHealth>();
 		this.roomCamera 				= cameraObject.GetComponent<CameraController>();
 		this.spawnPoint 				= spawnObject.transform;
 		this.goalCounterDoneTextUI		= objGoalDoneText.GetComponent<Text>();
@@ -85,35 +88,28 @@ public class GameManager : MonoBehaviour {
 
 		Assert.IsNotNull(this.gameMap, "Unable to recover GameMap script from GameMap Object");
 		Assert.IsNotNull(this.roomCamera, "Unable to recover CameraController script");
-		Assert.IsNotNull(this.player, "Unable to recover the player script");
+		Assert.IsNotNull(this.playerMovement, "Unable to recover the PlayerMovement script");
+		Assert.IsNotNull(this.playerHealth, "Unable to recover the PlayerHealth script");
 		Assert.IsNotNull(this.goalCounterDoneTextUI, "Unable to recover Text component from Goal Counter");
 		Assert.IsNotNull(this.goalCounterUndoneTextUI, "Unable to recover Text component from Goal Counter");
 		Assert.IsNotNull(this.timeCounterTextUI, "Unable to recover Text component from Time Counter");
 
-		// Init setup (Don't forget that)
-		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
-		this.currentRoom.onRoomEnter();
-		this.currentRoom.setActive(true);
-		this.previousRoom = this.currentRoom;
-
-		this.timeManager.startStopwatch();
-
-		this.victoryPanelUI.SetActive(false);
+		this.startGame();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		this.inputKeyHandler();
-		this.updateTimeCounter();
-		this.updateGoalCounter();
-		this.updateCurrentRoom();
-		this.updateCameraPosition();
-		this.updateVictory();
+	public void Update () {
+		if(this.isRunning) {
+			this.updateTimeCounter();
+			this.updateGoalCounter();
+			this.updateCurrentRoom();
+			this.updateCameraPosition();
+			this.updateVictory();
 
-		if(this.hasSwitchedRoom) {
-			this.previousRoom.onRoomExit();
-			this.currentRoom.onRoomEnter();
-			this.previousRoom = this.currentRoom;
+			if(this.hasSwitchedRoom) {
+				this.previousRoom.onRoomExit();
+				this.currentRoom.onRoomEnter();
+				this.previousRoom = this.currentRoom;
+			}
 		}
 	}
 
@@ -122,12 +118,46 @@ public class GameManager : MonoBehaviour {
 	// GamePlay Methods
 	// -------------------------------------------------------------------------
 
-	private void inputKeyHandler() {
-		// Nothing to do? yayaya!
+	public void respawnPlayer() {
+		this.playerMovement.transform.position = this.spawnPoint.position;
 	}
 
-	public void respawnPlayer() {
-		this.player.transform.position = this.spawnPoint.position;
+	public void startGame() {
+		this.playerMovement.transform.position = this.spawnPoint.position;
+		this.playerMovement.AllowMovement();
+
+		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.playerMovement.transform.position);
+		this.currentRoom.onRoomEnter();
+		this.currentRoom.setActive(true);
+		this.previousRoom = this.currentRoom;
+
+		this.isRunning = true;
+		this.timeManager.startStopwatch();
+		this.victoryPanelUI.SetActive(false); // TODO: To remove
+	}
+
+	public void stopGame() {
+		this.isRunning = false;
+		this.playerMovement.FreezeMovement();
+		this.timeManager.stopStopwatch();
+	}
+
+	public void victory() {
+		this.stopGame();
+
+		this.timeManager.stopStopwatch();
+		this.stopwatchTime = this.timeManager.getStopwatchTime();
+
+		this.victoryScoreTextUI.text = this.timeManager.getStopwatchTime().ToString("0.0");
+		this.victoryPanelUI.SetActive(true);
+
+	}
+
+	public void gameOver() {
+		this.stopGame();
+		this.timeManager.stopStopwatch();
+		this.stopwatchTime = this.timeManager.getStopwatchTime();
+		this.victoryPanelUI.SetActive(true);
 	}
 
 
@@ -135,7 +165,7 @@ public class GameManager : MonoBehaviour {
 	// Update Methods
 	// -------------------------------------------------------------------------
 	private void updateCurrentRoom() {
-		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.player.transform.position);
+		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.playerMovement.transform.position);
 
 		if(this.currentRoom != null) {
 			this.hasSwitchedRoom = false;
@@ -158,12 +188,10 @@ public class GameManager : MonoBehaviour {
 	private void updateVictory() {
 		int remaining = this.getNbRemainingGoals();
 		if(remaining == 0) {
-			// JUST WON
-			this.stopwatchTime = this.timeManager.getStopwatchTime();
-			this.victoryScoreTextUI.text = this.timeManager.getStopwatchTime().ToString("0.0");
-			this.victoryPanelUI.SetActive(true);
-			Debug.Log("GG, you won!");
-			this.timeManager.freezeGame();
+			this.victory();
+		}
+		if(!this.playerHealth.isAlive()) {
+			this.gameOver();
 		}
 	}
 
