@@ -124,6 +124,7 @@ public class Room : MonoBehaviour {
 
 	public void resetRoom() {
 		this.isDone = false;
+		this.isActive = false;
 		foreach(RoomGoal o in this.goals) {
 			o.unactivate();
 		}

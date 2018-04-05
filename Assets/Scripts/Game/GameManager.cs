@@ -122,12 +122,14 @@ public class GameManager : MonoBehaviour {
 	public void startGame() {
 		this.playerMovement.transform.position = this.spawnPoint.position;
 		this.playerMovement.AllowMovement();
+		
+		this.resetAllRooms();
 
 		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.playerMovement.transform.position);
 		this.currentRoom.onRoomEnter();
 		this.currentRoom.setActive(true);
 		this.previousRoom = this.currentRoom;
-		this.resetAllRooms();
+		
 
 		this.isRunning = true;
 		this.timeManager.startStopwatch();
