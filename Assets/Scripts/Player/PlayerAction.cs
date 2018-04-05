@@ -7,11 +7,13 @@ using UnityEngine.Assertions;
  * Manage Player Action such as Attacks and Pickup Goals.
  */
 public class PlayerAction : MonoBehaviour {
-    private Animator 			anim 			= null;
 	private PlayerMovement 		playerMovement 	= null;
 	private bool 				canAttack 		= false;
 	private Transform 			attackCenter 	= null;
 	private CircleCollider2D 	attackCollider 	= null;
+
+    private Animator 			anim 			= null;
+    private Animator        	animUI 			= null;
 
 
 	// -------------------------------------------------------------------------
@@ -20,13 +22,15 @@ public class PlayerAction : MonoBehaviour {
 	public void Start() {
 		this.playerMovement 		= this.GetComponent<PlayerMovement>();
 		this.attackCollider			= this.GetComponentInChildren<CircleCollider2D>();
-        this.anim 					= this.GetComponent<Animator>();
 		this.attackCenter 			= GameObject.Find("PlayerAttackCenter").transform;
+        this.anim 					= this.GetComponent<Animator>();
+		this.animUI 				= GameObject.Find("CanvasUI_GameStat").GetComponent<Animator>();
 
 		Assert.IsNotNull(this.playerMovement, "Unable to get playerMovement");
 		Assert.IsNotNull(this.attackCollider, "No range collider in player? :/");
 		Assert.IsNotNull(this.attackCenter, "Player's hand must be dragged on player script");
 		Assert.IsNotNull(this.anim, "Unable to get the player animator");
+		Assert.IsNotNull(this.animUI, "Unable to get UI Animator");
 
 		this.attackCollider.enabled = false; // Important. Used only for range value.
 	}
@@ -46,7 +50,10 @@ public class PlayerAction : MonoBehaviour {
         if(other.CompareTag("Goal")) {
             RoomGoal roger = other.gameObject.GetComponent<RoomGoal>();
             Assert.IsNotNull(roger, "Goal object doesn't have a RoomGoal script");
-            roger.activate();
+			if(roger.getIsDone() == false) {
+            	roger.activate();
+				this.animUI.SetTrigger("PickupGoal");
+			}
 			
 			// TODO SOUND: GG sound
         }
