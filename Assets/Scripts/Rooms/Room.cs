@@ -87,6 +87,11 @@ public class Room : MonoBehaviour {
 		}
 	}
 
+
+	// -------------------------------------------------------------------------
+	// Getter / Setters
+	// -------------------------------------------------------------------------
+
 	private bool isGoalDone() {
 		for(int k = 0; k < this.goals.Length; ++k) {
 			if(!this.goals[k].getIsDone()) {
@@ -96,10 +101,6 @@ public class Room : MonoBehaviour {
 		return true;
 	}
 
-
-	// -------------------------------------------------------------------------
-	// Getter / Setters
-	// -------------------------------------------------------------------------
 	public void setId(int value) {
 		this.id = value;
 	}
@@ -119,5 +120,12 @@ public class Room : MonoBehaviour {
 
 	public bool getIsDone() {
 		return this.isDone;
+	}
+
+	public void resetRoom() {
+		this.isDone = false;
+		foreach(RoomGoal o in this.goals) {
+			o.unactivate();
+		}
 	}
 }

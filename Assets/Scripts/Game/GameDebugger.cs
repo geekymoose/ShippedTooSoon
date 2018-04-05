@@ -49,7 +49,7 @@ public class GameDebugger : MonoBehaviour {
             this.gameObject.GetComponent<GameDebugger>().enabled = false;
             return;
         }
-        Debug.LogWarning("[WARNING] GameDebugger activated");
+        Debug.LogWarning("[DEBUGGER] GameDebugger is activated");
 
 		this.gameManager =  this.GetComponent<GameManager>();
 		this.player = GameObject.FindGameObjectWithTag("Player");

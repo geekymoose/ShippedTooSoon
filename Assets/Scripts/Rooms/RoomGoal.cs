@@ -41,4 +41,11 @@ public class RoomGoal : MonoBehaviour {
 		Assert.IsNotNull(this.spriteRenderer, "Unable to recover SpriteRenderer from Goal Button");
 		this.spriteRenderer.sprite = greedSprite;
 	}
+
+	public void unactivate() {
+		this.isDone = false;
+		this.spriteRenderer = this.GetComponent<SpriteRenderer>(); // Sometime, bugs if recovered only in start
+		Assert.IsNotNull(this.spriteRenderer, "Unable to recover SpriteRenderer from Goal Button");
+		this.spriteRenderer.sprite = redSprite;
+	}
 }
