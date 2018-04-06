@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
@@ -51,7 +52,7 @@ public class MenuManager : MonoBehaviour {
 		Assert.IsNotNull(this.welcomePanelUI);
 		Assert.IsNotNull(this.gameManager);
 
-		this.anim.SetBool("Hidden", true);
+		this.hideAll();
 	}
 
 
@@ -87,5 +88,19 @@ public class MenuManager : MonoBehaviour {
 		this.gameOverPanelUI.SetActive(false);
 		this.victoryPanelUI.SetActive(false);
 		this.welcomePanelUI.SetActive(false);
+	}
+
+
+	// -------------------------------------------------------------------------
+	// Application methods
+	// -------------------------------------------------------------------------
+
+	public void quit() {
+		Application.Quit();
+	}
+
+	public void restart() {
+		Scene loadedLevel = SceneManager.GetActiveScene();
+     	SceneManager.LoadScene (loadedLevel.buildIndex);
 	}
 }

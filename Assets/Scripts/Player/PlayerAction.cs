@@ -100,4 +100,8 @@ public class PlayerAction : MonoBehaviour {
 		
 		// TODO SOUND: pickup weapon sound (GG)
 	}
+
+	public void dropWeapon() {
+		this.canAttack = false;
+	}
 }

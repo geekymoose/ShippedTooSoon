@@ -144,6 +144,10 @@ public class GameManager : MonoBehaviour {
 		this.timeManager.stopStopwatch();
 	}
 
+	public void quitGame() {
+		this.menuManager.quit();
+	}
+
 	public void victory() {
 		this.stopGame();
 
