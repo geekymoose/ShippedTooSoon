@@ -228,7 +228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1709536517395118
 GameObject:
   m_ObjectHideFlags: 1
@@ -478,9 +478,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114743773888444998, guid: 923477ca46d864247a859a50b5e174fc,
-          type: 2}
-        m_MethodName: startGame
+      - m_Target: {fileID: 114467047012523296}
+        m_MethodName: restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -596,9 +595,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114743773888444998, guid: 923477ca46d864247a859a50b5e174fc,
-          type: 2}
-        m_MethodName: quitGame
+      - m_Target: {fileID: 114467047012523296}
+        m_MethodName: quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
