@@ -95,9 +95,16 @@ public class PlayerAction : MonoBehaviour {
 	 * Plays pickup animation.
 	 */
 	public void pickupWeapon() {
-		this.canAttack = true;
+		this.playerMovement.FreezeMovement();
 		this.anim.SetTrigger("PickupSword");
+		this.canAttack = true;
+		Invoke("internalUnfreeze", 0.6f);
 		
 		// TODO SOUND: pickup weapon sound (GG)
+	}
+
+	// This is ugly, just to unfreeze movement after pickup animation
+	private void internalUnfreeze() {
+		this.playerMovement.AllowMovement();
 	}
 }
