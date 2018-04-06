@@ -36,7 +36,7 @@ public class PlayerAction : MonoBehaviour {
 	}
 
 	void Update () {
-        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Fire1")) {
 			if(this.canAttack) {
 				this.attack();
 			}

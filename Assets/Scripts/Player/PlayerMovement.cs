@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         movementVector.x = Input.GetAxisRaw("Horizontal") * speed;
         movementVector.y = Input.GetAxisRaw("Vertical") * speed;
 
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if (movementVector.x != 0.0f || movementVector.y != 0.0f)
         {
             this.anim.SetBool("IsWalking", true);
             this.anim.SetFloat("MoveX", movementVector.x);
