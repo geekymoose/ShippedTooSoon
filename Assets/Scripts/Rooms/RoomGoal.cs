@@ -13,8 +13,6 @@ public class RoomGoal : MonoBehaviour {
 
 	private bool 				isDone = false;
 	private SpriteRenderer 		spriteRenderer;
-
-	public Sprite 				redSprite = null;
 	public Sprite 				greedSprite = null;
 
 
@@ -40,12 +38,5 @@ public class RoomGoal : MonoBehaviour {
 		this.spriteRenderer = this.GetComponent<SpriteRenderer>(); // Sometime, bugs if recovered only in start
 		Assert.IsNotNull(this.spriteRenderer, "Unable to recover SpriteRenderer from Goal Button");
 		this.spriteRenderer.sprite = greedSprite;
-	}
-
-	public void unactivate() {
-		this.isDone = false;
-		this.spriteRenderer = this.GetComponent<SpriteRenderer>(); // Sometime, bugs if recovered only in start
-		Assert.IsNotNull(this.spriteRenderer, "Unable to recover SpriteRenderer from Goal Button");
-		this.spriteRenderer.sprite = redSprite;
 	}
 }

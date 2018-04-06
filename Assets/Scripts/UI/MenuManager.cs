@@ -9,16 +9,9 @@ public class MenuManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	// Attribute
 	// -------------------------------------------------------------------------
-
 	private Animator 	anim = null;
-
-	private GameObject 	victoryPanelUI = null;
-	private GameObject 	gameOverPanelUI = null;
-	private GameObject 	welcomePanelUI = null;
-
-	private Text 		victoryScoreTextUI = null;
-
 	private GameManager gameManager = null;
+	private Text 		victoryScoreTextUI = null;
 
 	
 	// -------------------------------------------------------------------------
@@ -38,31 +31,23 @@ public class MenuManager : MonoBehaviour {
 		Assert.IsNotNull(scoreUIObject, "Unable to find score UI");
 		Assert.IsNotNull(objGameManager);
 
-		this.victoryPanelUI 	= GameObject.Find("VictoryPanelUI");
-		this.gameOverPanelUI 	= GameObject.Find("GameOverUI");
-		this.welcomePanelUI 	= GameObject.Find("WelcomePanelUI");
-
 		this.anim 				= this.GetComponent<Animator>();
 		this.victoryScoreTextUI	= scoreUIObject.GetComponent<Text>();
 		this.gameManager		= objGameManager.GetComponent<GameManager>();
 
 		Assert.IsNotNull(this.anim, "Missing Animator on MenuManager Component");
-		Assert.IsNotNull(this.victoryPanelUI);
-		Assert.IsNotNull(this.gameOverPanelUI);
-		Assert.IsNotNull(this.welcomePanelUI);
 		Assert.IsNotNull(this.gameManager);
 
-		this.hideAll();
+		// Desactivate all by default
+		for(int k = 0; k < this.transform.childCount; ++k) {
+			this.transform.GetChild(k).gameObject.SetActive(false);
+		}
 	}
 
 
 	// -------------------------------------------------------------------------
 	// Show menu methods
 	// -------------------------------------------------------------------------
-	public void showWelcome() {
-		this.anim.SetBool("Hidden", false);
-		this.anim.SetTrigger("Welcome");
-	}
 
 	public void showGameOver() {
 		this.anim.SetBool("Hidden", false);
@@ -82,14 +67,6 @@ public class MenuManager : MonoBehaviour {
 		this.victoryScoreTextUI.text = timeStr;
 	}
 
-	public void hideAll() {
-		this.anim.SetBool("Hidden", true);
-
-		this.gameOverPanelUI.SetActive(false);
-		this.victoryPanelUI.SetActive(false);
-		this.welcomePanelUI.SetActive(false);
-	}
-
 
 	// -------------------------------------------------------------------------
 	// Application methods
@@ -101,6 +78,6 @@ public class MenuManager : MonoBehaviour {
 
 	public void restart() {
 		Scene loadedLevel = SceneManager.GetActiveScene();
-     	SceneManager.LoadScene (loadedLevel.buildIndex);
+     	SceneManager.LoadScene(loadedLevel.buildIndex);
 	}
 }

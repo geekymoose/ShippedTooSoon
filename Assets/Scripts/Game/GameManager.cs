@@ -90,8 +90,17 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(this.timeCounterTextUI, "Unable to recover Text component from Time Counter");
 		Assert.IsNotNull(this.menuManager, "Unable to get the MenuManager Script");
 
-		// Don't start Game here, it's done through the menu.
-		this.playerMovement.FreezeMovement();
+		// Init Game (Important)
+		this.playerMovement.transform.position = this.spawnPoint.position;
+
+		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.playerMovement.transform.position);
+		this.currentRoom.onRoomEnter();
+		this.currentRoom.setActive(true);
+		this.previousRoom = this.currentRoom;
+		
+
+		this.isRunning = true;
+		this.timeManager.startStopwatch();
 	}
 	
 	public void Update () {
@@ -119,37 +128,10 @@ public class GameManager : MonoBehaviour {
 		this.playerMovement.transform.position = this.spawnPoint.position;
 	}
 
-	public void startGame() {
-		this.playerMovement.transform.position = this.spawnPoint.position;
-		this.playerMovement.AllowMovement();
-		this.playerHealth.healFull();
-
-		this.resetAllRooms();
-
-		this.currentRoom = this.gameMap.getRoomUnderWorldPos(this.playerMovement.transform.position);
-		this.currentRoom.onRoomEnter();
-		this.currentRoom.setActive(true);
-		this.previousRoom = this.currentRoom;
-		
-
-		this.isRunning = true;
-		this.timeManager.startStopwatch();
-
-		this.menuManager.hideAll();
-	}
-
-	public void stopGame() {
+	public void victory() {
 		this.isRunning = false;
 		this.playerMovement.FreezeMovement();
 		this.timeManager.stopStopwatch();
-	}
-
-	public void quitGame() {
-		this.menuManager.quit();
-	}
-
-	public void victory() {
-		this.stopGame();
 
 		this.stopwatchTime = this.timeManager.getStopwatchTime();
 		this.timeManager.stopStopwatch();
@@ -157,11 +139,18 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void gameOver() {
-		this.stopGame();
+		this.isRunning = false;
+		this.playerMovement.FreezeMovement();
+		this.timeManager.stopStopwatch();
+
 		this.timeManager.stopStopwatch();
 		this.stopwatchTime = this.timeManager.getStopwatchTime();
 		
 		this.menuManager.showGameOver();
+	}
+
+	public void restart() {
+		this.menuManager.restart();
 	}
 
 
@@ -247,11 +236,5 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 		return totalGoals - remaining;
-	}
-
-	public void resetAllRooms() {
-		foreach(Room roro in this.gameMap.listRooms){
-			roro.resetRoom();
-		}
 	}
 }

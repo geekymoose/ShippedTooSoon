@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Tilemaps;
 
+/**
+ * Defines a Room behavior.
+ * A room is a logicial part of the map where player can be.
+ * Player may be in one room exactly at the same time.
+ * A room is "done" when all its goals (Generally just one switch) are done.
+ *
+ * \author Constantin
+ */
 public class Room : MonoBehaviour {
 	private int id = 0; // Internal use for TileMap Grid
 	private bool isDone = false; // True if this room has been finished already
@@ -120,13 +128,5 @@ public class Room : MonoBehaviour {
 
 	public bool getIsDone() {
 		return this.isDone;
-	}
-
-	public void resetRoom() {
-		this.isDone = false;
-		this.isActive = false;
-		foreach(RoomGoal o in this.goals) {
-			o.unactivate();
-		}
 	}
 }

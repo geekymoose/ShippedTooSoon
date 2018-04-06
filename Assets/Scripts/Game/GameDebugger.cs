@@ -87,7 +87,7 @@ public class GameDebugger : MonoBehaviour {
 		}
 		else if(Input.GetKeyDown(this.keyRestartGame)) {
 			Debug.LogWarning("[DEBUG]: Restart Game");
-			this.gameManager.startGame();
+			this.gameManager.restart();
 		}
 
 
