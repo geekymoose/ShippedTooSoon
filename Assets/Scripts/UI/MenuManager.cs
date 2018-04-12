@@ -12,6 +12,9 @@ public class MenuManager : MonoBehaviour {
 	private Animator 	anim = null;
 	private GameManager gameManager = null;
 	private Text 		victoryScoreTextUI = null;
+	private Text 		victoryBestScoreTextUI = null;
+	private Text 		gameOverBestScoreTextUI = null;
+	private ScoreData 	scoreData = null;
 
 	
 	// -------------------------------------------------------------------------
@@ -27,16 +30,22 @@ public class MenuManager : MonoBehaviour {
 		}
 
 		GameObject objGameManager = GameObject.Find("GameManager");
-		GameObject scoreUIObject = GameObject.Find("VictoryScoreTextUI");
-		Assert.IsNotNull(scoreUIObject, "Unable to find score UI");
+		GameObject obj_VictoryScoreTextUI = GameObject.Find("VictoryScoreTextUI");
+		GameObject obj_VictoryBestScoreTextUI = GameObject.Find("VictoryBestScoreTextUI");
+		GameObject obj_GameOverVictoryBestScoreTextUI = GameObject.Find("GameOverBestScorePanelUI");
+		Assert.IsNotNull(obj_VictoryScoreTextUI, "Unable to find score UI");
 		Assert.IsNotNull(objGameManager);
 
-		this.anim 				= this.GetComponent<Animator>();
-		this.victoryScoreTextUI	= scoreUIObject.GetComponent<Text>();
-		this.gameManager		= objGameManager.GetComponent<GameManager>();
+		this.anim 						= this.GetComponent<Animator>();
+		this.victoryScoreTextUI			= obj_VictoryScoreTextUI.GetComponent<Text>();
+		this.victoryBestScoreTextUI 	= obj_VictoryBestScoreTextUI.GetComponent<Text>();
+		this.gameOverBestScoreTextUI 	= obj_GameOverVictoryBestScoreTextUI.GetComponent<Text>();
+		this.gameManager				= objGameManager.GetComponent<GameManager>();
+		this.scoreData 					= Resources.Load("ScoreDataSave") as ScoreData; 
 
 		Assert.IsNotNull(this.anim, "Missing Animator on MenuManager Component");
 		Assert.IsNotNull(this.gameManager);
+		Assert.IsNotNull(this.scoreData, "Unable to find the ScoreData resources");
 
 		// Desactivate all by default
 		for(int k = 0; k < this.transform.childCount; ++k) {
@@ -52,15 +61,19 @@ public class MenuManager : MonoBehaviour {
 	public void showGameOver() {
 		this.anim.SetBool("Hidden", false);
 		this.anim.SetTrigger("GameOver");
+		
+		this.gameOverBestScoreTextUI.text = this.scoreData.getScoreDataAsString();
 	}
 
 	public void showVictory() {
 		this.anim.SetBool("Hidden", false);
 		this.anim.SetTrigger("Victory");
+
 		float time = this.gameManager.getTimeManager().getStopwatchTime();
 		string timeStr = ScoreData.formatScoreTimestamp(time);
 
 		this.victoryScoreTextUI.text = timeStr;
+		this.victoryBestScoreTextUI.text = this.scoreData.getScoreDataAsString();
 	}
 
 

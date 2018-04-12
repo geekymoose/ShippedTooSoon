@@ -67,7 +67,7 @@ public class ScoreData : ScriptableObject {
      * Best score is first displayed.
      * Return line between each score.
      */
-    public string scoreDataToString() {
+    public string getScoreDataAsString() {
         string str = "";
         for(int k = 0; k < scores.Length; ++k) {
             str += (scores[k] == noScoreData) ? "empty\n" : scores[k] + "\n";
