@@ -46,6 +46,11 @@ public class GameManager : MonoBehaviour {
 	public void Start () {
 		Debug.Log("GameManager::Start()");
 
+		string scoreDataPath = "ScoreDataSave";
+        if(Debug.isDebugBuild) {
+			scoreDataPath = "ScoreDataSave_Debug";
+		}
+
 		GameObject gameMapObject 		= GameObject.Find("GameMap");
 		GameObject cameraObject 		= GameObject.Find("Main Camera");
 		GameObject spawnObject 			= GameObject.Find("SpawnPoint");
@@ -55,7 +60,7 @@ public class GameManager : MonoBehaviour {
 		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
 		GameObject objMenuCanvaslUI 	= GameObject.Find("CanvasUI_MenuGame");
 		this.gameMapCreator 			= GameObject.Find("GameMapCreator");
-		this.scoreData 					= Resources.Load("ScoreDataSave") as ScoreData; 
+		this.scoreData 					= Resources.Load(scoreDataPath) as ScoreData; 
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
@@ -240,5 +245,9 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 		return totalGoals - remaining;
+	}
+
+	public ScoreData getScoreData() {
+		return this.scoreData;
 	}
 }

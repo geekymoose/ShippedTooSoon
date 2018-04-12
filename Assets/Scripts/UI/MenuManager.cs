@@ -41,10 +41,11 @@ public class MenuManager : MonoBehaviour {
 		this.victoryBestScoreTextUI 	= obj_VictoryBestScoreTextUI.GetComponent<Text>();
 		this.gameOverBestScoreTextUI 	= obj_GameOverVictoryBestScoreTextUI.GetComponent<Text>();
 		this.gameManager				= objGameManager.GetComponent<GameManager>();
-		this.scoreData 					= Resources.Load("ScoreDataSave") as ScoreData; 
 
 		Assert.IsNotNull(this.anim, "Missing Animator on MenuManager Component");
 		Assert.IsNotNull(this.gameManager);
+
+		this.scoreData = this.gameManager.getScoreData();
 		Assert.IsNotNull(this.scoreData, "Unable to find the ScoreData resources");
 
 		// Desactivate all by default
@@ -59,14 +60,12 @@ public class MenuManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	public void showGameOver() {
-		this.anim.SetBool("Hidden", false);
 		this.anim.SetTrigger("GameOver");
 		
 		this.gameOverBestScoreTextUI.text = this.scoreData.getScoreDataAsString();
 	}
 
 	public void showVictory() {
-		this.anim.SetBool("Hidden", false);
 		this.anim.SetTrigger("Victory");
 
 		float time = this.gameManager.getTimeManager().getStopwatchTime();

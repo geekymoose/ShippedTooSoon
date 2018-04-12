@@ -57,7 +57,7 @@ public class GameDebugger : MonoBehaviour {
 
 		this.gameManager =  this.GetComponent<GameManager>();
 		this.player = GameObject.FindGameObjectWithTag("Player");
-		this.scoreData = Resources.Load("ScoreDataSave") as ScoreData;
+		this.scoreData = this.gameManager.getScoreData();
 
 		Assert.IsNotNull(this.gameManager);
 		Assert.IsNotNull(this.player);
