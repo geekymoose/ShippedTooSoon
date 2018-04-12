@@ -404,40 +404,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1667182682901524, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f, type: 2}
-      propertyPath: m_Name
-      value: GameOverScoreTextTitleUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1857814905247620, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f, type: 2}
-      propertyPath: m_Name
-      value: GameOverBestScorePanelUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899701289619234, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f, type: 2}
-      propertyPath: m_Name
-      value: VictoryBestScoreTextUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1811335998862056, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f, type: 2}
-      propertyPath: m_Name
-      value: VictoryBestScoreTextTitleUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437298058128820, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623273408638796, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224398261530505150, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 224398261530505150, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47e6c9a4150e39d4fb15023ff6d9ab6f, type: 2}
   m_IsPrefabParent: 0
