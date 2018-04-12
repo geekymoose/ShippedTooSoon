@@ -20,6 +20,7 @@ public class GameDebugger : MonoBehaviour {
 	private GameObject[] goals;
 	private GameManager gameManager = null;
 	private GameObject player = null;
+	private ScoreData scoreData = null;
 
 	// Shortcuts keys
 	private KeyCode keySlowDownGame 		= KeyCode.F1;
@@ -38,6 +39,9 @@ public class GameDebugger : MonoBehaviour {
 	private KeyCode keyKillPlayer 			= KeyCode.F10;
 	private KeyCode keyRespawnPlayer 		= KeyCode.F11;
 
+	private KeyCode keyAddRandomScore 		= KeyCode.Alpha9;
+	private KeyCode keyResetScores 			= KeyCode.Alpha0;
+
 
 	// -------------------------------------------------------------------------
 	// Unity Methods
@@ -53,9 +57,11 @@ public class GameDebugger : MonoBehaviour {
 
 		this.gameManager =  this.GetComponent<GameManager>();
 		this.player = GameObject.FindGameObjectWithTag("Player");
+		this.scoreData = Resources.Load("ScoreDataSave") as ScoreData;
 
 		Assert.IsNotNull(this.gameManager);
 		Assert.IsNotNull(this.player);
+		Assert.IsNotNull(this.scoreData);
     }
 	
 	// Update is called once per frame
@@ -117,6 +123,16 @@ public class GameDebugger : MonoBehaviour {
 		else if(Input.GetKeyDown(this.keyKillPlayer)) {
 			Debug.LogWarning("[DEBUG]: Kill player");
 			this.player.GetComponent<PlayerHealth>().die();
+		}
+
+		else if(Input.GetKeyDown(this.keyAddRandomScore)) {
+			int randScore = (int)Random.RandomRange(0, 999);
+			Debug.LogWarning("[DEBUG]: Add Random score (" + randScore + ")");
+			this.scoreData.addScoreEntry(randScore);
+		}
+		else if(Input.GetKeyDown(this.keyResetScores)) {
+			Debug.LogWarning("[DEBUG]: Reset scores");
+			this.scoreData.resetScores();
 		}
 	}
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 
+
 /**
  * General GameManager.
  *
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour {
 	private PlayerHealth		playerHealth = null;
 	private CameraController 	roomCamera = null;
 	private GameTimeManager 	timeManager = new GameTimeManager();
+	private ScoreData 			scoreData = null;
 
 	// Gameplay
 	private Transform 			spawnPoint = null;
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour {
 		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
 		GameObject objMenuCanvaslUI 	= GameObject.Find("CanvasUI_MenuGame");
 		this.gameMapCreator 			= GameObject.Find("GameMapCreator");
+		this.scoreData 					= Resources.Load("ScoreDataSave") as ScoreData; 
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
@@ -62,6 +65,7 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(objGoalUndoneText, "Unable to find GoalCounter Object");
 		Assert.IsNotNull(timeCounterObject, "Unable to find TimeCounter Object");
 		Assert.IsNotNull(objMenuCanvaslUI, "Unable to find MenuUI object");
+		Assert.IsNotNull(this.scoreData, "Unable to find the ScoreData Resources! Oooh!");
 
 		if(this.gameMapCreator != null) {
 			// gameMapCreator is just used to create the map by game designer.
@@ -135,6 +139,9 @@ public class GameManager : MonoBehaviour {
 
 		this.stopwatchTime = this.timeManager.getStopwatchTime();
 		this.timeManager.stopStopwatch();
+
+		this.scoreData.addScoreEntry((int)this.stopwatchTime);
+		
 		this.menuManager.showVictory();
 	}
 
@@ -198,10 +205,7 @@ public class GameManager : MonoBehaviour {
 
 	private void updateTimeCounter() {
 		float time = this.timeManager.getStopwatchTime();
-		int min = (int)(time / 60f);
-		int sec = (int)(time % 60f);
-
-		string timeStr = min.ToString("00") + ":" + sec.ToString("00");
+		string timeStr = ScoreData.formatScoreTimestamp(time);
 		this.timeCounterTextUI.text = timeStr;
 	}
 

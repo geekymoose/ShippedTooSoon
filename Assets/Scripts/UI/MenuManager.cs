@@ -58,11 +58,7 @@ public class MenuManager : MonoBehaviour {
 		this.anim.SetBool("Hidden", false);
 		this.anim.SetTrigger("Victory");
 		float time = this.gameManager.getTimeManager().getStopwatchTime();
-
-		int min = (int)(time / 60f);
-		int sec = (int)(time % 60f);
-
-		string timeStr = min.ToString("00") + ":" + sec.ToString("00");
+		string timeStr = ScoreData.formatScoreTimestamp(time);
 
 		this.victoryScoreTextUI.text = timeStr;
 	}
