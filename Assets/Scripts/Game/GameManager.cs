@@ -39,17 +39,23 @@ public class GameManager : MonoBehaviour {
 	// Debug / Editor
 	private GameObject 			gameMapCreator; // Used in editor to create GameMap.
 
+	private string 				scoreDataPath = "ScoreDataSave";
+
 
 	// -------------------------------------------------------------------------
 	// Unity Methods
 	// -------------------------------------------------------------------------
+
+	public void Awake() {
+        if(Debug.isDebugBuild) {
+			this.scoreDataPath = "ScoreDataSave_Debug";
+		}
+		this.scoreData = Resources.Load(scoreDataPath) as ScoreData;
+		Assert.IsNotNull(this.scoreData, "Unable to find the ScoreData Resources! Oooh!");
+	}
+
 	public void Start () {
 		Debug.Log("GameManager::Start()");
-
-		string scoreDataPath = "ScoreDataSave";
-        if(Debug.isDebugBuild) {
-			scoreDataPath = "ScoreDataSave_Debug";
-		}
 
 		GameObject gameMapObject 		= GameObject.Find("GameMap");
 		GameObject cameraObject 		= GameObject.Find("Main Camera");
@@ -57,10 +63,9 @@ public class GameManager : MonoBehaviour {
 		GameObject objGoalDoneText 		= GameObject.Find("GoalCounterDoneTextUI");
 		GameObject objGoalUndoneText 	= GameObject.Find("GoalCounterUndoneTextUI");
 		GameObject timeCounterObject 	= GameObject.Find("TimeCounterTextUI");
-		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
 		GameObject objMenuCanvaslUI 	= GameObject.Find("CanvasUI_MenuGame");
 		this.gameMapCreator 			= GameObject.Find("GameMapCreator");
-		this.scoreData 					= Resources.Load(scoreDataPath) as ScoreData; 
+		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
 		Assert.IsNotNull(cameraObject, "Unable to find Main Camera GameObject");
@@ -70,7 +75,6 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(objGoalUndoneText, "Unable to find GoalCounter Object");
 		Assert.IsNotNull(timeCounterObject, "Unable to find TimeCounter Object");
 		Assert.IsNotNull(objMenuCanvaslUI, "Unable to find MenuUI object");
-		Assert.IsNotNull(this.scoreData, "Unable to find the ScoreData Resources! Oooh!");
 
 		if(this.gameMapCreator != null) {
 			// gameMapCreator is just used to create the map by game designer.
