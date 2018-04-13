@@ -18,6 +18,7 @@
 						<State Name="END" ID="{D812789E-C2B9-42FE-AF99-12169D3BB9D6}"/>
 						<State Name="ROOM_ALL" ID="{E2373230-314E-4EF6-A011-E45FF0246CAC}"/>
 						<State Name="ROOM_ALL_BUG" ID="{AE828413-864F-46D8-88DE-2CBC6CE6DDBA}"/>
+						<State Name="VIC" ID="{1FF8727B-9127-4B40-B2F8-E4FB81096DA7}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

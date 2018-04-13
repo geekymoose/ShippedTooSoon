@@ -145,46 +145,24 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="MUS" ID="{7451E847-0CDE-4ED8-820F-BB128706FB61}" ShortID="461272383">
-					<ChildrenList>
-						<Event Name="mus_start" ID="{20407808-AECF-4B09-988A-7CA47E389C5C}">
+						<Event Name="bug_room" ID="{2B200F1C-A33F-4AA0-BBA4-39754A1D02F0}">
 							<ChildrenList>
-								<Action Name="" ID="{443DE5A4-FA47-4AF3-A4F4-FF361987D6C2}" ShortID="97671191">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="INTRO" ID="{9F11514C-8B88-4263-AB37-85BD5B061964}" WorkUnitID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{8743669E-0D9B-459B-B414-6C46BC4EB596}" ShortID="95435090">
+								<Action Name="" ID="{549F97F1-65A0-40DE-98CC-B23E494C3F84}" ShortID="1071924025">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="Delay" Type="Real64" Value="0.1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="MUS" ID="{CE983BFA-44B7-4B98-8EA3-F6269070BCB4}" WorkUnitID="{99704284-1015-413C-8AF8-48E4F39BF800}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{C9C71FCE-C52A-4F1B-971D-C8308F6F3DB4}" ShortID="316071299">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
-										<Property Name="Delay" Type="Real64" Value="0.5"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ROOM_ALL" ID="{E2373230-314E-4EF6-A011-E45FF0246CAC}" WorkUnitID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}"/>
+											<ObjectRef Name="BUG" ID="{DAB984C6-AF5B-4097-B2FA-8D224DA830CA}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="MUS" ID="{7451E847-0CDE-4ED8-820F-BB128706FB61}" ShortID="461272383">
+					<ChildrenList>
 						<Event Name="end" ID="{5BE5E5E5-6F2A-4738-97AF-16480C9CA8C5}">
 							<ChildrenList>
 								<Action Name="" ID="{EB8AD8B3-8675-4745-AA26-373FEF9EEE50}" ShortID="461252782">
@@ -222,10 +200,31 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{2FAD8AA0-60AD-4BF8-B5CE-EFD360211E35}" ShortID="917407371">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fx_monster" ID="{9FE8D29C-9646-414B-8271-EA31355920F4}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="mus_start_bug" ID="{90F38D30-DDD1-4003-B88B-044619CD461A}">
 							<ChildrenList>
+								<Action Name="" ID="{72A210D6-2D7C-47FD-AA31-E3515911B927}" ShortID="259960954">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
 								<Action Name="" ID="{FFC4FFBB-A035-4D18-9FD2-01CD4FD6BE94}" ShortID="449850842">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
@@ -247,63 +246,98 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="BUG" ID="{293197FB-935B-418C-BABF-BDD8D3D571B8}" ShortID="412847548">
-					<ChildrenList>
-						<Event Name="bug_buzz_A" ID="{282B07BE-77BC-4BFE-9F66-891FE2227D00}">
-							<ChildrenList>
-								<Action Name="" ID="{20970DFB-DA33-4FDD-99A6-95BC8EAD1D3B}" ShortID="282690069">
+								<Action Name="" ID="{A870AB39-81F9-46C1-A5AA-008FE3DB4672}" ShortID="261071236">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="bug_buzz_A" ID="{185350C3-8F89-4FAB-8786-9E340C6F1C32}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+											<ObjectRef Name="glitch" ID="{A012558C-67B4-4333-B5E0-8D1A0790B755}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="bug_buzz_B" ID="{97CF5377-8CCA-4FC0-B7CC-F9943CD910F5}">
+						<Event Name="mus_menu" ID="{70F5938F-A665-49F9-A0F7-2A60E09E861C}">
 							<ChildrenList>
-								<Action Name="" ID="{83B4C0DD-062D-4B39-9031-648AAF3E41B8}" ShortID="221775542">
+								<Action Name="" ID="{4EB9584C-AB97-4F69-A58B-60E2992EA0A9}" ShortID="443332731">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{03CA95A8-5290-4BC2-8EE7-6607586C5921}" ShortID="787905073">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="INTRO" ID="{9F11514C-8B88-4263-AB37-85BD5B061964}" WorkUnitID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2507EF0D-5595-4833-A158-D505F6DA1273}" ShortID="471158476">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS" ID="{CE983BFA-44B7-4B98-8EA3-F6269070BCB4}" WorkUnitID="{99704284-1015-413C-8AF8-48E4F39BF800}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0C988BE2-D102-491A-8989-D7E3BD653364}" ShortID="319232486">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="bug_buzz_B" ID="{2891E8C3-9F18-4FB9-B712-1969FA7890E1}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+											<ObjectRef Name="glitch" ID="{A012558C-67B4-4333-B5E0-8D1A0790B755}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="bug_noise" ID="{239DCF74-C66E-4100-8CAF-DF6FC619C24A}">
+						<Event Name="mus_victory" ID="{E592D427-0FE7-4737-9FF1-D83EBA4A94E6}">
 							<ChildrenList>
-								<Action Name="" ID="{8E6D6F47-A20C-47E9-9365-715D82938A49}" ShortID="583773233">
+								<Action Name="" ID="{59950578-03E0-4B77-9384-B49E5A2783AE}" ShortID="86016981">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="bug_noise" ID="{2F8C8E22-E465-4322-B203-A52D1D8E0319}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+											<ObjectRef Name="fx_monster" ID="{9FE8D29C-9646-414B-8271-EA31355920F4}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="bug_room" ID="{2B200F1C-A33F-4AA0-BBA4-39754A1D02F0}">
-							<ChildrenList>
-								<Action Name="" ID="{549F97F1-65A0-40DE-98CC-B23E494C3F84}" ShortID="1071924025">
+								<Action Name="" ID="{2820EE24-BBD4-411A-AE81-24B2E4477AC6}" ShortID="865819019">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VIC" ID="{1FF8727B-9127-4B40-B2F8-E4FB81096DA7}" WorkUnitID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{058B7160-793C-4E58-B991-58CAF0F68D1D}" ShortID="212272017">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="BUG" ID="{DAB984C6-AF5B-4097-B2FA-8D224DA830CA}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+											<ObjectRef Name="bug_end" ID="{ED0EBEAE-93FC-4B94-A0D7-565B1DC23896}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -642,6 +676,90 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ROOM_ALL" ID="{E2373230-314E-4EF6-A011-E45FF0246CAC}" WorkUnitID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="mus_start" ID="{20407808-AECF-4B09-988A-7CA47E389C5C}">
+							<ChildrenList>
+								<Action Name="" ID="{3F42DFD2-F4DE-4E34-B787-F825D8C84ED6}" ShortID="828600050">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{443DE5A4-FA47-4AF3-A4F4-FF361987D6C2}" ShortID="97671191">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="INTRO" ID="{9F11514C-8B88-4263-AB37-85BD5B061964}" WorkUnitID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8743669E-0D9B-459B-B414-6C46BC4EB596}" ShortID="95435090">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS" ID="{CE983BFA-44B7-4B98-8EA3-F6269070BCB4}" WorkUnitID="{99704284-1015-413C-8AF8-48E4F39BF800}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C9C71FCE-C52A-4F1B-971D-C8308F6F3DB4}" ShortID="316071299">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ROOM_ALL" ID="{E2373230-314E-4EF6-A011-E45FF0246CAC}" WorkUnitID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="bug_noise" ID="{239DCF74-C66E-4100-8CAF-DF6FC619C24A}">
+							<ChildrenList>
+								<Action Name="" ID="{8E6D6F47-A20C-47E9-9365-715D82938A49}" ShortID="583773233">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bug_noise" ID="{2F8C8E22-E465-4322-B203-A52D1D8E0319}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="bug_buzz_A" ID="{282B07BE-77BC-4BFE-9F66-891FE2227D00}">
+							<ChildrenList>
+								<Action Name="" ID="{20970DFB-DA33-4FDD-99A6-95BC8EAD1D3B}" ShortID="282690069">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bug_buzz_A" ID="{185350C3-8F89-4FAB-8786-9E340C6F1C32}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="bug_buzz_B" ID="{97CF5377-8CCA-4FC0-B7CC-F9943CD910F5}">
+							<ChildrenList>
+								<Action Name="" ID="{83B4C0DD-062D-4B39-9031-648AAF3E41B8}" ShortID="221775542">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bug_buzz_B" ID="{2891E8C3-9F18-4FB9-B712-1969FA7890E1}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

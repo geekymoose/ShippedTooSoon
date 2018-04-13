@@ -90,6 +90,10 @@
 							<Position X="2" Y="7"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="mus_menu" ID="{70F5938F-A665-49F9-A0F7-2A60E09E861C}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="fx_destroy" ID="{8FC56293-9D28-4536-AA03-90A7A45931F9}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
 							<Position X="3" Y="1"/>
 						</Module>
@@ -106,7 +110,7 @@
 							<Position X="3" Y="7"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="mus_start" ID="{20407808-AECF-4B09-988A-7CA47E389C5C}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<ObjectRef Name="mus_victory" ID="{E592D427-0FE7-4737-9FF1-D83EBA4A94E6}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>

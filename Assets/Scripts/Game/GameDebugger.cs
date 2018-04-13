@@ -42,6 +42,8 @@ public class GameDebugger : MonoBehaviour {
 	private KeyCode keyAddRandomScore 		= KeyCode.Alpha9;
 	private KeyCode keyResetScores 			= KeyCode.Alpha0;
 
+	private KeyCode keyGhostMode 			= KeyCode.Alpha2;
+
 
 	// -------------------------------------------------------------------------
 	// Unity Methods
@@ -123,6 +125,10 @@ public class GameDebugger : MonoBehaviour {
 		else if(Input.GetKeyDown(this.keyKillPlayer)) {
 			Debug.LogWarning("[DEBUG]: Kill player");
 			this.player.GetComponent<PlayerHealth>().die();
+		}
+		else if(Input.GetKeyDown(this.keyGhostMode)) {
+			Debug.LogWarning("[DEBUG]: Play is in Ghost mode");
+			this.player.GetComponent<CapsuleCollider2D>().enabled = false;
 		}
 
 		else if(Input.GetKeyDown(this.keyAddRandomScore)) {

@@ -114,6 +114,8 @@ public class GameManager : MonoBehaviour {
 
 		this.isRunning = true;
 		this.timeManager.startStopwatch();
+
+		AkSoundEngine.PostEvent("mus_start_bug", gameObject);
 	}
 	
 	public void Update () {
@@ -163,6 +165,8 @@ public class GameManager : MonoBehaviour {
 		this.stopwatchTime = this.timeManager.getStopwatchTime();
 		
 		this.menuManager.showGameOver();
+
+        AkSoundEngine.PostEvent("end", gameObject);
 	}
 
 	public void restart() {
@@ -180,6 +184,11 @@ public class GameManager : MonoBehaviour {
 			this.hasSwitchedRoom = false;
 			if(this.currentRoom.getId() != this.previousRoom.getId()) {
 				this.hasSwitchedRoom = true;
+
+				// This is had-hoc solution to start boss sound
+				if(this.currentRoom.getId() == 7) {
+					AkSoundEngine.PostEvent("fx_monster", gameObject);
+				}
 			}
 		}
 		else {

@@ -50,6 +50,11 @@
 				<Sound Name="fx_button" ID="{62404192-E270-4ABD-8C68-FC604AB2F9B3}" ShortID="216389269">
 					<PropertyList>
 						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>2000</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -116,7 +121,10 @@
 					<ChildrenList>
 						<AudioFileSource Name="fx_door" ID="{1851AFEE-2C18-46B9-B4F1-4253105B72DA}" ShortID="995357642">
 							<PropertyList>
-								<Property Name="FadeOutDuration" Type="Real64" Value="8.50810381355931E-02"/>
+								<Property Name="FadeInDuration" Type="Real64" Value="2.12702595338982E-02"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="1.87678760593219E-02"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.500476694915254"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.06101059322034"/>
 								<Property Name="VolumeOffset" Type="Real64">
 									<ValueList>
 										<Value>3</Value>
@@ -209,6 +217,11 @@
 				<Sound Name="fx_next" ID="{FA1F74EC-9B74-4F67-BB2B-38FF691605F0}" ShortID="361330753">
 					<PropertyList>
 						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -437,6 +450,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="MUS BUG LOOP C" ID="{773BE866-32A5-4875-8EAC-DB57710E8784}" ShortID="683349738">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
@@ -449,15 +469,12 @@
 										<AudioFileSource Name="MUS BUG LOOP C" ID="{21C72F07-1258-4BEE-A0BF-79AA3ECCA646}" ShortID="941565495">
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="5.50025981725606E-02"/>
-												<Property Name="LoopEnd" Type="Real64" Value="1.60217486714881"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.987580618003243"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.69813048678681"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.06201348183459"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>MUS BUG\MUS BUG LOOP C.wav</AudioFile>
-											<ConvertedFileIDList>
-												<File ID="215048258"/>
-											</ConvertedFileIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -465,6 +482,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="MUS BUG LOOP D" ID="{608EE3DE-23A0-4CBE-ADF1-83D65C155E55}" ShortID="769614305">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
@@ -478,15 +502,11 @@
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="5.44794756355932E-02"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="2.63055904303551E-02"/>
-												<Property Name="LoopEnd" Type="Real64" Value="2.12705360120449"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="2.1556758771557"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.17874453936929"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>MUS BUG\MUS BUG LOOP D.wav</AudioFile>
-											<ConvertedFileIDList>
-												<File ID="345529055"/>
-											</ConvertedFileIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -494,6 +514,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="MUS BUG LOOP E" ID="{9194CA4A-07E7-4353-A497-188DD2A43AD4}" ShortID="1069824555">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
@@ -507,15 +534,11 @@
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="9.07991260593222E-03"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.145278601694915"/>
-												<Property Name="LoopEnd" Type="Real64" Value="2.142859375"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="2.33353753972458"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.4073864539195"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>MUS BUG\MUS BUG LOOP E.wav</AudioFile>
-											<ConvertedFileIDList>
-												<File ID="407965093"/>
-											</ConvertedFileIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -931,12 +954,19 @@
 					</ChildrenList>
 				</Folder>
 				<BlendContainer Name="fx_grab" ID="{DE228B79-9FBA-4419-BECB-266268296EBF}" ShortID="698603402">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1029,11 +1059,15 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="fx_none" ID="{8F57F96D-436D-4DFB-84F0-AC7AD64791E0}" ShortID="324453912">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="8.12182203389831E-03"/>
+								<Property Name="TrimBegin" Type="Real64" Value="6.39593485169491E-02"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>fx_none.wav</AudioFile>
 						</AudioFileSource>
@@ -1050,13 +1084,18 @@
 								<Value>-500</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1073,6 +1112,41 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="fx_monster" ID="{AF522A28-9538-4F3E-A314-AA2C0E2525F5}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="glitch" ID="{A012558C-67B4-4333-B5E0-8D1A0790B755}" ShortID="952191206">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="glitch_interface_super_duper_04" ID="{1FB35891-2A60-4738-93C6-701A396BC218}" ShortID="622456485">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality Medium" ID="{01D20CF3-9A4C-4EEE-AE3E-2942B47543E9}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+							</ReferenceList>
+							<Language>SFX</Language>
+							<AudioFile>glitch_interface_super_duper_04.wav</AudioFile>
+							<ConvertedFileIDList>
+								<File ID="910589975"/>
+							</ConvertedFileIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="glitch_interface_super_duper_04" ID="{1FB35891-2A60-4738-93C6-701A396BC218}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

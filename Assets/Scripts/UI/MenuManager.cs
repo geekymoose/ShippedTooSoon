@@ -81,10 +81,14 @@ public class MenuManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	public void quit() {
+		AkSoundEngine.PostEvent("fx_select", gameObject);
+		
 		Application.Quit();
 	}
 
 	public void restart() {
+		AkSoundEngine.PostEvent("fx_select", gameObject);
+
 		Scene loadedLevel = SceneManager.GetActiveScene();
      	SceneManager.LoadScene(loadedLevel.buildIndex);
 	}

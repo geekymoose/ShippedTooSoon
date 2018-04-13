@@ -629,8 +629,9 @@ MonoBehaviour:
       minDuration: 0
   ExpandedItems:
   - /WIP TITLE
-  - /WIP TITLE/SoundBanks
-  - /WIP TITLE/SoundBanks/Default Work Unit
+  - /WIP TITLE/Events
+  - /WIP TITLE/Events/Default Work Unit
+  - /WIP TITLE/Events/Default Work Unit/MUS
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0

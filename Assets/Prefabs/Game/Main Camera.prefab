@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4076693659481222}
   - component: {fileID: 20412649926547004}
   - component: {fileID: 124683429120060300}
-  - component: {fileID: 81502914908110914}
   - component: {fileID: 114272303603627028}
+  - component: {fileID: 114897898881138422}
+  - component: {fileID: 114290082274350630}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -79,13 +80,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &81502914908110914
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461869325604276}
-  m_Enabled: 1
 --- !u!114 &114272303603627028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,6 +93,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   targetPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &114290082274350630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461869325604276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242a9a7db289c8b4184f917a435273d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &114897898881138422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461869325604276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131b1f4bfad54954f857be38527f55fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!124 &124683429120060300
 Behaviour:
   m_ObjectHideFlags: 1

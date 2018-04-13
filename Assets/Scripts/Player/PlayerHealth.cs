@@ -69,8 +69,8 @@ public class PlayerHealth : MonoBehaviour {
         this.updateHealthUI();
         this._anim.SetTrigger("TakeDamage");
         this._animUI.SetTrigger("TakeDamage");
-
-        // TODO SOUND: Play sound damage
+        
+        AkSoundEngine.PostEvent("fx_hit", gameObject);
 
         if(this._currentHP <= 0) {
             this.die();
@@ -81,8 +81,6 @@ public class PlayerHealth : MonoBehaviour {
         this._currentHP = 0;
         this._playerMovement.FreezeMovement();
         this.updateHealthUI();
-
-        // TODO SOUND: Play die sound
     }
 
     public void healFull() {

@@ -41,7 +41,7 @@ public class PlayerAction : MonoBehaviour {
 				this.attack();
 			}
 			else {
-				// TODO SOUND: Can't attack, sound?
+				AkSoundEngine.PostEvent("fx_none", gameObject);
 			}
         }
 	}
@@ -54,8 +54,9 @@ public class PlayerAction : MonoBehaviour {
             	roger.activate();
 				this.animUI.SetTrigger("PickupGoal");
 			}
-			
-			// TODO SOUND: GG sound
+
+			AkSoundEngine.PostEvent("fx_button", gameObject);
+			AkSoundEngine.PostEvent("fx_next", gameObject);
         }
 		else if(other.gameObject.name == "sword") {
 			GameObject.Destroy(other.gameObject);
@@ -69,9 +70,8 @@ public class PlayerAction : MonoBehaviour {
 	// -------------------------------------------------------------------------
 
 	private void attack() {
+		AkSoundEngine.PostEvent("fx_att", gameObject);
 		this.anim.SetTrigger("Attack");
-		
-		// TODO SOUND: attack sound
 
 		// Update position of attack center position
 		float distance = Vector3.Distance(this.attackCenter.transform.position, this.transform.position);
@@ -96,11 +96,10 @@ public class PlayerAction : MonoBehaviour {
 	 */
 	public void pickupWeapon() {
 		this.playerMovement.FreezeMovement();
+		AkSoundEngine.PostEvent("fx_grab", gameObject);
 		this.anim.SetTrigger("PickupSword");
 		this.canAttack = true;
 		Invoke("internalUnfreeze", 0.6f);
-		
-		// TODO SOUND: pickup weapon sound (GG)
 	}
 
 	// This is ugly, just to unfreeze movement after pickup animation

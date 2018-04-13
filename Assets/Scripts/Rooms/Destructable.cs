@@ -18,8 +18,8 @@ public class Destructable : MonoBehaviour {
 		foreach(Collider2D coco in colliders) {
 			coco.enabled = false;
 		}
+		
 		this.anim.SetTrigger("Destroy");
-
-		// TODO: Play a sounds?
+		AkSoundEngine.PostEvent("fx_destroy", gameObject);
 	}
 }

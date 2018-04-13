@@ -45,9 +45,6 @@ public class Room : MonoBehaviour {
 				this.onRoomSuccess();
 			}
 		}
-		else {
-			this.openAllDoors();
-		}
 	}
 
 
@@ -59,7 +56,7 @@ public class Room : MonoBehaviour {
 	 * Executed whenever player enter this room 
 	 */
 	public void onRoomEnter() {
-		//Debug.Log("Room::onRoomEnter() - ID: " + this.id);
+		Debug.Log("Room::onRoomEnter() - ID: " + this.id);
 		this.isActive = true;
 		if(!this.isDone){
 			Invoke("closeAllDoors", this.doorDelay);
@@ -73,14 +70,14 @@ public class Room : MonoBehaviour {
 		//Debug.Log("Room::onRoomExit() - ID: " + this.id);
 		this.isActive = false;
 		this.openAllDoors();
-		// TODO: Sound + destroye things
+		
+		AkSoundEngine.PostEvent("bug_room", gameObject);
 	}
 
 	public void onRoomSuccess() {
 		//Debug.Log("Room::onRoomSuccess() - ID: " + this.id);
 		this.isDone = true;
 		Invoke("openAllDoors", this.doorDelay);
-		// TODO: Open doors + sounds + success crap things etc etc
 	}
 
 	private void closeAllDoors() {

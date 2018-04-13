@@ -21,10 +21,7 @@
 			<ShortName>WIP_TITLE</ShortName>
 			<Path>WIP_TITLE.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3844446799" Name="bug_buzz_A" ObjectPath="\Events\Default Work Unit\BUG\bug_buzz_A"/>
-				<Event Id="3844446796" Name="bug_buzz_B" ObjectPath="\Events\Default Work Unit\BUG\bug_buzz_B"/>
-				<Event Id="972419010" Name="bug_noise" ObjectPath="\Events\Default Work Unit\BUG\bug_noise"/>
-				<Event Id="1753944917" Name="bug_room" ObjectPath="\Events\Default Work Unit\BUG\bug_room"/>
+				<Event Id="1753944917" Name="bug_room" ObjectPath="\Events\Default Work Unit\SFX\bug_room"/>
 				<Event Id="529726532" Name="end" ObjectPath="\Events\Default Work Unit\MUS\end"/>
 				<Event Id="2869415603" Name="fx_att" ObjectPath="\Events\Default Work Unit\SFX\fx_att"/>
 				<Event Id="3872889310" Name="fx_button" ObjectPath="\Events\Default Work Unit\SFX\fx_button"/>
@@ -36,13 +33,22 @@
 				<Event Id="3348100181" Name="fx_next" ObjectPath="\Events\Default Work Unit\SFX\fx_next"/>
 				<Event Id="3114787480" Name="fx_none" ObjectPath="\Events\Default Work Unit\SFX\fx_none"/>
 				<Event Id="2955764622" Name="fx_select" ObjectPath="\Events\Default Work Unit\SFX\fx_select"/>
-				<Event Id="1973954843" Name="mus_start" ObjectPath="\Events\Default Work Unit\MUS\mus_start"/>
+				<Event Id="3149643052" Name="mus_menu" ObjectPath="\Events\Default Work Unit\MUS\mus_menu"/>
 				<Event Id="4106786016" Name="mus_start_bug" ObjectPath="\Events\Default Work Unit\MUS\mus_start_bug"/>
+				<Event Id="3444599549" Name="mus_victory" ObjectPath="\Events\Default Work Unit\MUS\mus_victory"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="25716274" Language="SFX">
 					<ShortName>MUS\MUS III trans.wav</ShortName>
 					<Path>SFX\MUS\MUS III trans_D2927CEA.wem</Path>
+				</File>
+				<File Id="58646746" Language="SFX">
+					<ShortName>MUS BUG\MUS BUG LOOP D.wav</ShortName>
+					<Path>SFX\MUS BUG\MUS BUG LOOP D_3BD6A003.wem</Path>
+				</File>
+				<File Id="72010145" Language="SFX">
+					<ShortName>MUS BUG\MUS BUG LOOP E.wav</ShortName>
+					<Path>SFX\MUS BUG\MUS BUG LOOP E_5A688AEA.wem</Path>
 				</File>
 				<File Id="106810603" Language="SFX">
 					<ShortName>MUS\MUS intro.wav</ShortName>
@@ -55,10 +61,6 @@
 				<File Id="174307834" Language="SFX">
 					<ShortName>fx_hit.wav</ShortName>
 					<Path>SFX\fx_hit_F5B62A06.wem</Path>
-				</File>
-				<File Id="215048258" Language="SFX">
-					<ShortName>MUS BUG\MUS BUG LOOP C.wav</ShortName>
-					<Path>SFX\MUS BUG\MUS BUG LOOP C_F29E151A.wem</Path>
 				</File>
 				<File Id="225887680" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG SMP A.wav</ShortName>
@@ -86,15 +88,11 @@
 				</File>
 				<File Id="324453912" Language="SFX">
 					<ShortName>fx_none.wav</ShortName>
-					<Path>SFX\fx_none_1C9C67B2.wem</Path>
+					<Path>SFX\fx_none_AA06F3FA.wem</Path>
 				</File>
 				<File Id="330299835" Language="SFX">
 					<ShortName>fx_grab.wav</ShortName>
 					<Path>SFX\fx_grab_D31AAAFD.wem</Path>
-				</File>
-				<File Id="345529055" Language="SFX">
-					<ShortName>MUS BUG\MUS BUG LOOP D.wav</ShortName>
-					<Path>SFX\MUS BUG\MUS BUG LOOP D_04445E8C.wem</Path>
 				</File>
 				<File Id="349549188" Language="SFX">
 					<ShortName>BRUIT ROSE.wav</ShortName>
@@ -107,10 +105,6 @@
 				<File Id="390140804" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG LOOP E.wav</ShortName>
 					<Path>SFX\MUS BUG\MUS BUG LOOP E_D2927CEA.wem</Path>
-				</File>
-				<File Id="407965093" Language="SFX">
-					<ShortName>MUS BUG\MUS BUG LOOP E.wav</ShortName>
-					<Path>SFX\MUS BUG\MUS BUG LOOP E_7432389E.wem</Path>
 				</File>
 				<File Id="410857013" Language="SFX">
 					<ShortName>bug_noise.wav</ShortName>
@@ -148,9 +142,13 @@
 					<ShortName>MUS BUG\MUS BUG LOOP D.wav</ShortName>
 					<Path>SFX\MUS BUG\MUS BUG LOOP D_D2927CEA.wem</Path>
 				</File>
+				<File Id="622456485" Language="SFX">
+					<ShortName>glitch_interface_super_duper_04.wav</ShortName>
+					<Path>SFX\glitch_interface_super_duper_04_D2927CEA.wem</Path>
+				</File>
 				<File Id="622848671" Language="SFX">
 					<ShortName>fx_monster.wav</ShortName>
-					<Path>SFX\fx_monster_290CC56B.wem</Path>
+					<Path>SFX\fx_monster_EAA30283.wem</Path>
 				</File>
 				<File Id="642215571" Language="SFX">
 					<ShortName>fx_att.wav</ShortName>
@@ -192,6 +190,10 @@
 					<ShortName>fx_next.wav</ShortName>
 					<Path>SFX\fx_next_5FF32C9A.wem</Path>
 				</File>
+				<File Id="910589975" Language="SFX">
+					<ShortName>glitch_interface_super_duper_04.wav</ShortName>
+					<Path>SFX\glitch_interface_super_duper_04_F17FB28C.wem</Path>
+				</File>
 				<File Id="928592102" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG LIGHT B.wav</ShortName>
 					<Path>SFX\MUS BUG\MUS BUG LIGHT B_D2927CEA.wem</Path>
@@ -200,13 +202,17 @@
 					<ShortName>fx_grab_01.wav</ShortName>
 					<Path>SFX\fx_grab_01_1C9C67B2.wem</Path>
 				</File>
+				<File Id="941565495" Language="SFX">
+					<ShortName>MUS BUG\MUS BUG LOOP C.wav</ShortName>
+					<Path>SFX\MUS BUG\MUS BUG LOOP C_A06B14ED.wem</Path>
+				</File>
 				<File Id="995357642" Language="SFX">
 					<ShortName>fx_door.wav</ShortName>
-					<Path>SFX\fx_door_47E43645.wem</Path>
+					<Path>SFX\fx_door_B5C30DF6.wem</Path>
 				</File>
 				<File Id="1000512093" Language="SFX">
 					<ShortName>fx_grab_02.wav</ShortName>
-					<Path>SFX\fx_grab_02_B532B537.wem</Path>
+					<Path>SFX\fx_grab_02_0461740D.wem</Path>
 				</File>
 				<File Id="1016632928" Language="SFX">
 					<ShortName>MUS\2m A.wav</ShortName>
