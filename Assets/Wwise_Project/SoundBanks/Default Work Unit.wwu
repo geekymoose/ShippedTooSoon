@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{81727055-AA37-480B-96B5-88385438393C}" SchemaVersion="85">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{81727055-AA37-480B-96B5-88385438393C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="WIP_TITLE" ID="{D1809D9E-7243-46C3-B5FB-494459A8F86C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="mus_start_bug" ID="{90F38D30-DDD1-4003-B88B-044619CD461A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_hit" ID="{9E41FF71-8946-40DC-804D-94D765BF2F99}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="bug_noise" ID="{239DCF74-C66E-4100-8CAF-DF6FC619C24A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_select" ID="{43062AED-3165-412F-AB78-13939BACBF30}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_monster" ID="{0C2602D0-07E5-425C-9BA3-7C608A03CA08}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_door" ID="{41A69905-7AF1-443E-B3ED-7FEEF7B2833A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_destroy" ID="{8FC56293-9D28-4536-AA03-90A7A45931F9}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_next" ID="{BC77414F-9CDC-4680-B446-3994FD463B75}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="end" ID="{5BE5E5E5-6F2A-4738-97AF-16480C9CA8C5}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_button" ID="{3DBD89AA-CFF6-4794-BE69-A6188C3672FB}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="bug_room" ID="{2B200F1C-A33F-4AA0-BBA4-39754A1D02F0}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="mus_start" ID="{20407808-AECF-4B09-988A-7CA47E389C5C}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_att" ID="{22851822-6136-4B71-B47C-B14EA892CD32}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="bug_buzz_A" ID="{282B07BE-77BC-4BFE-9F66-891FE2227D00}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_none" ID="{19AEE647-B78F-4C87-8272-437DD833ACE3}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_grab" ID="{319785B0-A65B-4ECC-8FE0-DF4CA25990C5}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="bug_buzz_B" ID="{97CF5377-8CCA-4FC0-B7CC-F9943CD910F5}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FEF31A25-DDBE-480C-8769-08438C73D425}" SchemaVersion="85">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{FEF31A25-DDBE-480C-8769-08438C73D425}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="MUS" ID="{9F93C041-2A02-4133-BC8F-B3A8A433B59B}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="mus_start_bug" ID="{90F38D30-DDD1-4003-B88B-044619CD461A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="fx_next" ID="{BC77414F-9CDC-4680-B446-3994FD463B75}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="fx_door" ID="{41A69905-7AF1-443E-B3ED-7FEEF7B2833A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="bug_noise" ID="{239DCF74-C66E-4100-8CAF-DF6FC619C24A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_light_A" ID="{6F1C6AA3-29BC-47A6-BBA3-87A0E914D7CC}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_loop_C" ID="{94347BF4-48F8-4D2F-8451-946882B7D403}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_smp_A" ID="{515E57A8-FC2A-4ECF-B6F2-DBB1FE467C19}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="0" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="end" ID="{5BE5E5E5-6F2A-4738-97AF-16480C9CA8C5}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="fx_att" ID="{22851822-6136-4B71-B47C-B14EA892CD32}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="fx_select" ID="{43062AED-3165-412F-AB78-13939BACBF30}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="bug_buzz_A" ID="{282B07BE-77BC-4BFE-9F66-891FE2227D00}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_light_B" ID="{E233208E-86B6-4BD3-88F9-83F3376A09EF}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_loop_D" ID="{1EB82A00-C2B7-47C0-BCA8-EE2B43CB31F2}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_smp_B" ID="{4BAB3143-9E87-4CB2-9F1F-700348463CCE}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="1" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="bug_room" ID="{2B200F1C-A33F-4AA0-BBA4-39754A1D02F0}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="fx_button" ID="{3DBD89AA-CFF6-4794-BE69-A6188C3672FB}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="fx_hit" ID="{9E41FF71-8946-40DC-804D-94D765BF2F99}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="bug_buzz_B" ID="{97CF5377-8CCA-4FC0-B7CC-F9943CD910F5}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_light_C" ID="{4AC2027B-F507-45B6-9809-5486E6653205}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_loop_E" ID="{4E516ECE-F332-440C-A531-FB746EF3543A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="2" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_smp_C" ID="{16629757-B34B-4F83-BA14-4B650700F3A6}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="2" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="fx_destroy" ID="{8FC56293-9D28-4536-AA03-90A7A45931F9}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_loop_A" ID="{19483BDD-01D0-4DF8-9613-BF5EAA8F1940}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_loop_F" ID="{0AF7770D-6582-4B39-A9D7-DFAB2EA26AB7}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="3" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_smp_D" ID="{587B1EB9-45AC-43FE-898D-DA5A8400B100}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="3" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_start" ID="{20407808-AECF-4B09-988A-7CA47E389C5C}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_stop" ID="{C2F69ACC-EEE5-4A28-A874-7E6EEB011954}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="room_bug_A" ID="{355DEF63-69BA-4840-B82D-82EB65DA1E69}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="room_bug_B" ID="{8C87F19B-E51E-45A8-9E5C-61F1DD1D19E5}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_loop_B" ID="{30227915-2522-4CC7-9578-D4EE628D95A5}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="4" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mus_bug_loop_G" ID="{264195EB-8FB0-425B-8A09-3B1EF8BBB107}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="4" Y="6"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="SC_BUG" ID="{8F0CC4FC-E9D1-4E29-A9D9-63FA4127BCB2}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="ROOM_ALL_BUG" ID="{AE828413-864F-46D8-88DE-2CBC6CE6DDBA}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

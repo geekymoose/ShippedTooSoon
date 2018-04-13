@@ -1,0 +1,35 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	712897226	MUS			\Default Work Unit\MUS	
+
+State	ID	Name	State Group			Notes
+	0	None	MUS			
+	529726532	END	MUS			
+	1125500713	INTRO	MUS			
+	3399879606	ROOM_09	MUS			
+	3399879607	ROOM_08	MUS			
+	3399879608	ROOM_07	MUS			
+	3399879609	ROOM_06	MUS			
+	3399879610	ROOM_05	MUS			
+	3399879611	ROOM_04	MUS			
+	3399879612	ROOM_03	MUS			
+	3399879613	ROOM_02	MUS			
+	3399879614	ROOM_01	MUS			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	90678916	SC_BUG			\Default Work Unit\SC_BUG	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	712897226	MUS			\Default Work Unit\Master Audio Bus\MUS	
+	714721617	BUG			\Default Work Unit\Master Audio Bus\BUG	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	168621886	Wwise Meter (Custom)	Wwise Meter			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+
+Audio Devices	ID	Name	Type				Notes
+	530303819	Communication	Communication			
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

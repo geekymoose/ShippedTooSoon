@@ -14,7 +14,7 @@ MonoBehaviour:
   AcousticTextureWwu:
   - Guid: '{15BD33C6-931B-4529-BC30-68FCF3BAA6C8}'
     m_lastTimePart2: -1999269391
-    m_lastTimePsrt1: -918858414
+    m_lastTimePsrt1: -910906368
     ParentPhysicalPath: 
     PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     List: []
@@ -22,14 +22,14 @@ MonoBehaviour:
   AuxBusWwu:
   - Guid: '{E8C84236-4D13-497A-AE2E-D528D16B2816}'
     m_lastTimePart2: -1999269360
-    m_lastTimePsrt1: 381731263
+    m_lastTimePsrt1: 400074752
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List: []
   BankWwu:
   - Guid: '{81727055-AA37-480B-96B5-88385438393C}'
-    m_lastTimePart2: -1999269260
-    m_lastTimePsrt1: 779595246
+    m_lastTimePart2: -1999265579
+    m_lastTimePsrt1: 668728576
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -48,8 +48,8 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}'
-    m_lastTimePart2: -1999269259
-    m_lastTimePsrt1: -2139414988
+    m_lastTimePart2: -1999265579
+    m_lastTimePsrt1: 668728576
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
@@ -91,6 +91,20 @@ MonoBehaviour:
       - ElementName: BUG
         ObjectType: 4
       - ElementName: bug_noise
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1c0f202b3fa3a04abba439754a1d02f0
+      ID: 1753944917
+      Name: bug_room
+      Path: Default Work Unit\BUG\bug_room
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BUG
+        ObjectType: 4
+      - ElementName: bug_room
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -165,7 +179,7 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: ed2a064365312f41ab7813939bacbf30
+    - Guid: b08597315ba6cc4e8fe0df4ca25990c5
       ID: -1133914096
       Name: fx_grab
       Path: Default Work Unit\SFX\fx_grab
@@ -193,6 +207,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: d002260ce5075c429ba37c608a03ca08
+      ID: 879807740
+      Name: fx_monster
+      Path: Default Work Unit\SFX\fx_monster
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_monster
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 4f4177bcdc9c8046b4463994fd463b75
       ID: -946867115
       Name: fx_next
@@ -207,14 +235,42 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: a36a1c6fbc29a647bba387a0e914d7cc
-      ID: 35998224
-      Name: mus_bug_light_A
-      Path: Default Work Unit\BUG\mus_bug_light_A
+    - Guid: 47e6ae198fb7874c8272437dd833ace3
+      ID: -1180179816
+      Name: fx_none
+      Path: Default Work Unit\SFX\fx_none
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_none
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ed2a064365312f41ab7813939bacbf30
+      ID: -1339202674
+      Name: fx_select
+      Path: Default Work Unit\SFX\fx_select
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: fx_select
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a36a1c6fbc29a647bba387a0e914d7cc
+      ID: 35998224
+      Name: mus_bug_light_A
+      Path: Default Work Unit\OUT\mus_bug_light_A
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_light_A
         ObjectType: 3
@@ -224,11 +280,11 @@ MonoBehaviour:
     - Guid: 8e2033e2b686d34b88f983f3376a09ef
       ID: 35998227
       Name: mus_bug_light_B
-      Path: Default Work Unit\BUG\mus_bug_light_B
+      Path: Default Work Unit\OUT\mus_bug_light_B
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_light_B
         ObjectType: 3
@@ -238,11 +294,11 @@ MonoBehaviour:
     - Guid: 7b02c24a07f5b64598095486e6653205
       ID: 35998226
       Name: mus_bug_light_C
-      Path: Default Work Unit\BUG\mus_bug_light_C
+      Path: Default Work Unit\OUT\mus_bug_light_C
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_light_C
         ObjectType: 3
@@ -252,11 +308,11 @@ MonoBehaviour:
     - Guid: dd3b4819d001f84d9613bf5eaa8f1940
       ID: 418530418
       Name: mus_bug_loop_A
-      Path: Default Work Unit\BUG\mus_bug_loop_A
+      Path: Default Work Unit\OUT\mus_bug_loop_A
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_loop_A
         ObjectType: 3
@@ -266,11 +322,11 @@ MonoBehaviour:
     - Guid: 157922302225c74c9578d4ee628d95a5
       ID: 418530417
       Name: mus_bug_loop_B
-      Path: Default Work Unit\BUG\mus_bug_loop_B
+      Path: Default Work Unit\OUT\mus_bug_loop_B
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_loop_B
         ObjectType: 3
@@ -280,11 +336,11 @@ MonoBehaviour:
     - Guid: f47b3494f8482f4d8451946882b7d403
       ID: 418530416
       Name: mus_bug_loop_C
-      Path: Default Work Unit\BUG\mus_bug_loop_C
+      Path: Default Work Unit\OUT\mus_bug_loop_C
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_loop_C
         ObjectType: 3
@@ -294,11 +350,11 @@ MonoBehaviour:
     - Guid: 002ab81eb7c2c047bca8ee2b43cb31f2
       ID: 418530423
       Name: mus_bug_loop_D
-      Path: Default Work Unit\BUG\mus_bug_loop_D
+      Path: Default Work Unit\OUT\mus_bug_loop_D
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_loop_D
         ObjectType: 3
@@ -308,11 +364,11 @@ MonoBehaviour:
     - Guid: ce6e514e32f30c44a531fb746ef3543a
       ID: 418530422
       Name: mus_bug_loop_E
-      Path: Default Work Unit\BUG\mus_bug_loop_E
+      Path: Default Work Unit\OUT\mus_bug_loop_E
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_loop_E
         ObjectType: 3
@@ -322,11 +378,11 @@ MonoBehaviour:
     - Guid: 0d77f70a8265394ba9d7dfab2ea26ab7
       ID: 418530421
       Name: mus_bug_loop_F
-      Path: Default Work Unit\BUG\mus_bug_loop_F
+      Path: Default Work Unit\OUT\mus_bug_loop_F
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_loop_F
         ObjectType: 3
@@ -336,11 +392,11 @@ MonoBehaviour:
     - Guid: eb954126b08f5b428a093b1ef8bbb107
       ID: 418530420
       Name: mus_bug_loop_G
-      Path: Default Work Unit\BUG\mus_bug_loop_G
+      Path: Default Work Unit\OUT\mus_bug_loop_G
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_loop_G
         ObjectType: 3
@@ -350,11 +406,11 @@ MonoBehaviour:
     - Guid: a8575e512afccf4eb6f2dbb1fe467c19
       ID: -154921904
       Name: mus_bug_smp_A
-      Path: Default Work Unit\BUG\mus_bug_smp_A
+      Path: Default Work Unit\OUT\mus_bug_smp_A
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_smp_A
         ObjectType: 3
@@ -364,11 +420,11 @@ MonoBehaviour:
     - Guid: 4331ab4b879eb24c9f1f700348463cce
       ID: -154921901
       Name: mus_bug_smp_B
-      Path: Default Work Unit\BUG\mus_bug_smp_B
+      Path: Default Work Unit\OUT\mus_bug_smp_B
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_smp_B
         ObjectType: 3
@@ -378,11 +434,11 @@ MonoBehaviour:
     - Guid: 579762164bb3834fba144b650700f3a6
       ID: -154921902
       Name: mus_bug_smp_C
-      Path: Default Work Unit\BUG\mus_bug_smp_C
+      Path: Default Work Unit\OUT\mus_bug_smp_C
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_smp_C
         ObjectType: 3
@@ -392,11 +448,11 @@ MonoBehaviour:
     - Guid: b91e7b58ac45fe43898dda5a8400b100
       ID: -154921899
       Name: mus_bug_smp_D
-      Path: Default Work Unit\BUG\mus_bug_smp_D
+      Path: Default Work Unit\OUT\mus_bug_smp_D
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: BUG
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_bug_smp_D
         ObjectType: 3
@@ -417,14 +473,28 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: cc9af6c2e5ee284aa8747e6eeb011954
-      ID: 410419961
-      Name: mus_stop
-      Path: Default Work Unit\MUS\mus_stop
+    - Guid: 308df390d1dd0340b88b044619cd461a
+      ID: -188181280
+      Name: mus_start_bug
+      Path: Default Work Unit\MUS\mus_start_bug
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: MUS
+        ObjectType: 4
+      - ElementName: mus_start_bug
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: cc9af6c2e5ee284aa8747e6eeb011954
+      ID: 410419961
+      Name: mus_stop
+      Path: Default Work Unit\OUT\mus_stop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: mus_stop
         ObjectType: 3
@@ -434,11 +504,11 @@ MonoBehaviour:
     - Guid: 650d7e8a0a9cb64aae815d54f8c6cd15
       ID: -895087682
       Name: room_01
-      Path: Default Work Unit\MUS\room_01
+      Path: Default Work Unit\OUT\room_01
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_01
         ObjectType: 3
@@ -448,11 +518,11 @@ MonoBehaviour:
     - Guid: ef7d78d002f9c5448527b6ffdea71d76
       ID: -895087683
       Name: room_02
-      Path: Default Work Unit\MUS\room_02
+      Path: Default Work Unit\OUT\room_02
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_02
         ObjectType: 3
@@ -462,11 +532,11 @@ MonoBehaviour:
     - Guid: 58274ec72c0f7948bf7222bfa09a12b6
       ID: -895087684
       Name: room_03
-      Path: Default Work Unit\MUS\room_03
+      Path: Default Work Unit\OUT\room_03
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_03
         ObjectType: 3
@@ -476,11 +546,11 @@ MonoBehaviour:
     - Guid: a53544114ea37549b1f4bff803883769
       ID: -895087685
       Name: room_04
-      Path: Default Work Unit\MUS\room_04
+      Path: Default Work Unit\OUT\room_04
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_04
         ObjectType: 3
@@ -490,11 +560,11 @@ MonoBehaviour:
     - Guid: 36d5e7f88ba0aa42aff1a3700383ddcf
       ID: -522637364
       Name: room_all
-      Path: Default Work Unit\MUS\room_all
+      Path: Default Work Unit\OUT\room_all
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_all
         ObjectType: 3
@@ -504,11 +574,11 @@ MonoBehaviour:
     - Guid: 63ef5d35ba694048b82d82eb65da1e69
       ID: -51722657
       Name: room_bug_A
-      Path: Default Work Unit\MUS\room_bug_A
+      Path: Default Work Unit\OUT\room_bug_A
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_bug_A
         ObjectType: 3
@@ -518,11 +588,11 @@ MonoBehaviour:
     - Guid: 9bf1878c1ee5a8459e5c61f1dd1d19e5
       ID: -51722660
       Name: room_bug_B
-      Path: Default Work Unit\MUS\room_bug_B
+      Path: Default Work Unit\OUT\room_bug_B
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_bug_B
         ObjectType: 3
@@ -532,11 +602,11 @@ MonoBehaviour:
     - Guid: e286d3100176c44da27300262aec0554
       ID: -51722659
       Name: room_bug_C
-      Path: Default Work Unit\MUS\room_bug_C
+      Path: Default Work Unit\OUT\room_bug_C
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_bug_C
         ObjectType: 3
@@ -546,11 +616,11 @@ MonoBehaviour:
     - Guid: 7797d914a833674da9051d1ce2207bf4
       ID: -51722662
       Name: room_bug_D
-      Path: Default Work Unit\MUS\room_bug_D
+      Path: Default Work Unit\OUT\room_bug_D
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: MUS
+      - ElementName: OUT
         ObjectType: 4
       - ElementName: room_bug_D
         ObjectType: 3
@@ -559,9 +629,8 @@ MonoBehaviour:
       minDuration: 0
   ExpandedItems:
   - /WIP TITLE
-  - /WIP TITLE/Events
-  - /WIP TITLE/Events/Default Work Unit
-  - /WIP TITLE/Events/Default Work Unit/MUS
+  - /WIP TITLE/SoundBanks
+  - /WIP TITLE/SoundBanks/Default Work Unit
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
@@ -571,7 +640,7 @@ MonoBehaviour:
   RtpcWwu:
   - Guid: '{D6649D38-F7D8-4D0A-ABD1-C3BFD6EAD326}'
     m_lastTimePart2: -1999269263
-    m_lastTimePsrt1: 848774116
+    m_lastTimePsrt1: 868247040
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
     List:
@@ -586,8 +655,8 @@ MonoBehaviour:
         ObjectType: 13
   StateWwu:
   - Guid: '{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}'
-    m_lastTimePart2: -1999269261
-    m_lastTimePsrt1: -265264517
+    m_lastTimePart2: -1999265769
+    m_lastTimePsrt1: -2142452480
     ParentPhysicalPath: 
     PhysicalPath: States\Default Work Unit.wwu
     List:
@@ -609,6 +678,7 @@ MonoBehaviour:
       - bytes: b76468ebef0f184390830e8a7306762e
       - bytes: 92cc5897ea19914eb5ae084b875c534c
       - bytes: 303237e24e31f64ea011e45ff0246cac
+      - bytes: 138482ae4f86d84688de2cbc6ce6ddba
       - bytes: 85dff2656caa9148b215d5610be4ffc7
       - bytes: 08f976a04b2f84469f00ea5ca3ac16e7
       - bytes: 6e4a4f133ca67648bdeb46fa87180183
@@ -630,6 +700,8 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: ROOM_ALL
         ObjectType: 8
+      - ElementName: ROOM_ALL_BUG
+        ObjectType: 8
       - ElementName: ROOM_BUG_A
         ObjectType: 8
       - ElementName: ROOM_BUG_B
@@ -638,7 +710,7 @@ MonoBehaviour:
         ObjectType: 8
       - ElementName: ROOM_BUG_D
         ObjectType: 8
-      valueIDs: 44fc921f29c71543db3ba32cbe0ba6cabd0ba6cabc0ba6cabb0ba6cacc2fd9e05fc6eafc5cc6eafc5dc6eafc5ac6eafc
+      valueIDs: 44fc921f29c71543db3ba32cbe0ba6cabd0ba6cabc0ba6cabb0ba6cacc2fd9e003e5f9575fc6eafc5cc6eafc5dc6eafc5ac6eafc
       values:
       - END
       - INTRO
@@ -648,6 +720,7 @@ MonoBehaviour:
       - ROOM_03
       - ROOM_04
       - ROOM_ALL
+      - ROOM_ALL_BUG
       - ROOM_BUG_A
       - ROOM_BUG_B
       - ROOM_BUG_C
@@ -656,14 +729,14 @@ MonoBehaviour:
   SwitchWwu:
   - Guid: '{2374FF6A-E75D-41B9-9FA5-021EEDE0C87D}'
     m_lastTimePart2: -1999269391
-    m_lastTimePsrt1: -918738408
+    m_lastTimePsrt1: -910906368
     ParentPhysicalPath: 
     PhysicalPath: Switches\Default Work Unit.wwu
     List: []
   TriggerWwu:
   - Guid: '{F143701B-B947-4EC5-A331-F845C2C8268D}'
     m_lastTimePart2: -1999269391
-    m_lastTimePsrt1: -918808412
+    m_lastTimePsrt1: -910906368
     ParentPhysicalPath: 
     PhysicalPath: Triggers\Default Work Unit.wwu
     List: []

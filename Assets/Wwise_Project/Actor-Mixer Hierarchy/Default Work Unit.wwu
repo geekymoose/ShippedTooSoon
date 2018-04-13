@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A5184280-7028-4166-B5F1-B0DF789B820B}" SchemaVersion="85">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{A5184280-7028-4166-B5F1-B0DF789B820B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="fx_att" ID="{10486589-EAB9-44E2-8C0D-E3B6016007AB}" ShortID="891300179">
+					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6BE6A9E4-83BC-4889-9970-D364A0C36EE5}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="300"/>
+											<Property Name="Min" Type="Real64" Value="-400"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_att" ID="{69B7900B-5C2F-499D-A3DB-A7DD5759A95F}" ShortID="642215571">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="6.00582627118644E-03"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.124620895127119"/>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_att.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_att" ID="{69B7900B-5C2F-499D-A3DB-A7DD5759A95F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_button" ID="{62404192-E270-4ABD-8C68-FC604AB2F9B3}" ShortID="216389269">
+					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_button" ID="{D327CE16-F522-4231-8CE7-80581C446BB9}" ShortID="270990786">
+							<PropertyList>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_button.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_button" ID="{D327CE16-F522-4231-8CE7-80581C446BB9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_destroy" ID="{3CA83425-5996-45F1-AF70-1F6F16E7F906}" ShortID="317092452">
+					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_destroy" ID="{10C09C5B-71DA-45C4-9EBA-C149746BA0D9}" ShortID="823355541">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.59305790960452"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_destroy.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_destroy" ID="{10C09C5B-71DA-45C4-9EBA-C149746BA0D9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_door" ID="{04C8CD59-FF9C-4065-A8FF-471E61FA9553}" ShortID="20114472">
+					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_door" ID="{1851AFEE-2C18-46B9-B4F1-4253105B72DA}" ShortID="995357642">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="8.50810381355931E-02"/>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_door.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_door" ID="{1851AFEE-2C18-46B9-B4F1-4253105B72DA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_select" ID="{DB94E87C-937D-4E81-843F-A3869BFB4579}" ShortID="587821884">
+					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_grab" ID="{2B45DBDB-4E36-430B-B1AE-38C5808E0EF8}" ShortID="330299835">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.240813559322034"/>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_grab.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_grab" ID="{2B45DBDB-4E36-430B-B1AE-38C5808E0EF8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_hit" ID="{AECDCDDB-F850-43E5-88E1-9D72DA14F6D2}" ShortID="515859610">
+					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{44C57979-A75A-4CF2-A8A5-91D41635BB89}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="300"/>
+											<Property Name="Min" Type="Real64" Value="-400"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_hit" ID="{D232D2A4-6760-41B9-A04B-14DD53BD7C4D}" ShortID="174307834">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="8.03211708063079E-05"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="6.58734002075406E-02"/>
+								<Property Name="TrimBegin" Type="Real64" Value="8.94393493430015E-02"/>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_hit.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_hit" ID="{D232D2A4-6760-41B9-A04B-14DD53BD7C4D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_next" ID="{FA1F74EC-9B74-4F67-BB2B-38FF691605F0}" ShortID="361330753">
+					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_next" ID="{6D5F3AE7-E7DC-476E-8B91-3590DF2F190D}" ShortID="900749334">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.666627118644068"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.66957062146893"/>
+								<Property Name="VolumeOffset" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_next.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_next" ID="{6D5F3AE7-E7DC-476E-8B91-3590DF2F190D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Folder Name="BUG" ID="{0D82DCBE-103D-4F97-8874-CBC3205B6D62}" ShortID="327484992">
+					<ChildrenList>
+						<Sound Name="bug_buzz_B" ID="{2891E8C3-9F18-4FB9-B712-1969FA7890E1}" ShortID="855305194">
+							<PropertyList>
+								<Property Name="EnablePositioning" Type="bool" Value="False"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bug_buzz_B" ID="{273B4FFA-66EB-4893-8020-39FBA9D91CAA}" ShortID="445129043">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.25121380649718E-02"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.244737420550848"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>bug_buzz_B.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bug_buzz_B" ID="{273B4FFA-66EB-4893-8020-39FBA9D91CAA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bug_noise" ID="{2F8C8E22-E465-4322-B203-A52D1D8E0319}" ShortID="861851978">
+							<PropertyList>
+								<Property Name="EnablePositioning" Type="bool" Value="False"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bug_noise" ID="{9C4E29D4-DCF6-47CD-BEC7-A6D47C9B727B}" ShortID="410857013">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>bug_noise.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bug_noise" ID="{9C4E29D4-DCF6-47CD-BEC7-A6D47C9B727B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bug_buzz_A" ID="{185350C3-8F89-4FAB-8786-9E340C6F1C32}" ShortID="128472607">
+							<PropertyList>
+								<Property Name="EnablePositioning" Type="bool" Value="False"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bug_buzz_A" ID="{C0D41509-48AA-432F-B14F-AE56ADBB4115}" ShortID="318006219">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>bug_buzz_A.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bug_buzz_A" ID="{C0D41509-48AA-432F-B14F-AE56ADBB4115}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="BUG" ID="{DAB984C6-AF5B-4097-B2FA-8D224DA830CA}" ShortID="442063679">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="bug_buzz_B" ID="{249F2E25-2F90-4D7F-BBFD-68535C4AFAA3}" ShortID="93527998">
+									<PropertyList>
+										<Property Name="EnablePositioning" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="bug_buzz_B" ID="{870152D0-3ECE-4D5C-8942-62A696D7EFF5}" ShortID="787301734">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.25121380649718E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.244737420550848"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>bug_buzz_B.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="445129043"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="bug_buzz_B" ID="{870152D0-3ECE-4D5C-8942-62A696D7EFF5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="bug_noise" ID="{BEC97621-57AC-4732-A265-7165EB83ECD7}" ShortID="273687342">
+									<PropertyList>
+										<Property Name="EnablePositioning" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="bug_noise" ID="{D09F349A-D5AA-4897-A110-7FAA051CFA57}" ShortID="726179379">
+											<PropertyList>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>bug_noise.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="410857013"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="bug_noise" ID="{D09F349A-D5AA-4897-A110-7FAA051CFA57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="bug_buzz_A" ID="{2C359426-78A0-4FB8-A739-11633C7FB1F2}" ShortID="956304305">
+									<PropertyList>
+										<Property Name="EnablePositioning" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="bug_buzz_A" ID="{8F62CE47-E2EA-4A90-BA6A-C8617174FB9E}" ShortID="244243944">
+											<PropertyList>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>bug_buzz_A.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="318006219"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="bug_buzz_A" ID="{8F62CE47-E2EA-4A90-BA6A-C8617174FB9E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MUS BUG LOOP C" ID="{773BE866-32A5-4875-8EAC-DB57710E8784}" ShortID="683349738">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MUS BUG LOOP C" ID="{21C72F07-1258-4BEE-A0BF-79AA3ECCA646}" ShortID="941565495">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.50025981725606E-02"/>
+												<Property Name="LoopEnd" Type="Real64" Value="1.60217486714881"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.69813048678681"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>MUS BUG\MUS BUG LOOP C.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="215048258"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MUS BUG LOOP C" ID="{21C72F07-1258-4BEE-A0BF-79AA3ECCA646}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MUS BUG LOOP D" ID="{608EE3DE-23A0-4CBE-ADF1-83D65C155E55}" ShortID="769614305">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MUS BUG LOOP D" ID="{40B37902-7A8A-4746-9609-77A512A2431A}" ShortID="58646746">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="5.44794756355932E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.63055904303551E-02"/>
+												<Property Name="LoopEnd" Type="Real64" Value="2.12705360120449"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.1556758771557"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>MUS BUG\MUS BUG LOOP D.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="345529055"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MUS BUG LOOP D" ID="{40B37902-7A8A-4746-9609-77A512A2431A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MUS BUG LOOP E" ID="{9194CA4A-07E7-4353-A497-188DD2A43AD4}" ShortID="1069824555">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MUS BUG LOOP E" ID="{089881F3-893A-467D-9B82-337D05EC84C7}" ShortID="72010145">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.07991260593222E-03"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.145278601694915"/>
+												<Property Name="LoopEnd" Type="Real64" Value="2.142859375"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.33353753972458"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>MUS BUG\MUS BUG LOOP E.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="407965093"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MUS BUG LOOP E" ID="{089881F3-893A-467D-9B82-337D05EC84C7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="bug_end" ID="{ED0EBEAE-93FC-4B94-A0D7-565B1DC23896}" ShortID="249854292">
+							<PropertyList>
+								<Property Name="EnablePositioning" Type="bool" Value="False"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bug_buzz_B" ID="{738ECAD1-0FA4-45B0-B26D-7280C84F2290}" ShortID="1025774361">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.25121380649718E-02"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.244737420550848"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>bug_buzz_B.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="445129043"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bug_buzz_B" ID="{738ECAD1-0FA4-45B0-B26D-7280C84F2290}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="BUG_LOOPS" ID="{94D9E04A-6FA4-40AC-BC1F-17D69B2F3892}" ShortID="756161044">
+					<ChildrenList>
+						<Sound Name="MUS BUG LIGHT B" ID="{8CEC6C41-F5F9-468B-A0D6-9278D280A22F}" ShortID="662207161">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LIGHT B" ID="{0ECE0E57-88BF-49DD-83DD-D660A2BF439A}" ShortID="901039701">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="5.11743373524985E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.022419526400224"/>
+										<Property Name="LoopEnd" Type="Real64" Value="5.75439181673729"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.80042190687774"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LIGHT B.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LIGHT B" ID="{0ECE0E57-88BF-49DD-83DD-D660A2BF439A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LIGHT A" ID="{F280F5CA-D1BA-4896-BD3D-F538F9505B8C}" ShortID="329804120">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LIGHT A" ID="{2E397D43-29A1-4BF3-82B6-65633F116197}" ShortID="1027242073">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="8.85709684947089E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="6.80993114406796E-02"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.28894452291275"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality Medium" ID="{01D20CF3-9A4C-4EEE-AE3E-2942B47543E9}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+									</ReferenceList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LIGHT A.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LIGHT A" ID="{2E397D43-29A1-4BF3-82B6-65633F116197}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LIGHT C" ID="{8A2D14FA-6023-452C-BC3C-93E11514490C}" ShortID="129674776">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LIGHT C" ID="{1CA7DAB5-F1B8-4909-A3B2-D38E706D5FFA}" ShortID="14698481">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.13370894784022E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.217917902542373"/>
+										<Property Name="LoopEnd" Type="Real64" Value="4.30387857521186"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.52179647775423"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality Medium" ID="{01D20CF3-9A4C-4EEE-AE3E-2942B47543E9}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+									</ReferenceList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LIGHT C.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LIGHT C" ID="{1CA7DAB5-F1B8-4909-A3B2-D38E706D5FFA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LOOP A" ID="{CE723DAC-30C6-4B92-B645-024CDF6E0826}" ShortID="1027391314">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LOOP A" ID="{C5D70406-88C2-4A47-A8D9-7DC6322B1887}" ShortID="955755989">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="6.80998411016949E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.13499735169493E-02"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LOOP A.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LOOP A" ID="{C5D70406-88C2-4A47-A8D9-7DC6322B1887}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LOOP B" ID="{2F60BC61-007C-4F61-989D-73225C955921}" ShortID="465601238">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LOOP B" ID="{21CAF211-6E3F-4AF5-B5C6-63336449023F}" ShortID="345991091">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="8.07186378072855E-02"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.02524814303802"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.11392156482014"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LOOP B.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LOOP B" ID="{21CAF211-6E3F-4AF5-B5C6-63336449023F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LOOP C" ID="{4DC05BF2-3E57-4C3A-A5B8-4E110F30DB14}" ShortID="122748379">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LOOP C" ID="{9A7495F1-36D9-435B-B27B-A373ABC4589D}" ShortID="215048258">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="5.50025981725606E-02"/>
+										<Property Name="LoopEnd" Type="Real64" Value="1.60217486714881"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.69813048678681"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LOOP C.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LOOP C" ID="{9A7495F1-36D9-435B-B27B-A373ABC4589D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LOOP D" ID="{A88B314F-D152-4E12-81C1-8A8D5FE10101}" ShortID="740297066">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LOOP D" ID="{C2AD9AD3-1F04-4ABC-AB44-516284ECE8A4}" ShortID="345529055">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="5.44794756355932E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.63055904303551E-02"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.12705360120449"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.1556758771557"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LOOP D.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LOOP D" ID="{C2AD9AD3-1F04-4ABC-AB44-516284ECE8A4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LOOP E" ID="{0DF6E996-E6E6-42F5-9EC7-45E3A499FD0C}" ShortID="489003055">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LOOP E" ID="{1D55F4F3-2CAE-4EB2-9016-8EEB2DFEDD76}" ShortID="407965093">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="9.07991260593222E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.145278601694915"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.142859375"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.33353753972458"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LOOP E.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LOOP E" ID="{1D55F4F3-2CAE-4EB2-9016-8EEB2DFEDD76}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LOOP F" ID="{4642150B-13D2-4622-96C0-C6ABE705B4CD}" ShortID="747125571">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LOOP F" ID="{5166650A-1430-456C-9359-023CC309CE75}" ShortID="375620428">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.81599576271186E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="6.80998411016942E-03"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LOOP F.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LOOP F" ID="{5166650A-1430-456C-9359-023CC309CE75}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG LOOP G" ID="{4FCA35AF-233B-464A-A484-CE80E0FB4326}" ShortID="435613256">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG LOOP G" ID="{0CDBF595-6B4D-4E7E-AC98-732AA9C53E0B}" ShortID="672893200">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="3.63196504237289E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.53995630296609E-02"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.55024582891949"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.62046590307204"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG LOOP G.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG LOOP G" ID="{0CDBF595-6B4D-4E7E-AC98-732AA9C53E0B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG SMP A" ID="{72AC976A-0D28-4E57-ADDB-77178C950127}" ShortID="425788836">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG SMP A" ID="{D4B7682E-FB2E-4F28-89B4-1B27B92AA847}" ShortID="639391237">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.34627937556026E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="5.67961611564449E-03"/>
+										<Property Name="LoopEnd" Type="Real64" Value="4.90315280720339"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.90315280720339"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG SMP A.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG SMP A" ID="{D4B7682E-FB2E-4F28-89B4-1B27B92AA847}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG SMP B" ID="{E80DBA53-4BB3-4644-86A3-CB1BD8BCFCAB}" ShortID="499873">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG SMP B" ID="{3C313A64-F76C-4BC6-A217-95640BEAE8AD}" ShortID="379828709">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="6.37711283160122E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="7.13816744936491E-03"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.67962075714756"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG SMP B.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG SMP B" ID="{3C313A64-F76C-4BC6-A217-95640BEAE8AD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG SMP C" ID="{D2579FE6-E981-4437-BF66-76FC29DC097B}" ShortID="985573220">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG SMP C" ID="{34458684-3ADA-4CDC-9C93-DBFB225B4D79}" ShortID="394490503">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="2.42131002824859E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.86275908665934E-03"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.04056110963984"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG SMP C.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG SMP C" ID="{34458684-3ADA-4CDC-9C93-DBFB225B4D79}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MUS BUG SMP D" ID="{034719D2-0E5A-4019-A57E-881E89D1B589}" ShortID="858402145">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="BUG" ID="{9BBCEF43-18F9-4950-AF22-78004D6053CF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MUS BUG SMP D" ID="{3A8A4794-59F3-4B6A-BF9E-12BF5C7F1415}" ShortID="104129102">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.16913735246022E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.22818469349362E-02"/>
+										<Property Name="LoopEnd" Type="Real64" Value="2.39407029043079"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.40393673207158"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MUS BUG\MUS BUG SMP D.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MUS BUG SMP D" ID="{3A8A4794-59F3-4B6A-BF9E-12BF5C7F1415}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<BlendContainer Name="fx_grab" ID="{DE228B79-9FBA-4419-BECB-266268296EBF}" ShortID="698603402">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="fx_grab_01" ID="{22795E88-4965-46BC-9700-1FA5CBE180E3}" ShortID="420333033">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="fx_grab_01" ID="{9A0CE168-984C-47C6-80E8-594D8C3E6407}" ShortID="932314206">
+									<Language>SFX</Language>
+									<AudioFile>fx_grab_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="fx_grab_01" ID="{9A0CE168-984C-47C6-80E8-594D8C3E6407}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="fx_grab_02" ID="{B0A49D7E-8839-4E86-B589-1DCE31C99757}" ShortID="274117659">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="fx_grab_02" ID="{28141A5D-E7D9-4C14-8C91-69799648F53E}" ShortID="1000512093">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.497314287605932"/>
+										<Property Name="FadeOutShape" Type="int16" Value="6"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.839146407132769"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>fx_grab_02.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="fx_grab_02" ID="{28141A5D-E7D9-4C14-8C91-69799648F53E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="fx_grab_03" ID="{C01E8226-8602-49D3-A315-9F949ADBFF97}" ShortID="1065904114">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="fx_grab_03" ID="{09CB6172-08F0-4C7D-B56A-122248C70ADF}" ShortID="497092800">
+									<Language>SFX</Language>
+									<AudioFile>fx_grab_03.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="fx_grab_03" ID="{09CB6172-08F0-4C7D-B56A-122248C70ADF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<Sound Name="fx_none" ID="{916F7FB5-E8DE-4CAD-B226-C571830237DA}" ShortID="716821140">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_none" ID="{8F57F96D-436D-4DFB-84F0-AC7AD64791E0}" ShortID="324453912">
+							<Language>SFX</Language>
+							<AudioFile>fx_none.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_none" ID="{8F57F96D-436D-4DFB-84F0-AC7AD64791E0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_monster" ID="{9FE8D29C-9646-414B-8271-EA31355920F4}" ShortID="867382485">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-500</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_monster" ID="{AF522A28-9538-4F3E-A314-AA2C0E2525F5}" ShortID="622848671">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="LoopEnd" Type="Real64" Value="0.653110566737288"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.653110566737288"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_monster.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_monster" ID="{AF522A28-9538-4F3E-A314-AA2C0E2525F5}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

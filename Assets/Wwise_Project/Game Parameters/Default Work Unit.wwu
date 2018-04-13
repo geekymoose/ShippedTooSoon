@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D6649D38-F7D8-4D0A-ABD1-C3BFD6EAD326}" SchemaVersion="85">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{D6649D38-F7D8-4D0A-ABD1-C3BFD6EAD326}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="SC_BUG" ID="{8F0CC4FC-E9D1-4E29-A9D9-63FA4127BCB2}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-48"/>
+						<Property Name="Max" Type="Real64" Value="6"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

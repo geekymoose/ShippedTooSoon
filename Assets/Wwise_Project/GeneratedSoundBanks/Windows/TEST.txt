@@ -1,0 +1,31 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1973954843	mus_start			\Default Work Unit\MUS\mus_start	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	25716274	MUS III trans	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS III trans_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_03\MUS III trans\MUS III trans		153530
+	106810603	MUS intro	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS intro_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\INTRO\MUS intro\MUS intro		276422
+	119527989	MUS BUG LOOP B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_A\MUS BUG LOOP B\MUS BUG LOOP B		226813
+	225887680	MUS BUG SMP A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG SMP A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_D\MUS BUG SMP A\MUS BUG SMP A		275709
+	229192031	MUS BUG LOOP A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_B\MUS BUG LOOP A\MUS BUG LOOP A		28192
+	276692451	2m B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\2m B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\2m B\2m B		89919
+	306310403	MUS BUG LIGHT C	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LIGHT C_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_A\MUS BUG LIGHT C\MUS BUG LIGHT C		216659
+	349549188	BRUIT ROSE	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\BRUIT ROSE_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\END\BRUIT ROSE\BRUIT ROSE		88544
+	385812007	MUS IV A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS IV A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_04\MUS IV A\MUS IV A		256155
+	390140804	MUS BUG LOOP E	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP E_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_C\MUS BUG LOOP E\MUS BUG LOOP E		163429
+	421622993	MUS BUG LOOP C	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP C_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_B\MUS BUG LOOP C\MUS BUG LOOP C		247979
+	492048873	MUS IV B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS IV B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_04\MUS IV B\MUS IV B		268988
+	506231787	MUS I	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS I_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_01\MUS I\MUS I		273473
+	518331236	MUS BUG LOOP G	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP G_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_C\MUS BUG LOOP G\MUS BUG LOOP G		106240
+	598689229	MUS III B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS III B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_03\MUS III B\MUS III B		243545
+	614102286	MUS BUG LOOP D	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP D_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_C\MUS BUG LOOP D\MUS BUG LOOP D		120178
+	662339137	MUS BUG SMP D	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG SMP D_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_D\MUS BUG SMP D\MUS BUG SMP D		112984
+	777883526	MUS BUG SMP C	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG SMP C_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_C\MUS BUG SMP C\MUS BUG SMP C		112696
+	785846887	MUS BUG SMP B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG SMP B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_C\MUS BUG SMP B\MUS BUG SMP B		206609
+	813891382	MUS II A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS II A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_02\MUS II A\MUS II A		250801
+	841386519	MUS BUG LIGHT A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LIGHT A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_A\MUS BUG LIGHT A\MUS BUG LIGHT A		240067
+	841841874	MUS BUG LOOP F	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP F_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_D\MUS BUG LOOP F\MUS BUG LOOP F		28667
+	864121367	MUS II B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS II B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_02\MUS II B\MUS II B		247434
+	928592102	MUS BUG LIGHT B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LIGHT B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_B\MUS BUG LIGHT B\MUS BUG LIGHT B		242030
+	1016632928	2m A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\2m A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\2m A\2m A		61656
+	1025250673	MUS III A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS III A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_03\MUS III A\MUS III A		244593
+

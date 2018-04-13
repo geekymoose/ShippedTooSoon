@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}" SchemaVersion="85">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{E9019687-B5AF-4C6E-AA6D-2FC6F33C19D0}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="MUS" ID="{8B3ED5F1-D294-431F-9B67-FF845A56443F}">
+					<ChildrenList>
+						<State Name="None" ID="{CB55E5ED-A517-4E09-B11B-A918DCCF77B0}"/>
+						<State Name="INTRO" ID="{9F11514C-8B88-4263-AB37-85BD5B061964}"/>
+						<State Name="ROOM_01" ID="{99DF1018-1F3A-4E6E-A29A-D17D22045A6F}"/>
+						<State Name="ROOM_02" ID="{87D636A7-53E8-4C5F-9CE5-D81A402BAD7D}"/>
+						<State Name="ROOM_03" ID="{EB6864B7-0FEF-4318-9083-0E8A7306762E}"/>
+						<State Name="ROOM_04" ID="{9758CC92-19EA-4E91-B5AE-084B875C534C}"/>
+						<State Name="ROOM_BUG_A" ID="{65F2DF85-AA6C-4891-B215-D5610BE4FFC7}"/>
+						<State Name="ROOM_BUG_B" ID="{A076F908-2F4B-4684-9F00-EA5CA3AC16E7}"/>
+						<State Name="ROOM_BUG_C" ID="{134F4A6E-A63C-4876-BDEB-46FA87180183}"/>
+						<State Name="ROOM_BUG_D" ID="{E3B30413-D585-49B9-8FDA-AFD517215034}"/>
+						<State Name="END" ID="{D812789E-C2B9-42FE-AF99-12169D3BB9D6}"/>
+						<State Name="ROOM_ALL" ID="{E2373230-314E-4EF6-A011-E45FF0246CAC}"/>
+						<State Name="ROOM_ALL_BUG" ID="{AE828413-864F-46D8-88DE-2CBC6CE6DDBA}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

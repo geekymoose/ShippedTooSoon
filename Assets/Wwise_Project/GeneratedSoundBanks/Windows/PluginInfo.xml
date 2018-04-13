@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Project="WIP TITLE" Platform="Windows" BasePlatform="Windows">
+	<Plugins>
+		<Plugin Name="Wwise Peak Limiter" ID="7208963" DLL="AkPeakLimiter"/>
+		<Plugin Name="Wwise Meter" ID="8454147" DLL="AkSoundEngineDLL"/>
+		<Plugin Name="System" ID="11403271" DLL="DefaultSink"/>
+		<Plugin Name="Communication" ID="11534343" DLL="DefaultSink"/>
+		<Plugin Name="No Output" ID="11862023" DLL="DefaultSink"/>
+	</Plugins>
+</PluginInfo>

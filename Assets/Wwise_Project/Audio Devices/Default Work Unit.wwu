@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AD4935C8-6816-44BF-A008-FC69F9B80911}" SchemaVersion="85">
+	<AudioDevices>
+		<WorkUnit Name="Default Work Unit" ID="{AD4935C8-6816-44BF-A008-FC69F9B80911}" PersistMode="Standalone">
+			<ChildrenList>
+				<AudioDevice Name="Microsoft_Spatial_Sound_Platform_Output" ID="{F53C291A-0F40-4E86-A87A-15CC4A58906A}" PluginName="Microsoft Spatial Sound Platform Output" CompanyID="275" PluginID="170" PluginType="7"/>
+				<AudioDevice Name="System" ID="{439BC28D-80B8-4F17-B533-85C705783670}" PluginName="System" CompanyID="0" PluginID="174" PluginType="7"/>
+				<AudioDevice Name="Communication" ID="{CD0A94C1-8D6D-4854-B06C-CCFAEF46583F}" PluginName="Communication" CompanyID="0" PluginID="176" PluginType="7"/>
+				<AudioDevice Name="No_Output" ID="{FB85C12B-F29B-42CA-B6B4-120809FF7F23}" PluginName="No Output" CompanyID="0" PluginID="181" PluginType="7"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioDevices>
+</WwiseDocument>

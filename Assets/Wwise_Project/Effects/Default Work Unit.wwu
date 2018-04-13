@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FC49CF33-8971-4FF1-AC0E-C2AB6A6756CA}" SchemaVersion="85">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{FC49CF33-8971-4FF1-AC0E-C2AB6A6756CA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="SC_BUG" ID="{D07A9BCE-871C-49BE-8AEB-ECCE341887BB}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+					<PropertyList>
+						<Property Name="FullBandGain" Type="Real32">
+							<RTPCList>
+								<RTPC Name="" ID="{677A9648-7B69-4738-87EA-C08DC41B0788}" ShortID="347967814">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="SC_BUG" ID="{8F0CC4FC-E9D1-4E29-A9D9-63FA4127BCB2}" WorkUnitID="{D6649D38-F7D8-4D0A-ABD1-C3BFD6EAD326}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{C20498C2-EA78-4AD1-B623-ED2519EC674B}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>-48</XPos>
+												<YPos>-96.3</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-96.3</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>6</XPos>
+												<YPos>-24.43489</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>
