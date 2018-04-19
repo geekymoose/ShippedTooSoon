@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     // Attributes
     // -------------------------------------------------------------------------
 
-    [Range(0, 100)]
+    [Range(0, 30)]
     public float speed = 5f;
 
     private Rigidbody2D body2d;

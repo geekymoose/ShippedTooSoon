@@ -12,11 +12,8 @@ using UnityEngine.Assertions;
  */
 public class GameDebugger : MonoBehaviour {
 	// -------------------------------------------------------------------------
-	// Parameters
+	// Attributes
 	// -------------------------------------------------------------------------
-	[Tooltip("Amount of damage on keyDamagePlayer")]
-	private float damageAmount = 5f;
-
 	private GameObject[] goals;
 	private GameManager gameManager = null;
 	private GameObject player = null;
@@ -46,11 +43,18 @@ public class GameDebugger : MonoBehaviour {
 
 
 	// -------------------------------------------------------------------------
+	// Attributes (Unity editor)
+	// -------------------------------------------------------------------------
+	[Tooltip("Amount of damage on keyDamagePlayer")]
+	private float damageAmount = 5f;
+
+
+	// -------------------------------------------------------------------------
 	// Unity Methods
 	// -------------------------------------------------------------------------
     private void Start() {
+    	// Script enabled ONLY in debug build
         if(!Debug.isDebugBuild) {
-            // Script enabled ONLY in debug build
         	Debug.Log("[DEBUGGER] GameDebugger is not activated");
             this.gameObject.GetComponent<GameDebugger>().enabled = false;
             return;
@@ -72,6 +76,7 @@ public class GameDebugger : MonoBehaviour {
 	}
 
 	private void handleInputKey(){
+
 		// Game state (Win etc..)
 		if(Input.GetKeyDown(this.keyActivatedAllGoals)) {
 			Debug.LogWarning("[DEBUG]: Activate all goals");
@@ -97,7 +102,6 @@ public class GameDebugger : MonoBehaviour {
 			Debug.LogWarning("[DEBUG]: Restart Game");
 			this.gameManager.restart();
 		}
-
 
 		// Game speed / Time
 		else if(Input.GetKeyDown(this.keySlowDownGame)) {
@@ -132,7 +136,7 @@ public class GameDebugger : MonoBehaviour {
 		}
 
 		else if(Input.GetKeyDown(this.keyAddRandomScore)) {
-			int randScore = (int)Random.RandomRange(0, 999);
+			int randScore = Random.Range(0, 999);
 			Debug.LogWarning("[DEBUG]: Add Random score (" + randScore + ")");
 			this.scoreData.addScoreEntry(randScore);
 		}
@@ -147,8 +151,6 @@ public class GameDebugger : MonoBehaviour {
 	// Debug / Cheat functions
 	// -------------------------------------------------------------------------
 	private void activateAllGoals() {
-		// TODO: Has a bug and doesn't work
-
 		// If done before, goals object may have not been created yet
 		this.goals = GameObject.FindGameObjectsWithTag("Goal");
 		Assert.IsNotNull(this.goals);

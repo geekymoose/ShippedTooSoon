@@ -6,26 +6,20 @@ using UnityEngine;
  * Score is the x first best times. (Set to 5 best scores)
  * \author  Constantin Masson
  */
-[CreateAssetMenu(fileName = "ScoreDataSave", menuName = "Custom/ScoreDataSave", order = 1)]
+[CreateAssetMenu(fileName = "ScoreDataSave", menuName = "ScoreDataSave", order = 1)]
 public class ScoreData : ScriptableObject {
 
     // -------------------------------------------------------------------------
-    // Data
+    // Data (Unity editor)
     // -------------------------------------------------------------------------
-
     [SerializeField]
-    private int[] scores = new int[5]; // 5 best time
+    private int[] scores = new int[5]; // 5 best times
 
+
+    // -------------------------------------------------------------------------
+    // Internal data
+    // -------------------------------------------------------------------------
     private int noScoreData = 999;
-
-    
-    // -------------------------------------------------------------------------
-    // Unity Methods
-    // -------------------------------------------------------------------------
-
-    public void Awake() {
-        // Hi rabbit! Where is the salad and carrot?
-    }
     
 
     // -------------------------------------------------------------------------
