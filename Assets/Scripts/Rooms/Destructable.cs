@@ -3,23 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class Destructable : MonoBehaviour {
-	private Animator anim;
-	private Collider2D[] colliders;
 
-	// Use this for initialization
+/**
+ * Anything player can destroye with his weapon.
+ */
+public class Destructable : MonoBehaviour {
+	private Animator _anim;
+	private Collider2D[] _colliders;
+
 	void Start () {
-		this.anim = this.GetComponent<Animator>();
-		this.colliders = this.GetComponents<Collider2D>();
-		Assert.IsNotNull(this.anim, "Missing Animator component");
+		_anim = this.GetComponent<Animator>();
+		_colliders = this.GetComponents<Collider2D>();
+		Assert.IsNotNull(_anim, "Missing Animator component");
+		Assert.IsNotNull(_colliders, "Unable to recover the colliders");
 	}
 
+	/**
+	 * Actually destroye the destructable object.
+	 */
 	public void destroy() {
-		foreach(Collider2D coco in colliders) {
+		foreach(Collider2D coco in _colliders) {
 			coco.enabled = false;
 		}
 		
-		this.anim.SetTrigger("Destroy");
+		_anim.SetTrigger("Destroy");
 		AkSoundEngine.PostEvent("fx_destroy", gameObject);
 	}
 }

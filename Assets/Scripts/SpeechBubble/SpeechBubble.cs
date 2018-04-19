@@ -9,7 +9,7 @@ using UnityEngine.Assertions;
  * Unity controller to display a Speech Bubble.
  * Bubble may be displayed for a given amount of time, with specific text.
  */
-public class SpeechBubbleController : MonoBehaviour {
+public class SpeechBubble : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	// Attributes (Unity Editor)
 	// -------------------------------------------------------------------------

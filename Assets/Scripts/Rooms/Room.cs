@@ -56,7 +56,7 @@ public class Room : MonoBehaviour {
 	 * Executed whenever player enter this room 
 	 */
 	public void onRoomEnter() {
-		Debug.Log("Room::onRoomEnter() - ID: " + this.id);
+		//Debug.Log("Room::onRoomEnter() - ID: " + this.id);
 		this.isActive = true;
 		if(!this.isDone){
 			Invoke("closeAllDoors", this.doorDelay);

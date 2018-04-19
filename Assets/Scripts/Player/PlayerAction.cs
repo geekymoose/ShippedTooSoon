@@ -7,8 +7,11 @@ using UnityEngine.Assertions;
  * Manage Player Action such as Attacks and activate Goals or pickup glitches.
  */
 public class PlayerAction : MonoBehaviour {
+	// -------------------------------------------------------------------------
+	// Attributes
+	// -------------------------------------------------------------------------
 	private PlayerMovement 			_playerMovement 	= null;
-	private SpeechBubbleController	_speechBubble		= null;
+	private SpeechBubble			_speechBubble		= null;
 	private bool 					_canAttack 			= false;
 	private Transform 				_attackCenter 		= null;
 	private CircleCollider2D 		_attackCollider 	= null;
@@ -18,11 +21,23 @@ public class PlayerAction : MonoBehaviour {
 
 
 	// -------------------------------------------------------------------------
+	// Attributes (Unity Editor)
+	// -------------------------------------------------------------------------
+	[SerializeField]
+	[Tooltip("Speech that player will say when pickup this pickable")]
+	private SpeechBubbleData _noWeaponMessage;
+
+	[SerializeField]
+	[Tooltip("Speech that player will say when pickup this pickable")]
+	private SpeechBubbleData _enemyMessage;
+
+
+	// -------------------------------------------------------------------------
 	// Unity Methods
 	// -------------------------------------------------------------------------
 	public void Start() {
 		_playerMovement 	= this.GetComponent<PlayerMovement>();
-		_speechBubble 		= this.GetComponent<SpeechBubbleController>();
+		_speechBubble 		= this.GetComponent<SpeechBubble>();
         _anim 				= this.GetComponent<Animator>();
 		_attackCollider		= this.GetComponentInChildren<CircleCollider2D>();
 		_attackCenter 		= GameObject.Find("PlayerAttackCenter").transform;
@@ -44,9 +59,15 @@ public class PlayerAction : MonoBehaviour {
 			}
 			else {
 				AkSoundEngine.PostEvent("fx_none", gameObject);
-				_speechBubble.showBubble("I need a sword to attack!", 0.5f);
+				_speechBubble.showBubble(_noWeaponMessage.message, _noWeaponMessage.duration);
 			}
         }
+	}
+
+	public void OnCollisionEnter2D(Collision2D other) {
+		if(other.gameObject.CompareTag("Enemy")) {
+			_speechBubble.showBubble(_enemyMessage.message, _enemyMessage.duration);
+		}
 	}
 	
     public void OnTriggerEnter2D(Collider2D other) {
@@ -62,7 +83,7 @@ public class PlayerAction : MonoBehaviour {
 			AkSoundEngine.PostEvent("fx_next", gameObject);
         }
 		else if(other.CompareTag("Pickable")) {
-			GlitchPickableController glitch = other.GetComponent<GlitchPickableController>();
+			Pickable glitch = other.GetComponent<Pickable>();
 			Assert.IsNotNull(glitch, "Missing script on a Glitch Pickage");
 			_speechBubble.showBubble(glitch.data.message, glitch.data.duration);
 			// TODO: play a sound ?

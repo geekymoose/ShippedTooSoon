@@ -362,6 +362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276856e8dcf586e499ea4a96cda9ac39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _noWeaponMessage: {fileID: 11400000, guid: a6d457a2a078ded42a57590f872bd916, type: 2}
+  _enemyMessage: {fileID: 11400000, guid: cc8beba3badd2f141b70b88c829e96dc, type: 2}
 --- !u!212 &212918403280586696
 SpriteRenderer:
   m_ObjectHideFlags: 1

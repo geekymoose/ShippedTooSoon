@@ -5,9 +5,16 @@ using UnityEngine.Assertions;
 using UnityEngine.Tilemaps;
 
 
+/**
+ * GameMap is a matrix of Room.
+ * All rooms have the same fixed dimension.
+ * Number of rooms in each row and column is configurable.
+ *
+ * Each room is displayed in unity using TileMap.
+ */
 public class GameMap : MonoBehaviour {
 	// -------------------------------------------------------------------------
-	// Data / Variables (PUBLIC)
+	// Attributes (Unity Editor)
 	// -------------------------------------------------------------------------
 
 	[Tooltip("Number of rooms per row in the GameMap")]
