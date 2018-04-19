@@ -9,8 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a98d420be2d91848928d1321ba2949b, type: 3}
-  m_Name: BoosMessage
+  m_Name: GhostBridgeMsg
   m_EditorClassIdentifier: 
   duration: 3
-  message: This boss is totally useless! I'm sure Constantin, the programmer, was
-    to lazy to code an AI.
+  message: Hum... I feel a ghost bridge there...

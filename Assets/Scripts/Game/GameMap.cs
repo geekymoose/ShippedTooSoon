@@ -17,17 +17,20 @@ public class GameMap : MonoBehaviour {
 	// Attributes (Unity Editor)
 	// -------------------------------------------------------------------------
 
+	[SerializeField]
 	[Tooltip("Number of rooms per row in the GameMap")]
-	public int width = 0;
+	private int width = 0;
 
+	[SerializeField]
 	[Tooltip("Number of tiles per room (RoomRow)")]
-	public int roomWidth = 16;
+	private int roomWidth = 16;
 
+	[SerializeField]
 	[Tooltip("Number of tiles per room (RoomColumn)")]
-	public int roomHeight = 9;
+	private int roomHeight = 9;
 
 	[Tooltip("All rooms. (Size must be equals to width * height)")]
-	public Room[] listRooms;
+	public Room[] listRooms; // Public cuz used elsewhere. It's okay for now
 
 
 	// -------------------------------------------------------------------------
