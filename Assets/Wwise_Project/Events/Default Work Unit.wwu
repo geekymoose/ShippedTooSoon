@@ -210,6 +210,16 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{9EB9F335-171B-4B55-AA4C-220C00ECDA87}" ShortID="394805942">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fx_end" ID="{AB753F25-1F74-463C-A9A6-CF954BCB20B8}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="mus_start_bug" ID="{90F38D30-DDD1-4003-B88B-044619CD461A}">
@@ -217,17 +227,29 @@
 								<Action Name="" ID="{72A210D6-2D7C-47FD-AA31-E3515911B927}" ShortID="259960954">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{A870AB39-81F9-46C1-A5AA-008FE3DB4672}" ShortID="261071236">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
 										<Property Name="Inclusion" Type="bool">
 											<ValueList>
 												<Value>False</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
-									<ReferenceList/>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="glitch" ID="{A012558C-67B4-4333-B5E0-8D1A0790B755}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+										</Reference>
+									</ReferenceList>
 								</Action>
 								<Action Name="" ID="{FFC4FFBB-A035-4D18-9FD2-01CD4FD6BE94}" ShortID="449850842">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -238,21 +260,11 @@
 								<Action Name="" ID="{7C9A487A-A2A7-4901-A00A-204A769C6FEB}" ShortID="519335919">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="Delay" Type="Real64" Value="0.1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="MUS" ID="{CE983BFA-44B7-4B98-8EA3-F6269070BCB4}" WorkUnitID="{99704284-1015-413C-8AF8-48E4F39BF800}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{A870AB39-81F9-46C1-A5AA-008FE3DB4672}" ShortID="261071236">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="glitch" ID="{A012558C-67B4-4333-B5E0-8D1A0790B755}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -338,6 +350,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="bug_end" ID="{ED0EBEAE-93FC-4B94-A0D7-565B1DC23896}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{84815514-10A6-476E-9D52-3EB6B4558DF3}" ShortID="163009260">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fx_vic" ID="{C5B59DED-17F1-48A5-B866-89697EBB919E}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

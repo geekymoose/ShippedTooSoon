@@ -62,6 +62,10 @@
 					<ShortName>fx_hit.wav</ShortName>
 					<Path>SFX\fx_hit_F5B62A06.wem</Path>
 				</File>
+				<File Id="194369685" Language="SFX">
+					<ShortName>fx_vic.wav</ShortName>
+					<Path>SFX\fx_vic_51B09493.wem</Path>
+				</File>
 				<File Id="225887680" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG SMP A.wav</ShortName>
 					<Path>SFX\MUS BUG\MUS BUG SMP A_D2927CEA.wem</Path>
@@ -157,6 +161,10 @@
 				<File Id="662339137" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG SMP D.wav</ShortName>
 					<Path>SFX\MUS BUG\MUS BUG SMP D_D2927CEA.wem</Path>
+				</File>
+				<File Id="722001932" Language="SFX">
+					<ShortName>fx_end.wav</ShortName>
+					<Path>SFX\fx_end_0194616E.wem</Path>
 				</File>
 				<File Id="777883526" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG SMP C.wav</ShortName>

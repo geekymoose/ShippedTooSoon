@@ -98,6 +98,10 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="fx_monster" ID="{0C2602D0-07E5-425C-9BA3-7C608A03CA08}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="mus_bug_loop_A" ID="{19483BDD-01D0-4DF8-9613-BF5EAA8F1940}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
 							<Position X="3" Y="5"/>
 						</Module>
@@ -141,7 +145,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="ROOM_ALL_BUG" ID="{AE828413-864F-46D8-88DE-2CBC6CE6DDBA}"/>
+						<CurrentStateRef Name="VIC" ID="{1FF8727B-9127-4B40-B2F8-E4FB81096DA7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

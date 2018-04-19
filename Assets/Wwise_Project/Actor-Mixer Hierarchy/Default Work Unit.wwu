@@ -84,6 +84,16 @@
 				<Sound Name="fx_destroy" ID="{3CA83425-5996-45F1-AF70-1F6F16E7F906}" ShortID="317092452">
 					<PropertyList>
 						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -109,6 +119,16 @@
 				<Sound Name="fx_door" ID="{04C8CD59-FF9C-4065-A8FF-471E61FA9553}" ShortID="20114472">
 					<PropertyList>
 						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -217,11 +237,6 @@
 				<Sound Name="fx_next" ID="{FA1F74EC-9B74-4F67-BB2B-38FF691605F0}" ShortID="361330753">
 					<PropertyList>
 						<Property Name="EnablePositioning" Type="bool" Value="False"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-2</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -453,7 +468,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -517,7 +532,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1147,6 +1162,66 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="glitch_interface_super_duper_04" ID="{1FB35891-2A60-4738-93C6-701A396BC218}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_end" ID="{AB753F25-1F74-463C-A9A6-CF954BCB20B8}" ShortID="436711812">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_end" ID="{8570FA8C-9BCF-4B10-BCA5-696D01951FAD}" ShortID="722001932">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="2.19472925530678E-03"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.171713559376526"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_end.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_end" ID="{8570FA8C-9BCF-4B10-BCA5-696D01951FAD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="fx_vic" ID="{C5B59DED-17F1-48A5-B866-89697EBB919E}" ShortID="895217746">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_vic" ID="{037B981B-2199-4A67-AE52-229017983B29}" ShortID="194369685">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="5.65752430256861E-03"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.171335959256385"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>fx_vic.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_vic" ID="{037B981B-2199-4A67-AE52-229017983B29}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
