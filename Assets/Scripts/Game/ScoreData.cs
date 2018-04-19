@@ -13,13 +13,14 @@ public class ScoreData : ScriptableObject {
     // Data (Unity editor)
     // -------------------------------------------------------------------------
     [SerializeField]
-    private int[] scores = new int[5]; // 5 best times
+    [Tooltip("The scores. Don't enter them manually (Added at victory). Format: (min:sec:mil)")]
+    private float[] scores = new float[5]; // 5 best times (min:sec:mil)
 
 
     // -------------------------------------------------------------------------
     // Internal data
     // -------------------------------------------------------------------------
-    private int noScoreData = 999;
+    private float noScoreData = 999;
     
 
     // -------------------------------------------------------------------------
@@ -35,7 +36,7 @@ public class ScoreData : ScriptableObject {
      * Don't give negative score! It will actually be added (But doesn't make
      * any sense)
      */
-    public int addScoreEntry(int value) {
+    public float addScoreEntry(float value) {
         int pos = scores.Length - 1;
         bool inPodium = (value < scores[scores.Length-1]) ? true : false;
 
@@ -64,7 +65,7 @@ public class ScoreData : ScriptableObject {
     public string getScoreDataAsString() {
         string str = "";
         for(int k = 0; k < scores.Length; ++k) {
-            str += (scores[k] == noScoreData) ? "empty\n" : scores[k] + "\n";
+            str += (scores[k] == noScoreData) ? "empty\n" : formatScoreTimestamp(scores[k]) + "\n";
         }
         return str;
     }
@@ -83,8 +84,9 @@ public class ScoreData : ScriptableObject {
     public static string formatScoreTimestamp(float timestamp) {
 		int min = (int)(timestamp / 60f);
 		int sec = (int)(timestamp % 60f);
+        int mil = (int)((timestamp % 1) * 100);
 
-		string timeStr = min.ToString("00") + ":" + sec.ToString("00");
+		string timeStr = min.ToString("00") + ":" + sec.ToString("00") + ":" + mil.ToString("00");
         return timeStr;
     }
 }

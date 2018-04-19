@@ -77,10 +77,9 @@ public class PlayerAction : MonoBehaviour {
 			if(roger.getIsDone() == false) {
             	roger.activate();
 				_animUI.SetTrigger("PickupGoal");
+				AkSoundEngine.PostEvent("fx_button", gameObject);
+				AkSoundEngine.PostEvent("fx_next", gameObject);
 			}
-
-			AkSoundEngine.PostEvent("fx_button", gameObject);
-			AkSoundEngine.PostEvent("fx_next", gameObject);
         }
 		else if(other.CompareTag("Pickable")) {
 			Pickable glitch = other.GetComponent<Pickable>();

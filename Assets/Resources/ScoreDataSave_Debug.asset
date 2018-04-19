@@ -11,4 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54526c1e3f3409d41b41f9d6a0f8213b, type: 3}
   m_Name: ScoreDataSave_Debug
   m_EditorClassIdentifier: 
-  scores: e7030000e7030000e7030000e7030000e7030000
+  scores:
+  - 999
+  - 999
+  - 999
+  - 999
+  - 999

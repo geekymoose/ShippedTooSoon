@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * Simple gestion for time. (Like stopwatch etc)
+ */
 public class GameTimeManager {
 	private bool 	_isFreezed = false;
 	private float 	_timeScale = 1.0f;

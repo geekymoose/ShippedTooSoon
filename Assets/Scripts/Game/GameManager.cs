@@ -151,9 +151,11 @@ public class GameManager : MonoBehaviour {
 		this.stopwatchTime = this.timeManager.getStopwatchTime();
 		this.timeManager.stopStopwatch();
 
-		this.scoreData.addScoreEntry((int)this.stopwatchTime);
+		this.scoreData.addScoreEntry(this.stopwatchTime);
 		
 		this.menuManager.showVictory();
+		
+        AkSoundEngine.PostEvent("mus_victory", gameObject);
 	}
 
 	public void gameOver() {
