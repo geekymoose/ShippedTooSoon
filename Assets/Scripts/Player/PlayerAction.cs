@@ -49,7 +49,7 @@ public class PlayerAction : MonoBehaviour {
         }
 	}
 	
-    private void OnTriggerEnter2D(Collider2D other) {
+    public void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Goal")) {
             RoomGoal roger = other.gameObject.GetComponent<RoomGoal>();
             Assert.IsNotNull(roger, "Goal object doesn't have a RoomGoal script");
@@ -61,8 +61,11 @@ public class PlayerAction : MonoBehaviour {
 			AkSoundEngine.PostEvent("fx_button", gameObject);
 			AkSoundEngine.PostEvent("fx_next", gameObject);
         }
-		else if(other.CompareTag("Glitch")) {
-
+		else if(other.CompareTag("Pickable")) {
+			GlitchPickableController glitch = other.GetComponent<GlitchPickableController>();
+			Assert.IsNotNull(glitch, "Missing script on a Glitch Pickage");
+			_speechBubble.showBubble(glitch.data.message, glitch.data.duration);
+			// TODO: play a sound ?
 		}
 		else if(other.gameObject.name == "sword") {
 			GameObject.Destroy(other.gameObject);

@@ -7,6 +7,7 @@ TagManager:
   - Destructable
   - Goal
   - Enemy
+  - Pickable
   layers:
   - Default
   - TransparentFX
