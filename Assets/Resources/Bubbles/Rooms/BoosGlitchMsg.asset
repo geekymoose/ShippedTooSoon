@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a98d420be2d91848928d1321ba2949b, type: 3}
   m_Name: BoosGlitchMsg
   m_EditorClassIdentifier: 
-  duration: 2
+  duration: 4
   message: This boss is totally useless! I'm sure Constantin, the programmer, was
     to lazy to code an AI.
