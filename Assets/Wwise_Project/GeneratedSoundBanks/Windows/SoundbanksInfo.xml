@@ -24,6 +24,7 @@
 				<Event Id="1753944917" Name="bug_room" ObjectPath="\Events\Default Work Unit\SFX\bug_room"/>
 				<Event Id="529726532" Name="end" ObjectPath="\Events\Default Work Unit\MUS\end"/>
 				<Event Id="2869415603" Name="fx_att" ObjectPath="\Events\Default Work Unit\SFX\fx_att"/>
+				<Event Id="414206330" Name="fx_bulle" ObjectPath="\Events\Default Work Unit\SFX\fx_bulle"/>
 				<Event Id="3872889310" Name="fx_button" ObjectPath="\Events\Default Work Unit\SFX\fx_button"/>
 				<Event Id="2325123060" Name="fx_destroy" ObjectPath="\Events\Default Work Unit\SFX\fx_destroy"/>
 				<Event Id="1252715098" Name="fx_door" ObjectPath="\Events\Default Work Unit\SFX\fx_door"/>
@@ -64,7 +65,7 @@
 				</File>
 				<File Id="194369685" Language="SFX">
 					<ShortName>fx_vic.wav</ShortName>
-					<Path>SFX\fx_vic_51B09493.wem</Path>
+					<Path>SFX\fx_vic_8060C475.wem</Path>
 				</File>
 				<File Id="225887680" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG SMP A.wav</ShortName>
@@ -164,7 +165,7 @@
 				</File>
 				<File Id="722001932" Language="SFX">
 					<ShortName>fx_end.wav</ShortName>
-					<Path>SFX\fx_end_0194616E.wem</Path>
+					<Path>SFX\fx_end_F4AF1E87.wem</Path>
 				</File>
 				<File Id="777883526" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG SMP C.wav</ShortName>
@@ -213,6 +214,10 @@
 				<File Id="941565495" Language="SFX">
 					<ShortName>MUS BUG\MUS BUG LOOP C.wav</ShortName>
 					<Path>SFX\MUS BUG\MUS BUG LOOP C_A06B14ED.wem</Path>
+				</File>
+				<File Id="961939856" Language="SFX">
+					<ShortName>fx_bulle.wav</ShortName>
+					<Path>SFX\fx_bulle_1C9C67B2.wem</Path>
 				</File>
 				<File Id="995357642" Language="SFX">
 					<ShortName>fx_door.wav</ShortName>

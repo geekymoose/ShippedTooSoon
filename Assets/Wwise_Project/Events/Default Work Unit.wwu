@@ -159,6 +159,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="fx_bulle" ID="{08E54A57-A804-44A2-8734-8526E385C9B6}">
+							<ChildrenList>
+								<Action Name="" ID="{D75E41F8-734A-457F-984F-061B499D5F10}" ShortID="460618814">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fx_bulle" ID="{FE7CB11A-89BF-49EB-83F6-C2FA3178C5E7}" WorkUnitID="{A5184280-7028-4166-B5F1-B0DF789B820B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MUS" ID="{7451E847-0CDE-4ED8-820F-BB128706FB61}" ShortID="461272383">

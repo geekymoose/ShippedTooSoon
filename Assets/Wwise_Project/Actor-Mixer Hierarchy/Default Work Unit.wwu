@@ -1224,6 +1224,192 @@
 						<ActiveSource Name="fx_vic" ID="{037B981B-2199-4A67-AE52-229017983B29}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="bulles" ID="{66F22FFA-7002-4AAB-988B-69106B2FD5E0}" ShortID="234892485">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="bulles_01" ID="{275E8B16-DA4B-4233-8014-72EEDC514269}" ShortID="829187699">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Detunized_EssKrush_01" ID="{58D16C9C-F023-4910-8952-831F4EDD32A0}" ShortID="1051492813">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="7.49506801447009E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.046871730487549"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.70329209495934"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Detunized_EssKrush_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Detunized_EssKrush_01" ID="{58D16C9C-F023-4910-8952-831F4EDD32A0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bulles_02" ID="{BCD64A30-3ABD-4A73-8A98-A48481AD7243}" ShortID="165982174">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Detunized_EssKrush_01" ID="{2C277854-E391-4148-AC4A-F21DC2C1CF59}" ShortID="616500479">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="7.49506801447009E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.046871730487549"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="7.49990226445087"/>
+										<Property Name="TrimEnd" Type="Real64" Value="8.05084745762711"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Detunized_EssKrush_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Detunized_EssKrush_01" ID="{2C277854-E391-4148-AC4A-F21DC2C1CF59}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bulles_03" ID="{95949396-2C89-4A5D-A13A-472D0E98C313}" ShortID="65553222">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Detunized_EssKrush_01" ID="{3D48150B-CAC1-43EF-9406-FE5EFEBC9A31}" ShortID="551451121">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="7.49506801447009E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.046871730487549"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="9.92221283616509"/>
+										<Property Name="TrimEnd" Type="Real64" Value="10.5254237288136"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Detunized_EssKrush_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Detunized_EssKrush_01" ID="{3D48150B-CAC1-43EF-9406-FE5EFEBC9A31}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bulles_04" ID="{4C94433D-52E0-4E11-9AFC-B26248EE8622}" ShortID="442480888">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Detunized_EssKrush_01" ID="{3FCC1A1D-4E73-4693-98E2-FB145BFAD0EC}" ShortID="479499969">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="7.49506801447009E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.046871730487549"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="11.0843806537001"/>
+										<Property Name="TrimEnd" Type="Real64" Value="11.346516007533"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Detunized_EssKrush_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Detunized_EssKrush_01" ID="{3FCC1A1D-4E73-4693-98E2-FB145BFAD0EC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bulles_05" ID="{46C4D0EC-3757-48C0-ADB2-353BDFE27D30}" ShortID="737164915">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Detunized_EssKrush_01" ID="{C5B51545-20F6-43F3-8380-1C9D1D836B1C}" ShortID="793332628">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="7.49506801447009E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.046871730487549"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="11.6466321707539"/>
+										<Property Name="TrimEnd" Type="Real64" Value="12.214324156525"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Detunized_EssKrush_01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Detunized_EssKrush_01" ID="{C5B51545-20F6-43F3-8380-1C9D1D836B1C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="fx_bulle" ID="{FE7CB11A-89BF-49EB-83F6-C2FA3178C5E7}" ShortID="30329293">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>1200</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4A6CA9D0-5D35-4B1E-9EBB-EB32C5A9A066}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{EAAA7E72-6CC5-4C70-8314-B9438FB2D8EF}" WorkUnitID="{E8C84236-4D13-497A-AE2E-D528D16B2816}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="fx_bulle" ID="{2385CA07-8A99-41BC-B9A8-E11B6EAF37AF}" ShortID="961939856">
+							<Language>SFX</Language>
+							<AudioFile>fx_bulle.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="fx_bulle" ID="{2385CA07-8A99-41BC-B9A8-E11B6EAF37AF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -10,6 +10,7 @@
 						<ObjectRef Name="fx_select" ID="{43062AED-3165-412F-AB78-13939BACBF30}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="fx_monster" ID="{0C2602D0-07E5-425C-9BA3-7C608A03CA08}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="fx_door" ID="{41A69905-7AF1-443E-B3ED-7FEEF7B2833A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="fx_bulle" ID="{08E54A57-A804-44A2-8734-8526E385C9B6}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="fx_destroy" ID="{8FC56293-9D28-4536-AA03-90A7A45931F9}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="fx_next" ID="{BC77414F-9CDC-4680-B446-3994FD463B75}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="mus_victory" ID="{E592D427-0FE7-4737-9FF1-D83EBA4A94E6}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}" Filter="7" Origin="Manual"/>

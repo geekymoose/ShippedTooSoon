@@ -17,7 +17,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -56,7 +56,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>-4</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{9BF84155-0BE0-4C71-A96A-528A49B9AF6F}" ShortID="884960448">

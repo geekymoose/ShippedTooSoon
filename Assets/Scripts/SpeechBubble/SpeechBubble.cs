@@ -47,6 +47,7 @@ public class SpeechBubble : MonoBehaviour {
 		_animUI.ResetTrigger("Popup");
 		_animUI.ResetTrigger("Close");
 		_animUI.SetTrigger("Popup");
+		AkSoundEngine.PostEvent("fx_bulle", gameObject);
 		_speechBubbleTextUI.text = message;
 		Invoke("hiddeBubble", duration);
 	}

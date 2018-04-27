@@ -18,6 +18,10 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="fx_bulle" ID="{08E54A57-A804-44A2-8734-8526E385C9B6}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="bug_noise" ID="{239DCF74-C66E-4100-8CAF-DF6FC619C24A}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
 							<Position X="0" Y="4"/>
 						</Module>
@@ -44,6 +48,10 @@
 						<Module>
 							<ObjectRef Name="fx_select" ID="{43062AED-3165-412F-AB78-13939BACBF30}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
 							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="fx_bulle" ID="{08E54A57-A804-44A2-8734-8526E385C9B6}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="bug_buzz_A" ID="{282B07BE-77BC-4BFE-9F66-891FE2227D00}" WorkUnitID="{E74EAD34-3112-4B17-8A04-FEB76AD3B07C}"/>
@@ -145,7 +153,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="VIC" ID="{1FF8727B-9127-4B40-B2F8-E4FB81096DA7}"/>
+						<CurrentStateRef Name="ROOM_ALL_BUG" ID="{AE828413-864F-46D8-88DE-2CBC6CE6DDBA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

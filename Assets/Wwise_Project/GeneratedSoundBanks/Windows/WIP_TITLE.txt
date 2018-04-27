@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	414206330	fx_bulle			\Default Work Unit\SFX\fx_bulle	
 	529726532	end			\Default Work Unit\MUS\end	
 	879807740	fx_monster			\Default Work Unit\SFX\fx_monster	
 	1252715098	fx_door			\Default Work Unit\SFX\fx_door	
@@ -22,7 +23,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	106810603	MUS intro	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS intro_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\INTRO\MUS intro\MUS intro		276422
 	119527989	MUS BUG LOOP B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_A\MUS BUG LOOP B\MUS BUG LOOP B		226813
 	174307834	fx_hit	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_hit_F5B62A06.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_hit		41420
-	194369685	fx_vic	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_vic_51B09493.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_vic		420276
+	194369685	fx_vic	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_vic_8060C475.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_vic		420276
 	225887680	MUS BUG SMP A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG SMP A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_D\MUS BUG SMP A\MUS BUG SMP A		275709
 	229192031	MUS BUG LOOP A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_B\MUS BUG LOOP A\MUS BUG LOOP A		28192
 	270990786	fx_button	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_button_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_button		181484
@@ -47,7 +48,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	622848671	fx_monster	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_monster_EAA30283.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_monster		125460
 	642215571	fx_att	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_att_40232343.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_att		90776
 	662339137	MUS BUG SMP D	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG SMP D_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_D\MUS BUG SMP D\MUS BUG SMP D		112984
-	722001932	fx_end	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_end_0194616E.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_end		420204
+	722001932	fx_end	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_end_F4AF1E87.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_end		420204
 	777883526	MUS BUG SMP C	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG SMP C_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_C\MUS BUG SMP C\MUS BUG SMP C		112696
 	785846887	MUS BUG SMP B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG SMP B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_C\MUS BUG SMP B\MUS BUG SMP B		206609
 	813891382	MUS II A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\MUS II A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_02\MUS II A\MUS II A		250801
@@ -60,6 +61,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	928592102	MUS BUG LIGHT B	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LIGHT B_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\ROOM_BUG_B\MUS BUG LIGHT B\MUS BUG LIGHT B		242030
 	932314206	fx_grab_01	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_grab_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_grab\fx_grab_01		126660
 	941565495	MUS BUG LOOP C	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS BUG\MUS BUG LOOP C_A06B14ED.wem		\Actor-Mixer Hierarchy\Default Work Unit\BUG\BUG\MUS BUG LOOP C		203972
+	961939856	fx_bulle	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_bulle_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_bulle		126660
 	995357642	fx_door	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_door_B5C30DF6.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_door		107688
 	1000512093	fx_grab_02	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\fx_grab_02_0461740D.wem		\Actor-Mixer Hierarchy\Default Work Unit\fx_grab\fx_grab_02		161180
 	1016632928	2m A	C:\Users\JOON\Musique - travaux\projets\MCGJ 2018 - WIP TITLE WW\.cache\Windows\SFX\MUS\2m A_D2927CEA.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\2m A\2m A		61656
