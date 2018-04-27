@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a98d420be2d91848928d1321ba2949b, type: 3}
-  m_Name: PickableHammerMsg
+  m_Name: NiceTryMsg
   m_EditorClassIdentifier: 
-  duration: 4
-  message: 'Hope to see it in DLC #4'
+  duration: 3
+  message: Nice Try! ;)

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: ShortcutMsg
   m_EditorClassIdentifier: 
   duration: 3
-  message: Sounds like I found a shortcut
+  message: Lazy level design!

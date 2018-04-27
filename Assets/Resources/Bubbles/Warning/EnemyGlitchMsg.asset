@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: EnemyGlitchMsg
   m_EditorClassIdentifier: 
   duration: 4
-  message: Hum... Sounds like Pierre forgot the colliders.. I can't attack them!
+  message: Hm... Pierre forgot colliders
