@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a98d420be2d91848928d1321ba2949b, type: 3}
   m_Name: NoWeaponMsg
   m_EditorClassIdentifier: 
-  duration: 0.5
-  message: I need a weapon
+  duration: 1
+  message: I need a weapon!

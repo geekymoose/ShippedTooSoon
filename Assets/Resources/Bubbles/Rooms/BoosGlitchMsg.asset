@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Name: BoosGlitchMsg
   m_EditorClassIdentifier: 
   duration: 4
-  message: This boss is totally useless! I'm sure Constantin, the programmer, was
-    to lazy to code an AI.
+  message: Constantin! No A.I. ??? WTF!
