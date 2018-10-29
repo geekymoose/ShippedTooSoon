@@ -96,7 +96,8 @@ public class MenuManager : MonoBehaviour {
 	public void leave() {
 		AkSoundEngine.PostEvent("fx_select", gameObject);
 
-		Scene loadedLevel = SceneManager.GetSceneByName("MenuWelcome");
-     	SceneManager.LoadScene(loadedLevel.buildIndex);
+		// Should be better with GetSceneAt etc, but was not working
+		Scene loadedLevel = SceneManager.GetActiveScene();
+     	SceneManager.LoadScene(loadedLevel.buildIndex - 1);
 	}
 }
