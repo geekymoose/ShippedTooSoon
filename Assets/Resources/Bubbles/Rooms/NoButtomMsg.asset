@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: NoButtomMsg
   m_EditorClassIdentifier: 
   duration: 3
-  message: The button is hidden!
+  message: The button is somewhere
