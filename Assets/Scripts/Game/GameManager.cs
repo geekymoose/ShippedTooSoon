@@ -53,13 +53,14 @@ public class GameManager : MonoBehaviour {
 		this.scoreData = Resources.Load(scoreDataPath) as ScoreData;
 		Assert.IsNotNull(this.scoreData, "Unable to find the ScoreData Resources! Oooh!");
 	
-		// Warning: this caused several bugs in build. Must be called before Start
+		// Warning: this caused several bugs in build, it is safer to disabled manually before build
 		this.gameMapCreator = GameObject.Find("GameMapCreator");
 		if(this.gameMapCreator != null) {
+			Debug.LogWarning("GameMapCreator must be disabled manually if you want to Build the game (Works fine in editor)");
 			// gameMapCreator is just used to create the map by game designer.
 			// If env is still present in editor. Must be removed first!
 			// (Because the env is re-generated at runtime)
-			GameObject.Destroy(this.gameMapCreator);
+			// GameObject.Destroy(this.gameMapCreator);
 		}
 	}
 
