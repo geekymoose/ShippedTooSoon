@@ -52,6 +52,15 @@ public class GameManager : MonoBehaviour {
 		}
 		this.scoreData = Resources.Load(scoreDataPath) as ScoreData;
 		Assert.IsNotNull(this.scoreData, "Unable to find the ScoreData Resources! Oooh!");
+	
+		// Warning: this caused several bugs in build. Must be called before Start
+		this.gameMapCreator = GameObject.Find("GameMapCreator");
+		if(this.gameMapCreator != null) {
+			// gameMapCreator is just used to create the map by game designer.
+			// If env is still present in editor. Must be removed first!
+			// (Because the env is re-generated at runtime)
+			GameObject.Destroy(this.gameMapCreator);
+		}
 	}
 
 	public void Start () {
@@ -64,7 +73,6 @@ public class GameManager : MonoBehaviour {
 		GameObject objGoalUndoneText 	= GameObject.Find("GoalCounterUndoneTextUI");
 		GameObject timeCounterObject 	= GameObject.Find("TimeCounterTextUI");
 		GameObject objMenuCanvaslUI 	= GameObject.Find("CanvasUI_MenuGame");
-		this.gameMapCreator 			= GameObject.Find("GameMapCreator");
 		GameObject playerObject 		= GameObject.FindGameObjectWithTag("Player");
 
 		Assert.IsNotNull(gameMapObject, "Unable to find GameMap object in scene");
@@ -75,13 +83,6 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull(objGoalUndoneText, "Unable to find GoalCounter Object");
 		Assert.IsNotNull(timeCounterObject, "Unable to find TimeCounter Object");
 		Assert.IsNotNull(objMenuCanvaslUI, "Unable to find MenuUI object");
-
-		if(this.gameMapCreator != null) {
-			// gameMapCreator is just used to create the map by game designer.
-			// If env is still present in editor. Must be removed first!
-			// (Because the env is re-generated at runtime)
-			GameObject.Destroy(this.gameMapCreator); 
-		}
 
 		this.gameMap 					= gameMapObject.GetComponent<GameMap>();
 		this.playerMovement 			= playerObject.GetComponent<PlayerMovement>();
