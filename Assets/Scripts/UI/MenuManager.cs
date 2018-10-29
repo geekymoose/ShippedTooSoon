@@ -9,12 +9,12 @@ public class MenuManager : MonoBehaviour {
 	// -------------------------------------------------------------------------
 	// Attribute
 	// -------------------------------------------------------------------------
-	private Animator 	anim = null;
-	private GameManager gameManager = null;
-	private Text 		victoryScoreTextUI = null;
-	private Text 		victoryBestScoreTextUI = null;
-	private Text 		gameOverBestScoreTextUI = null;
-	private ScoreData 	scoreData = null;
+	private Animator 	anim 						= null;
+	private GameManager gameManager 				= null;
+	private Text 		victoryScoreTextUI 			= null;
+	private Text 		victoryBestScoreTextUI 		= null;
+	private Text 		gameOverBestScoreTextUI 	= null;
+	private ScoreData 	scoreData 					= null;
 
 	
 	// -------------------------------------------------------------------------
@@ -90,6 +90,13 @@ public class MenuManager : MonoBehaviour {
 		AkSoundEngine.PostEvent("fx_select", gameObject);
 
 		Scene loadedLevel = SceneManager.GetActiveScene();
+     	SceneManager.LoadScene(loadedLevel.buildIndex);
+	}
+
+	public void leave() {
+		AkSoundEngine.PostEvent("fx_select", gameObject);
+
+		Scene loadedLevel = SceneManager.GetSceneByName("MenuWelcome");
      	SceneManager.LoadScene(loadedLevel.buildIndex);
 	}
 }

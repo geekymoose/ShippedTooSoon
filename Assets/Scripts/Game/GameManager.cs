@@ -119,6 +119,13 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	public void Update () {
+		if(Input.GetButtonDown("Leave")) {
+			this.menuManager.leave();
+		}
+		else if(Input.GetButtonDown("Restart")) {
+			this.menuManager.restart();
+		}
+		
 		if(this.isRunning) {
 			this.updateTimeCounter();
 			this.updateGoalCounter();

@@ -44,16 +44,15 @@ public class SpeechBubble : MonoBehaviour {
 	 * Show bubble on screen for certain amount of time with given message.
 	 */
 	public void showBubble(string message, float duration) {
+		_speechBubbleTextUI.text = message;
 		_animUI.ResetTrigger("Popup");
 		_animUI.ResetTrigger("Close");
 		_animUI.SetTrigger("Popup");
-		AkSoundEngine.PostEvent("fx_bulle", gameObject);
-		_speechBubbleTextUI.text = message;
 		Invoke("hiddeBubble", duration);
 	}
 
 	/**
-	* Hidde bubble.
+	 * Hidde bubble.
 	 */
 	public void hiddeBubble() {
 		_animUI.SetTrigger("Close");

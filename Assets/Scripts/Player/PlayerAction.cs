@@ -82,10 +82,13 @@ public class PlayerAction : MonoBehaviour {
 			}
         }
 		else if(other.CompareTag("Pickable")) {
-			Pickable glitch = other.GetComponent<Pickable>();
-			Assert.IsNotNull(glitch, "Missing script on a Glitch Pickage");
-			_speechBubble.showBubble(glitch.data.message, glitch.data.duration);
-			// TODO: play a sound ?
+			Pickable pickable = other.GetComponent<Pickable>();
+			Assert.IsNotNull(pickable, "Missing script on a Glitch Pickage");
+			if(!pickable.isPickedup()) {
+				pickable.pickup();
+				_speechBubble.showBubble(pickable.data.message, pickable.data.duration);
+				AkSoundEngine.PostEvent("fx_bulle", gameObject);
+			}
 		}
 		else if(other.gameObject.name == "sword") {
 			GameObject.Destroy(other.gameObject);

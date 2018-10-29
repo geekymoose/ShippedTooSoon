@@ -17,9 +17,6 @@ public class Pickable : MonoBehaviour {
 		_isDone = false;
 	}
 
-	/**
-	 * Pickup the pickable element.
-	 */
 	public void pickup() {
 		_isDone = true;
 	}

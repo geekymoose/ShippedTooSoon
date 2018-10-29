@@ -18,9 +18,6 @@ public class Destructable : MonoBehaviour {
 		Assert.IsNotNull(_colliders, "Unable to recover the colliders");
 	}
 
-	/**
-	 * Actually destroye the destructable object.
-	 */
 	public void destroy() {
 		foreach(Collider2D coco in _colliders) {
 			coco.enabled = false;
