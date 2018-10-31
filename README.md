@@ -21,7 +21,7 @@ The goal is to activate all buttons (One per room) as fast as you can.
 
 
 # Controls
-| Name | PC | Xbox Controler |
+| Name | PC | Xbox Controller |
 | ----- | ----- | ----- |
 | Movement | WASD | Joystick |
 | Attack | Space | A |
