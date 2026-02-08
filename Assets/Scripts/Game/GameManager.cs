@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour {
 		}
 		this.scoreData = Resources.Load(scoreDataPath) as ScoreData;
 		Assert.IsNotNull(this.scoreData, "Unable to find the ScoreData Resources! Oooh!");
-	
+
 		// Warning: this caused several bugs in build, it is safer to disabled manually before build
 		this.gameMapCreator = GameObject.Find("GameMapCreator");
 		if(this.gameMapCreator != null) {
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour {
 		Debug.Log("GameManager::Start()");
 
 		GameObject gameMapObject 		= GameObject.Find("GameMap");
-		GameObject cameraObject 		= GameObject.Find("Main Camera");
+		GameObject cameraObject 		= GameObject.Find("MainCamera");
 		GameObject spawnObject 			= GameObject.Find("SpawnPoint");
 		GameObject objGoalDoneText 		= GameObject.Find("GoalCounterDoneTextUI");
 		GameObject objGoalUndoneText 	= GameObject.Find("GoalCounterUndoneTextUI");
@@ -112,14 +112,14 @@ public class GameManager : MonoBehaviour {
 		this.currentRoom.onRoomEnter();
 		this.currentRoom.setActive(true);
 		this.previousRoom = this.currentRoom;
-		
+
 
 		this.isRunning = true;
 		this.timeManager.startStopwatch();
 
 		AkSoundEngine.PostEvent("mus_start_bug", gameObject);
 	}
-	
+
 	public void Update () {
 		if(Input.GetButtonDown("Leave")) {
 			this.menuManager.leave();
@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour {
 		else if(Input.GetButtonDown("Restart")) {
 			this.menuManager.restart();
 		}
-		
+
 		if(this.isRunning) {
 			this.updateTimeCounter();
 			this.updateGoalCounter();
@@ -161,9 +161,9 @@ public class GameManager : MonoBehaviour {
 		this.timeManager.stopStopwatch();
 
 		this.scoreData.addScoreEntry(this.stopwatchTime);
-		
+
 		this.menuManager.showVictory();
-		
+
         AkSoundEngine.PostEvent("mus_victory", gameObject);
 	}
 
@@ -174,7 +174,7 @@ public class GameManager : MonoBehaviour {
 
 		this.timeManager.stopStopwatch();
 		this.stopwatchTime = this.timeManager.getStopwatchTime();
-		
+
 		this.menuManager.showGameOver();
 
         AkSoundEngine.PostEvent("end", gameObject);
